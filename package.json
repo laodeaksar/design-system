@@ -5,7 +5,7 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
-  "repository": "https://github.com/MaximeHeckel/design-system",
+  "repository": "https://github.com/laodeaksarr/design-system",
   "license": "MIT",
   "scripts": {
     "build": "node ./esbuild.build.js",
