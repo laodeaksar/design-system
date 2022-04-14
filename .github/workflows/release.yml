@@ -78,4 +78,4 @@ jobs:
           commit-message: Bump package.json to version ${{steps.get-version.outputs.result}}
       - name: Publish
         run: |
-          yarn publish --access public
+          yarn publish
