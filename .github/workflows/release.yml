@@ -73,9 +73,9 @@ jobs:
         with:
           delete-branch: true
           reviewers: |
-            MaximeHeckel
+            laodeaksarr
           title: Bump package.json to version ${{steps.get-version.outputs.result}}
           commit-message: Bump package.json to version ${{steps.get-version.outputs.result}}
       - name: Publish
         run: |
-          yarn publish
+          yarn publish --access public
