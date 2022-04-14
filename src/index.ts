@@ -1,4 +1,5 @@
 export { default as Anchor } from './components/Anchor';
+/**
 export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
 export { default as Flex } from './components/Flex';
@@ -15,7 +16,7 @@ export {
   H4,
 } from './components/Typography';
 export { default as VisuallyHidden } from './components/VisuallyHidden';
-
+*/
 export {
   Shadows,
   styled,
