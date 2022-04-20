@@ -1,1 +1,1 @@
-# design-syatem
+# design-system
