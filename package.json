@@ -1,5 +1,5 @@
 {
-  "name": "@laodeaksarr/design-system",
+  "name": "@laodeaksar/design-system",
   "version": "0.0.13",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
