@@ -3,23 +3,23 @@ import { styled } from 'src/lib/stitches.config';
 export const StyledAnchor = styled('a', {
   fontSize: 'inherit',
   lineHeight: 'inherit',
-  color: 'var(--color, var(--maximeheckel-colors-brand))',
+  color: 'var(--color, var(--laodeaksar-colors-brand))',
   fontWeight: 500,
   wordBreak: 'break-word',
   textDecoration: 'none',
   outline: 'none',
   transition: 'border-color 0.3s ease, color 0.3s ease',
 
-  '--hover-color': 'var(--maximeheckel-colors-typeface-primary)',
+  '--hover-color': 'var(--laodeaksar-colors-typeface-primary)',
 
   '&:focus': {
-    '--color': 'var(--hover-color, var(--maximeheckel-colors-brand))',
+    '--color': 'var(--hover-color, var(--laodeaksar-colors-brand))',
     '--hover-translation-distance': 'var(--arrow-translation, 0)',
   },
 
   '@media (hover: hover) and (pointer: fine)': {
     '&:hover': {
-      '--color': 'var(--hover-color, var(--maximeheckel-colors-brand))',
+      '--color': 'var(--hover-color, var(--laodeaksar-colors-brand))',
       ' --hover-translation-distance': 'var(--arrow-translation, 0)',
     },
   },
@@ -27,7 +27,7 @@ export const StyledAnchor = styled('a', {
   variants: {
     discreet: {
       true: {
-        '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
+        '--color': 'var(--laodeaksar-colors-typeface-tertiary)',
       },
     },
     arrow: {
