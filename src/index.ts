@@ -1,9 +1,9 @@
 export { default as Anchor } from './components/Anchor';
 export { default as Card } from './components/Card';
-/**
 export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
 export { default as Flex } from './components/Flex';
+/**
 export { default as Icon } from './components/Icon';
 export { default as Test } from './components/Test';
 export {
