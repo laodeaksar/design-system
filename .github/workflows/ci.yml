@@ -157,3 +157,5 @@ jobs:
           name: build-output
           path: dist
           retention-days: 1
+      - name: Enable Github Automerge
+        uses: alexwilson/enable-github-automerge-action@1.0.0
