@@ -1,15 +1,42 @@
-name: Auto-Merge
+name: Automerge
+
 on:
+  # Try enabling auto-merge for all open pull requests. (Only recommended for testing.)
+  push:
+
+  # Try enabling auto-merge for all open pull requests.
+  schedule:
+    - cron: 0 * * * *
+
+  # Try enabling auto-merge for a pull request when a draft is marked as “ready for review”, when
+  # a required label is applied or when a “do not merge” label is removed, or when a pull request
+  # is updated in any way (opened, synchronized, reopened, edited).
   pull_request_target:
-    types: [labeled]
+    types:
+      - opened
+      - synchronized
+      - reopened
+      - edited
+      - labeled
+      - unlabeled
+      - ready_for_review
+
+  # Try enabling auto-merge for the specified pull request or all open pull requests if none is specified.
+  workflow_dispatch:
+    inputs:
+      pull-request:
+        description: Pull Request Number
+        required: false
 
 jobs:
-  enable-auto-merge:
+  automerge:
     runs-on: ubuntu-latest
-
-    # Specifically check that dependabot (or another trusted party) created this pull-request, and that it has been labelled correctly.
-    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(github.event.pull_request.labels.*.name, 'dependencies')
     steps:
-    - uses: alexwilson/enable-github-automerge-action@main
-      with:
-        github-token: "${{ secrets.GH_PACKAGES_TOKEN }}"
+      - uses: reitermarkus/automerge@v2
+        with:
+          token: ${{secrets.GH_PACKAGES_TOKEN }}
+          merge-method: rebase
+          do-not-merge-labels: never-merge
+          required-labels: automerge
+          pull-request: ${{ github.event.inputs.pull-request }}
+          dry-run: true
