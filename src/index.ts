@@ -3,6 +3,7 @@ export { default as Card } from './components/Card';
 export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
 export { default as Flex } from './components/Flex';
+export { default as Tooltip } from './components/Tooltip';
 /**
 export { default as Icon } from './components/Icon';
 export { default as Test } from './components/Test';
@@ -16,8 +17,19 @@ export {
   H3,
   H4,
 } from './components/Typography';
-export { default as VisuallyHidden } from './components/VisuallyHidden';
 */
+export { default as VisuallyHidden } from './components/VisuallyHidden';
+
+/** HOOKS
+export { default as useDebouncedValue } from './hooks/useDebouncedValue';
+export { default as useKeyboardShortcut } from './hooks/useKeyboardShortcut';
+export {
+  default as useTheme,
+  ThemeContext,
+  ThemeProvider,
+} from './hooks/useTheme'**/
+
+/** LIB **/
 export {
   Shadows,
   styled,
