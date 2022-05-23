@@ -1,11 +1,13 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import Flex from '../Flex';
 import { StyledButton, StyledIconButton } from './Button.styles';
 import { ButtonProps } from './Button.types';
 
-const Button = <T extends object>(
-  props: ButtonProps<T>,
-  ref: React.ForwardedRef<HTMLButtonElement>
+const Button = React.forwardRef(
+  <T extends object>(
+    props: ButtonProps<T>,
+    ref: React.ForwardedRef<HTMLButtonElement>
 ) => {
   const {
     variant = 'primary',
@@ -55,15 +57,10 @@ const Button = <T extends object>(
     </StyledButton>
   );
 };
+)
+
 Button.displayName = 'Button';
 
-const ForwardedButton = React.forwardRef(Button);
-
-export const WrappedButton = <T,>({
-  ref,
-  ...rest
-}: ButtonProps<T> & { ref?: React.Ref<HTMLButtonElement> }) => (
-  <ForwardedButton {...rest} ref={ref} />
-);
-
-export default WrappedButton;
+export default Button as <T extends object>(
+  props: ButtonProps<T> & { ref?: React.ForwardedRef<HTMLButtonElement> }
+) => JSX.Element;
