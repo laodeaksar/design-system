@@ -14,17 +14,17 @@ export const StyledInput = styled('input', {
   fontSize: 'var(--font-size-2)',
   fontFamily: 'inherit',
   lineHeight: '26px',
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  color: 'var(--laodeaksar-colors-typeface-primary)',
 
   borderRadius: 'var(--border-radius-1)',
   border:
-    '1px solid var(--border-color, var(--maximeheckel-form-input-border))',
-  background: 'var(--background, var(--maximeheckel-form-input-background))',
+    '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
+  background: 'var(--background, var(--laodeaksar-form-input-background))',
 
   transition: 'border-color 0.3s, box-shadow 0.3s',
 
   '&::placeholder': {
-    color: 'var(--maximeheckel-colors-typeface-tertiary)',
+    color: 'var(--laodeaksar-colors-typeface-tertiary)',
     opacity: 0.5,
   },
 
@@ -33,7 +33,7 @@ export const StyledInput = styled('input', {
   },
 
   '&:disabled': {
-    '--background': 'var(--maximeheckel-form-input-disabled)',
+    '--background': 'var(--laodeaksar-form-input-disabled)',
     cursor: 'not-allowed',
     opacity: 0.65,
     '& + label': {
@@ -60,13 +60,13 @@ export const StyledInputWrapper = styled('div', {
   width: '100%',
 
   '--shadow-hover-primary':
-    '0 2px 20px -2px var(--maximeheckel-form-input-focus)',
+    '0 2px 20px -2px var(--laodeaksar-form-input-focus)',
 
   svg: {
     display: 'block',
     position: 'absolute',
     fill: 'none',
-    stroke: 'var(--icon-color, var(--maximeheckel-form-input-border))',
+    stroke: 'var(--icon-color, var(--laodeaksar-form-input-border))',
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
     strokeWidth: 1.6,
@@ -80,12 +80,12 @@ export const StyledInputWrapper = styled('div', {
       '&:not(:disabled)': {
         '&:not(:focus)': {
           '& + svg': {
-            '--icon-color': 'var(--maximeheckel-form-input-active)',
+            '--icon-color': 'var(--laodeaksar-form-input-active)',
           },
 
           '& + button': {
             svg: {
-              '--icon-color': 'var(--maximeheckel-form-input-active)',
+              '--icon-color': 'var(--laodeaksar-form-input-active)',
             },
           },
         },
@@ -97,13 +97,13 @@ export const StyledInputWrapper = styled('div', {
     input: {
       '&:not(:disabled)': {
         '--shadow': 'var(--shadow-hover-primary)',
-        '--border-color': 'var(--maximeheckel-form-input-active)',
+        '--border-color': 'var(--laodeaksar-form-input-active)',
         '& + svg': {
-          '--icon-color': 'var(--maximeheckel-form-input-active)',
+          '--icon-color': 'var(--laodeaksar-form-input-active)',
         },
         '& + button': {
           svg: {
-            '--icon-color': 'var(--maximeheckel-form-input-active)',
+            '--icon-color': 'var(--laodeaksar-form-input-active)',
           },
         },
       },
@@ -111,8 +111,8 @@ export const StyledInputWrapper = styled('div', {
   },
 
   '&:focus-within': {
-    '--border-color': 'var(--maximeheckel-form-input-active)',
-    '--icon-color': 'var(--maximeheckel-form-input-active)',
+    '--border-color': 'var(--laodeaksar-form-input-active)',
+    '--icon-color': 'var(--laodeaksar-form-input-active)',
     '--shadow': 'var(--shadow-hover-primary)',
   },
 
@@ -150,7 +150,7 @@ export const StyledInputWrapper = styled('div', {
           padding: '0px',
 
           '&:focus-visible': {
-            boxShadow: '0 0 0 2px var(--maximeheckel-colors-brand)',
+            boxShadow: '0 0 0 2px var(--laodeaksar-colors-brand)',
           },
 
           '&:disabled': {
