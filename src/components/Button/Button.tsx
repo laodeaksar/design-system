@@ -56,8 +56,7 @@ const Button = React.forwardRef(
       ) : null}
     </StyledButton>
   );
-};
-)
+});
 
 Button.displayName = 'Button';
 
