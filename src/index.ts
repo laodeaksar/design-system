@@ -6,7 +6,7 @@ export { default as Flex } from './components/Flex';
 export { default as Tooltip } from './components/Tooltip';
 /**
 export { default as Icon } from './components/Icon';
-export { default as Test } from './components/Test';
+export { default as Test } from './components/Test';*/
 export {
   default as Text,
   EM,
@@ -17,7 +17,6 @@ export {
   H3,
   H4,
 } from './components/Typography';
-*/
 export { default as VisuallyHidden } from './components/VisuallyHidden';
 
 /** HOOKS **/
