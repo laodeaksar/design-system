@@ -102,4 +102,4 @@ export const StyledRange = styled('input', {
       '--shadow': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
     },
   },
-}
+});
