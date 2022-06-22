@@ -59,4 +59,4 @@ const useKeyboardShortcut = (
   }, [innerConfig.eventType, handler]);
 };
 
-export default useKeyboardShortcut
+export default useKeyboardShortcut;

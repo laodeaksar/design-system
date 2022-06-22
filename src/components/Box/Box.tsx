@@ -16,9 +16,9 @@ const Box = styled('div', {
     py: getVariant('space', (token) => ({ py: token })),
 
     full: {
-      true: { width: '$full' }
-    }
-  }
+      true: { width: '$full' },
+    },
+  },
 });
 
 export default Box;

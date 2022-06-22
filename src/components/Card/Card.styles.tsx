@@ -3,8 +3,7 @@ import Box from '../Box';
 
 export const CardWrapper = styled(Box, {
   position: 'relative',
-  background:
-    'var(--card-background, var(--laodeaksar-card-background-color))',
+  background: 'var(--card-background, var(--laodeaksar-card-background-color))',
   backdropFilter: 'var(--card-blur, none)',
   borderRadius: 'var(--border-radius-2)',
   boxShadow: 'var(--card-shadow)',

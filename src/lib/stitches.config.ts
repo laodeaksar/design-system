@@ -1,11 +1,21 @@
-import { createStitches, CSS as StitchesCSS, type PropertyValue } from '@stitches/react';
+import {
+  createStitches,
+  CSS as StitchesCSS,
+  type PropertyValue,
+} from '@stitches/react';
 
 import { radii } from './tokens/radii';
 import { spaces as space } from './tokens/spaces';
-import { fonts, fontSizes, fontWeights, letterSpacings, lineHeights } from './tokens/typography';
-import { media } from "./tokens/media";
-import { sizes } from "./tokens/sizes";
-import { utils } from './tokens/utils'
+import {
+  fonts,
+  fontSizes,
+  fontWeights,
+  letterSpacings,
+  lineHeights,
+} from './tokens/typography';
+import { media } from './tokens/media';
+import { sizes } from './tokens/sizes';
+import { utils } from './tokens/utils';
 import { zIndices } from './tokens/zIndices';
 
 const { config, css, getCssText, globalCss, keyframes, styled, theme } =
@@ -19,10 +29,10 @@ const { config, css, getCssText, globalCss, keyframes, styled, theme } =
       letterSpacings,
       fontWeights,
       radii,
-      zIndices
+      zIndices,
     },
     media,
-    utils
+    utils,
   });
 
 export type CSS = StitchesCSS<typeof config>;

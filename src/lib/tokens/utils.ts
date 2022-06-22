@@ -1,9 +1,6 @@
-import type { ScaleValue } from '@stitches/react'
+import type { ScaleValue } from '@stitches/react';
 
 const utils = {
-  p: (value: ScaleValue<'padding'> | string | number) => ({
-    padding: value,
-  }),
   pt: (value: ScaleValue<'paddingTop'> | string | number) => ({
     paddingTop: value,
   }),
@@ -25,9 +22,6 @@ const utils = {
     paddingBottom: value,
   }),
 
-  m: (value: ScaleValue<'margin'> | string | number) => ({
-    margin: value,
-  }),
   mt: (value: ScaleValue<'marginTop'> | string | number) => ({
     marginTop: value,
   }),
@@ -49,12 +43,16 @@ const utils = {
     marginBottom: value,
   }),
 
-  ta: (value: ScaleValue<'textAlign'> | string | number) => ({ textAlign: value }),
+  ta: (value: ScaleValue<'textAlign'> | string | number) => ({
+    textAlign: value,
+  }),
 
   fd: (value: ScaleValue<'flexDirection'> | string | number) => ({
     flexDirection: value,
   }),
-  fw: (value: ScaleValue<'flexWrap'> | string | number) => ({ flexWrap: value }),
+  fw: (value: ScaleValue<'flexWrap'> | string | number) => ({
+    flexWrap: value,
+  }),
 
   ai: (value: ScaleValue<'alignItems'> | string | number) => ({
     alignItems: value,
@@ -65,21 +63,27 @@ const utils = {
   jc: (value: ScaleValue<'justifyContent'> | string | number) => ({
     justifyContent: value,
   }),
-  as: (value: ScaleValue<'alignSelf'> | string | number) => ({ alignSelf: value }),
-  fg: (value: ScaleValue<'flexGrow'> | string | number) => ({ flexGrow: value }),
+  as: (value: ScaleValue<'alignSelf'> | string | number) => ({
+    alignSelf: value,
+  }),
+  fg: (value: ScaleValue<'flexGrow'> | string | number) => ({
+    flexGrow: value,
+  }),
   fs: (value: ScaleValue<'flexShrink'> | string | number) => ({
     flexShrink: value,
   }),
-  fb: (value: ScaleValue<'flexBasis'> | string | number) => ({ flexBasis: value }),
+  fb: (value: ScaleValue<'flexBasis'> | string | number) => ({
+    flexBasis: value,
+  }),
 
   bc: (value: ScaleValue<'backgroundColor'> | string | number) => ({
     backgroundColor: value,
   }),
   linearGradient: (value: ScaleValue<'backgroundImage'> | string | number) => ({
-    backgroundImage: `linear-gradient(${value})`
+    backgroundImage: `linear-gradient(${value})`,
   }),
   radialGradient: (value: ScaleValue<'backgroundImage'> | string | number) => ({
-    backgroundImage: `radial-gradient(${value})`
+    backgroundImage: `radial-gradient(${value})`,
   }),
 
   br: (value: ScaleValue<'borderRadius'> | string | number) => ({
@@ -98,14 +102,20 @@ const utils = {
     borderTopLeftRadius: value,
   }),
 
-  bs: (value: ScaleValue<'boxShadow'> | string | number) => ({ boxShadow: value }),
+  bs: (value: ScaleValue<'boxShadow'> | string | number) => ({
+    boxShadow: value,
+  }),
 
   lh: (value: ScaleValue<'lineHeight'> | string | number) => ({
     lineHeight: value,
   }),
 
-  ox: (value: ScaleValue<'overflowX'> | string | number) => ({ overflowX: value }),
-  oy: (value: ScaleValue<'overflowY'> | string | number) => ({ overflowY: value }),
+  ox: (value: ScaleValue<'overflowX'> | string | number) => ({
+    overflowX: value,
+  }),
+  oy: (value: ScaleValue<'overflowY'> | string | number) => ({
+    overflowY: value,
+  }),
 
   pe: (value: ScaleValue<'pointerEvents'> | string | number) => ({
     pointerEvents: value,
@@ -136,6 +146,6 @@ const utils = {
     WebkitBackgroundClip: value,
     backgroundClip: value,
   }),
-}
+};
 
-export { utils }
+export { utils };

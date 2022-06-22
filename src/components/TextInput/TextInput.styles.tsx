@@ -17,8 +17,7 @@ export const StyledInput = styled('input', {
   color: 'var(--laodeaksar-colors-typeface-primary)',
 
   borderRadius: 'var(--border-radius-1)',
-  border:
-    '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
+  border: '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
   background: 'var(--background, var(--laodeaksar-form-input-background))',
 
   transition: 'border-color 0.3s, box-shadow 0.3s',

@@ -17,14 +17,12 @@ export const StyledRadio = styled('input', {
 
   // TODO: Custom token "round"?
   borderRadius: '50%',
-  border:
-    '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
+  border: '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
   background: 'var(--background, var(--laodeaksar-form-input-background))',
   boxShadow: 'var(--shadow, none)',
   transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
 
-  '--shadow-hover-primary':
-    '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+  '--shadow-hover-primary': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
 
   '&:after': {
     content: '',
@@ -77,4 +75,4 @@ export const StyledRadio = styled('input', {
     '--border-color': 'var(--laodeaksar-form-input-active)',
     '--shadow': 'var(--shadow-hover-primary)',
   },
-})
+});

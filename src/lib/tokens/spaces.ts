@@ -15,7 +15,7 @@ const spaces = {
   13: '128px',
   14: '256px',
   15: '512px',
-  auto: 'auto'
+  auto: 'auto',
 };
 
-export { spaces }
+export { spaces };

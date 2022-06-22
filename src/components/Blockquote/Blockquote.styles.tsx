@@ -26,7 +26,7 @@ export const BlockquoteContent = styled(Box, {
   color: 'var(--laodeaksar-colors-typeface-primary)',
 
   p: {
-    marginBottom: 0,
+    marginBottom: '0',
     fontSize: 'var(--font-size-6) !important',
     lineHeight: '1.6818 !important',
     fontWeight: 'var(--font-weight-2) !important',

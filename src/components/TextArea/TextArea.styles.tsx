@@ -17,8 +17,7 @@ export const StyledTextArea = styled('textarea', {
   color: 'var(--laodeaksar-colors-typeface-primary)',
 
   borderRadius: 'var(--border-radius-1)',
-  border:
-    '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
+  border: '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
   background: 'var(--background, var(--laodeaksar-form-input-background))',
   cursor: 'var(--cursor, initial)',
   opacity: 'var(--opacity, 1)',

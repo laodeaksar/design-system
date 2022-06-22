@@ -15,21 +15,21 @@ export const StyledAnchor = styled('a', {
 
   '&:focus': {
     $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
-    '--hover-translation-distance': 'var(--arrow-translation, 0)'
+    '--hover-translation-distance': 'var(--arrow-translation, 0)',
   },
 
   '@hover': {
     '&:hover': {
       $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
-      '--hover-translation-distance': 'var(--arrow-translation, 0)'
-    }
+      '--hover-translation-distance': 'var(--arrow-translation, 0)',
+    },
   },
 
   variants: {
     discreet: {
       true: {
-        $$color: 'var(--laodeaksar-colors-typeface-tertiary)'
-      }
+        $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
+      },
     },
     arrow: {
       left: {
@@ -49,8 +49,8 @@ export const StyledAnchor = styled('a', {
           marginRight: '0.18em',
           transition: 'transform 0.4s ease',
           transform:
-            'translateY(-1px) translateX(var(--hover-translation-distance, 0px)) scaleX(var(--arrow-direction, 1))'
-        }
+            'translateY(-1px) translateX(var(--hover-translation-distance, 0px)) scaleX(var(--arrow-direction, 1))',
+        },
       },
       right: {
         '--size': '1.1em',
@@ -69,9 +69,9 @@ export const StyledAnchor = styled('a', {
           marginLeft: '0.18em',
           transition: 'transform 0.4s ease',
           transform:
-            'translateY(-2px) translateX(var(--hover-translation-distance, 0px)) scaleX(var(--arrow-direction, 1))'
-        }
-      }
+            'translateY(-2px) translateX(var(--hover-translation-distance, 0px)) scaleX(var(--arrow-direction, 1))',
+        },
+      },
     },
 
     favicon: {
@@ -87,9 +87,9 @@ export const StyledAnchor = styled('a', {
           WebkitMaskRepeat: 'no-repeat',
           backgroundColor: 'currentColor',
           marginRight: '0.18em',
-          transform: 'translateY(-2px)'
-        }
-      }
+          transform: 'translateY(-2px)',
+        },
+      },
     },
 
     underline: {
@@ -100,15 +100,15 @@ export const StyledAnchor = styled('a', {
         '--hover-color': 'unset',
 
         '&:focus': {
-          '--border-color': 'hsl(var(--palette-blue-40))'
+          '--border-color': 'hsl(var(--palette-blue-40))',
         },
 
         '@hover': {
           '&:hover': {
-            '--border-color': 'hsl(var(--palette-blue-40))'
-          }
-        }
-      }
+            '--border-color': 'hsl(var(--palette-blue-40))',
+          },
+        },
+      },
     },
     tags: {
       true: {
@@ -124,9 +124,9 @@ export const StyledAnchor = styled('a', {
           WebkitMaskRepeat: 'no-repeat',
           backgroundColor: 'currentColor',
           marginRight: '0.18em',
-          transform: 'translateY(-2px)'
-        }
-      }
-    }
-  }
+          transform: 'translateY(-2px)',
+        },
+      },
+    },
+  },
 });

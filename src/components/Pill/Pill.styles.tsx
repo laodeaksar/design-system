@@ -56,4 +56,4 @@ export const StyledPill = styled('span', {
       },
     },
   ],
-})
+});

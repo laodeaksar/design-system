@@ -39,7 +39,7 @@ export {
   default as useTheme,
   ThemeContext,
   ThemeProvider,
-} from './hooks/useTheme'
+} from './hooks/useTheme';
 
 /** LIB **/
 export {
