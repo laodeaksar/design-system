@@ -1,9 +1,4 @@
-laodeaksar.eu.org/core/components/TextInput/Styles.tsx
-@laodeaksarr
-laodeaksarr edit style and Link
- 1 contributor
-Executable File  186 lines (155 sloc)  3.73 KB
-import { styled } from '~/lib/stitches.config';
+import { styled } from '@/lib/stitches.config';
 
 export const StyledInput = styled('input', {
   $$padding: '8px 40px 8px 16px',
