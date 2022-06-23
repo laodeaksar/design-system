@@ -36,7 +36,7 @@ const Button = React.forwardRef(
         {startIcon ? (
           <Flex
             css={{
-              marginRight: 'var(--space-2)',
+              marginRight: '$2',
             }}
           >
             {startIcon}
@@ -46,7 +46,7 @@ const Button = React.forwardRef(
         {endIcon ? (
           <Flex
             css={{
-              marginLeft: 'var(--space-2)',
+              marginLeft: '$2',
             }}
           >
             {endIcon}

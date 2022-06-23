@@ -18,27 +18,27 @@ export const CardWrapper = styled(Box, {
     glass: {
       true: {
         $$background: 'var(--laodeaksar-foreground)',
-        $$blur: 'blur(6px)'
-      }
+        $$blur: 'blur(6px)',
+      },
     },
     depth: {
       0: {
-        $$shadow: Shadows[0]
+        $$shadow: Shadows[0],
       },
       1: {
-        $$shadow: Shadows[1]
+        $$shadow: Shadows[1],
       },
       2: {
-        $$shadow: Shadows[2]
+        $$shadow: Shadows[2],
       },
       3: {
-        $$shadow: Shadows[3]
-      }
-    }
+        $$shadow: Shadows[3],
+      },
+    },
   },
   defaultVariants: {
-    depth: 1
-  }
+    depth: 1,
+  },
 });
 
 export const CardHeader = styled('div', {
@@ -51,7 +51,7 @@ export const CardHeader = styled('div', {
   color: 'var(--laodeaksar-colors-typeface-tertiary)',
   fontWeight: '$3',
   fontSize: '$4',
-  borderBottom: '1px solid var(--laodeaksar-colors-emphasis)'
+  borderBottom: '1px solid var(--laodeaksar-colors-emphasis)',
 });
 
 CardHeader.displayName = 'CardHeader';
@@ -66,8 +66,8 @@ export const CardBody = styled('div', {
       true: {
         radialGradient: 'var(--laodeaksar-border-color) 1px, transparent 0',
         backgroundPosition: '50% center',
-        backgroundSize: '20px 20px'
-      }
-    }
-  }
+        backgroundSize: '20px 20px',
+      },
+    },
+  },
 });

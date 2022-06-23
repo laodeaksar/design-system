@@ -4,6 +4,9 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
+        "paths":{
+            "@/*": ["src/*"]
+        },
         "declaration": true,
         "declarationDir": "dist/types",
         "downlevelIteration": true,

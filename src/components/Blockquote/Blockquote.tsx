@@ -1,13 +1,14 @@
-import React from 'react';
-import { BlockquoteContent, BlockquoteWrapper } from './Blockquote.styles';
+import { StyledBlockquote } from './Blockquote.styles';
+import QuotationMark from './Blockquote.icon';
 
 const Blockquote: React.FC = (props) => {
   const { children, ...rest } = props;
 
   return (
-    <BlockquoteWrapper {...rest}>
-      <BlockquoteContent>{children}</BlockquoteContent>
-    </BlockquoteWrapper>
+    <StyledBlockquote {...rest}>
+      <QuotationMark className="quotation" />
+      {children}
+    </StyledBlockquote>
   );
 };
 

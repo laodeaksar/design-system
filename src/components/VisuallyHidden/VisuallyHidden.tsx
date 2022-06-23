@@ -23,4 +23,5 @@ const VisuallyHidden = ({
     {props.children}
   </Component>
 );
+
 export default VisuallyHidden;

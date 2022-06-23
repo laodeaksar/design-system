@@ -1,35 +1,47 @@
-import { styled } from 'src/lib/stitches.config';
-import Box from '../Box';
+import { styled } from '@/lib/stitches.config';
 
-export const BlockquoteWrapper = styled('blockquote', {
-  /**
-   * Make it fullbleed!
-   */
-  margin: '0 -50vw 2.25rem -50vw',
+export const StyledBlockquote = styled('blockquote', {
+  fontWeight: '$2',
+  lineHeight: '$relaxed',
+  letterSpacing: '$tight',
+  fontSize: '$4',
+  color: 'var(--laodeaksar-colors-typeface-secondary)',
   position: 'relative',
-  left: '50%',
-  right: '50%',
-  width: '100vw',
+  margin: '0 0 24px 0',
 
-  paddingTop: '40px',
-  paddingBottom: '40px',
-  background: 'var(--laodeaksar-colors-emphasis)',
-  backdropFilter: 'blur(6px)',
-});
-
-export const BlockquoteContent = styled(Box, {
-  maxWidth: '1020px',
-  padding: '0 var(--space-2)',
-  textAlign: 'center',
-  width: '100%',
-  margin: '0 auto',
-  color: 'var(--laodeaksar-colors-typeface-primary)',
+  '@lg': {
+    fontSize: '$6',
+  },
 
   p: {
-    marginBottom: '0',
-    fontSize: 'var(--font-size-6) !important',
-    lineHeight: '1.6818 !important',
-    fontWeight: 'var(--font-weight-2) !important',
-    fontStyle: 'italic',
+    marginBottom: 0,
+  },
+
+  cite: {
+    letterSpacing: '$normal',
+    fontSize: '$2',
+    wordBreak: 'break-word',
+    breakBefore: 'auto',
+
+    '@lg': {
+      fontSize: '$3',
+    },
+  },
+
+  '.quotation': {
+    opacity: 0.1,
+    size: 80,
+    position: 'absolute',
+    left: -15,
+    top: -25,
+
+    '@md': {
+      left: -85,
+      top: -15,
+    },
+
+    '@lg': {
+      top: 0,
+    },
   },
 });

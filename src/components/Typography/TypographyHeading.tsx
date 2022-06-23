@@ -1,5 +1,5 @@
-import { CSS } from 'src/lib/stitches.config';
 import React from 'react';
+import { CSS } from '@/lib/stitches.config';
 import { DEFAULT_TAG } from './Typography.constants';
 import Text from './TypographyText';
 import {
@@ -24,25 +24,25 @@ const Heading = React.forwardRef<
 
   const headingCSS: Record<HeadingSizeVariants, CSS> = {
     1: {
-      fontWeight: 'var(--font-weight-4)',
+      fontWeight: '$4',
       lineHeight: '1.6818',
       letterSpacing: '0px',
       marginBottom: '1.45rem',
     },
     2: {
-      fontWeight: 'var(--font-weight-4)',
+      fontWeight: '$4',
       lineHeight: '1.6818',
       letterSpacing: '0px',
       marginBottom: '1.45rem',
     },
     3: {
-      fontWeight: 'var(--font-weight-4)',
+      fontWeight: '$4',
       lineHeight: '1.6818',
       letterSpacing: '0px',
       marginBottom: '1.45rem',
     },
     4: {
-      fontWeight: 'var(--font-weight-4)',
+      fontWeight: '$4',
       lineHeight: '1.6818',
       letterSpacing: '0px',
       marginBottom: '1.45rem',

@@ -7,14 +7,14 @@ import Card from '.';
 
 const rotateGradient = keyframes({
   '0%': {
-    transform: 'rotate(0deg)'
+    transform: 'rotate(0deg)',
   },
   '50%': {
-    transform: 'rotate(135deg)'
+    transform: 'rotate(135deg)',
   },
   '100%': {
-    transform: 'rotate(0deg)'
-  }
+    transform: 'rotate(0deg)',
+  },
 });
 
 export const Gradients: React.FC = (props) => (
@@ -26,7 +26,7 @@ export const Gradients: React.FC = (props) => (
       height: '250px',
       position: 'relative',
       overflow: 'hidden',
-      userSelect: 'none'
+      userSelect: 'none',
     }}
   >
     <Box
@@ -39,7 +39,7 @@ export const Gradients: React.FC = (props) => (
 
         animation: `${rotateGradient} 10s infinite`,
 
-        '@motion': { display: 'none', animation: 'none' }
+        '@motion': { display: 'none', animation: 'none' },
       }}
     >
       <Box
@@ -50,7 +50,7 @@ export const Gradients: React.FC = (props) => (
           left: '-10px',
           position: 'absolute',
           top: '-10px',
-          transformOrigin: 'center center'
+          transformOrigin: 'center center',
         }}
       />
     </Box>
@@ -61,7 +61,7 @@ export const Gradients: React.FC = (props) => (
         css={{
           marginTop: '50%',
           transform: 'translateY(-50%)',
-          height: '$full'
+          height: '$full',
         }}
       >
         {props.children}

@@ -12,6 +12,9 @@ const Twitter =
 const Github =
   'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSJ2YXIoLS1zaXplLCAxLjA1ZW0pIiBoZWlnaHQ9InZhcigtLXNpemUsIDEuMDVlbSkiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWdpdGh1YiI+PHBhdGggZD0iTTkgMTljLTUgMS41LTUtMi41LTctM20xNCA2di0zLjg3YTMuMzcgMy4zNyAwIDAgMC0uOTQtMi42MWMzLjE0LS4zNSA2LjQ0LTEuNTQgNi40NC03QTUuNDQgNS40NCAwIDAgMCAyMCA0Ljc3IDUuMDcgNS4wNyAwIDAgMCAxOS45MSAxUzE4LjczLjY1IDE2IDIuNDhhMTMuMzggMTMuMzggMCAwIDAtNyAwQzYuMjcuNjUgNS4wOSAxIDUuMDkgMUE1LjA3IDUuMDcgMCAwIDAgNSA0Ljc3YTUuNDQgNS40NCAwIDAgMC0xLjUgMy43OGMwIDUuNDIgMy4zIDYuNjEgNi40NCA3QTMuMzcgMy4zNyAwIDAgMCA5IDE4LjEzVjIyIj48L3BhdGg+PC9zdmc+';
 
+const Hastag =
+  'data:image/svg+xml;base64,PHN2ZyAKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAogIGhlaWdodD0idmFyKC0tc2l6ZSwgMS4wNWVtKSIgCiAgd2lkdGg9InZhcigtLXNpemUsIDEuMDVlbSkiIAogIGZpbGw9Im5vbmUiIAogIHZpZXdCb3g9IjAgMCAyNCAyNCIgCiAgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIAogIHN0cm9rZVdpZHRoPSIyIgo+CiAgPHBhdGgKICAgIHN0cm9rZUxpbmVjYXA9InJvdW5kIiAKICAgIHN0cm9rZUxpbmVqb2luPSJyb3VuZCIKICAgIGQ9Ik03IDIwbDQtMTZtMiAxNmw0LTE2TTYgOWgxNE00IDE1aDE0IgogIC8+Cjwvc3ZnPgo=';
+
 export const getIconString = (
   href?: string,
   arrow?: ArrowPosition
@@ -23,6 +26,8 @@ export const getIconString = (
       return Twitter;
     case href && href.includes('github.com'):
       return Github;
+    case href && href.includes('/tags'):
+      return Hastag;
     default:
       // Improve: Add default link icon here
       return null;

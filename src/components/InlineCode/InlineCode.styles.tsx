@@ -11,5 +11,5 @@ export const StyledInlineCode = styled('code', {
   fontWeight: '$2 !important',
   wordBreak: 'break-word',
   border: '1px solid var(--laodeaksar-border-color)',
-  boxShadow: Shadows[1]
+  boxShadow: Shadows[1],
 });

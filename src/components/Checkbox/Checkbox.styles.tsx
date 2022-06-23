@@ -43,7 +43,7 @@ export const StyledCheckbox = styled('input', {
     borderLeft: '0',
     left: '8px',
     top: '5px',
-    transform: 'rotate($$rotation)'
+    transform: 'rotate($$rotation)',
   },
 
   '&:checked': {
@@ -54,35 +54,35 @@ export const StyledCheckbox = styled('input', {
     $$dte: 'cubic-bezier(0.2, 0.85, 0.32, 1.2)',
     $$dtd: '0.1s',
     $$opacity: '1',
-    $$rotation: '43deg'
+    $$rotation: '43deg',
   },
 
   '&:disabled': {
     $$background: 'var(--laodeaksar-form-input-disabled)',
-    
+
     cursor: 'not-allowed',
     opacity: '0.65',
 
     '&:checked': {
-      $$border: 'var(--laodeaksar-form-input-border)'
+      $$border: 'var(--laodeaksar-form-input-border)',
     },
 
     '& + label': {
-      cursor: 'not-allowed'
-    }
+      cursor: 'not-allowed',
+    },
   },
 
   '&:hover': {
     '&:not(:disabled)': {
       '&:not(:checked)': {
-        $$border: 'var(--laodeaksar-form-input-active)'
+        $$border: 'var(--laodeaksar-form-input-active)',
       },
-      $$shadow: '$$shadow-hover-primary'
-    }
+      $$shadow: '$$shadow-hover-primary',
+    },
   },
 
   '&:focus-visible': {
     $$border: 'var(--laodeaksar-form-input-active)',
-    $$shadow: '$$shadow-hover-primary'
-  }
+    $$shadow: '$$shadow-hover-primary',
+  },
 });

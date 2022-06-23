@@ -1,4 +1,4 @@
-import { styled } from 'src/lib/stitches.config';
+import { styled } from '@/lib/stitches.config';
 
 export const StyledAnchor = styled('a', {
   $$color: 'var(--laodeaksar-colors-brand)',
@@ -110,7 +110,8 @@ export const StyledAnchor = styled('a', {
         },
       },
     },
-    tags: {
+
+    hastag: {
       true: {
         '--size': '1.1em',
         border: '1px solid currentColor',

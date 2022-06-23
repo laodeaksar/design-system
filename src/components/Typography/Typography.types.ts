@@ -1,4 +1,4 @@
-import { CSS, VariantProps } from '../../lib/stitches.config';
+import { CSS, VariantProps } from '@/lib/stitches.config';
 import { DEFAULT_TAG } from './Typography.constants';
 import Text from './TypographyText';
 

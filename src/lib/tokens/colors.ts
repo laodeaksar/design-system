@@ -1,4 +1,4 @@
-export const palette = {
+const palette = {
   /* Gray scale */
   '--base-hue-gray': '223',
   '--base-gray': 'var(--base-hue-gray), 15%',
@@ -32,6 +32,7 @@ export const palette = {
   '--palette-gray-95': 'var(--base-gray), 5%',
   '--palette-gray-98': 'var(--base-gray), 2%',
   '--palette-gray-100': 'var(--base-gray), 0%',
+
   /* Blue scale */
   '--base-hue': '222',
   '--base-saturation': '89',
@@ -57,6 +58,7 @@ export const palette = {
   '--palette-blue-85': 'var(--base-blue), 15%',
   '--palette-blue-90': 'var(--base-blue), 10%',
   '--palette-blue-95': 'var(--base-blue), 5%',
+
   /* Red scale */
   '--base-red': '0, 95%',
   '--palette-red-05': 'var(--base-red), 95%',
@@ -78,6 +80,7 @@ export const palette = {
   '--palette-red-85': 'var(--base-red), 15%',
   '--palette-red-90': 'var(--base-red), 10%',
   '--palette-red-95': 'var(--base-red), 5%',
+
   /* Orange scale */
   '--base-orange': '42, 100%',
   '--palette-orange-05': 'var(--base-orange), 95%',
@@ -99,6 +102,7 @@ export const palette = {
   '--palette-orange-85': 'var(--base-orange), 15%',
   '--palette-orange-90': 'var(--base-orange), 10%',
   '--palette-orange-95': 'var(--base-orange), 5%',
+
   /* Green scale */
   '--base-green': '160, 100%',
   '--palette-green-05': 'var(--base-green), 95%',
@@ -120,6 +124,7 @@ export const palette = {
   '--palette-green-85': 'var(--base-green), 15%',
   '--palette-green-90': 'var(--base-green), 10%',
   '--palette-green-95': 'var(--base-green), 5%',
+
   /* Pink scale */
   '--base-pink': '330, 98%',
   '--palette-pink-05': 'var(--base-pink), 95%',
@@ -141,6 +146,7 @@ export const palette = {
   '--palette-pink-85': 'var(--base-pink), 15%',
   '--palette-pink-90': 'var(--base-pink), 10%',
   '--palette-pink-95': 'var(--base-pink), 5%',
+
   /* Indigo scale */
   '--base-indigo': '239, 84%',
   '--palette-indigo-05': 'var(--base-indigo), 95%',
@@ -163,3 +169,5 @@ export const palette = {
   '--palette-indigo-90': 'var(--base-indigo), 10%',
   '--palette-indigo-95': 'var(--base-indigo), 5%',
 };
+
+export { palette };

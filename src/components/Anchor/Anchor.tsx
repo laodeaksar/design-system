@@ -5,8 +5,16 @@ import { getIconString } from './utils';
 
 const Anchor = React.forwardRef(
   (props: AnchorProps, ref: React.Ref<HTMLAnchorElement>) => {
-    const { children, href, arrow, underline, favicon, discreet, ...rest } =
-      props;
+    const {
+      children,
+      href,
+      hastag,
+      arrow,
+      underline,
+      favicon,
+      discreet,
+      ...rest
+    } = props;
 
     const icon = getIconString(href, arrow);
 
@@ -19,6 +27,7 @@ const Anchor = React.forwardRef(
         discreet={discreet}
         favicon={favicon}
         href={href}
+        hastag={hastag}
         underline={underline}
         ref={ref}
         {...rest}

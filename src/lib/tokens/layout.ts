@@ -1,4 +1,4 @@
-export const grid = {
+const grid = {
   '--default-gutter': '1fr',
   '--max-width-medium': '880px',
   '--max-width-small': '700px',
@@ -7,3 +7,5 @@ export const grid = {
   '--layout-small':
     'var(--default-gutter) minmax(auto, var(--max-width-small)) var(--default-gutter)',
 };
+
+export { grid };

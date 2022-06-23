@@ -1,5 +1,5 @@
-import { styled } from 'src/lib/stitches.config';
 import React from 'react';
+import { getVariant, styled } from '@/lib/stitches.config';
 import { EMProps, StrongProps } from './Typography.types';
 
 /**
@@ -27,7 +27,7 @@ const Text = styled('span', {
     outline: {
       true: {
         color: 'transparent !important',
-        WebkitTextStrokeColor: 'var(--maximeheckel-colors-typeface-primary)',
+        WebkitTextStrokeColor: 'var(--laodeaksar-colors-typeface-primary)',
         WebkitTextStrokeWidth: '1px',
       },
     },
@@ -37,43 +37,8 @@ const Text = styled('span', {
         lineHeight: 1.9,
       },
     },
-    family: {
-      default: {
-        fontFamily: 'inherit',
-      },
-      display: {
-        fontFamily: 'var(--font-display)',
-      },
-      mono: {
-        fontFamily: 'var(--font-mono)',
-      },
-      numeric: {
-        fontFamily: 'var(--font-numeric)',
-      },
-    },
-    size: {
-      1: {
-        fontSize: 'var(--font-size-1)',
-      },
-      2: {
-        fontSize: 'var(--font-size-2)',
-      },
-      3: {
-        fontSize: 'var(--font-size-3)',
-      },
-      4: {
-        fontSize: 'var(--font-size-4)',
-      },
-      5: {
-        fontSize: 'var(--font-size-5)',
-      },
-      6: {
-        fontSize: 'var(--font-size-6)',
-      },
-      7: {
-        fontSize: 'var(--font-size-7)',
-      },
-    },
+    family: getVariant('fonts', (token) => ({fontFamily: token})),
+    size:  getVariant('space', (token) => ({ fontSize: token })),
     truncate: {
       true: {
         overflow: 'hidden',
@@ -83,33 +48,27 @@ const Text = styled('span', {
     },
     variant: {
       default: { color: 'currentColor' },
-      primary: { color: 'var(--maximeheckel-colors-typeface-primary)' },
-      secondary: { color: 'var(--maximeheckel-colors-typeface-secondary)' },
-      tertiary: { color: 'var(--maximeheckel-colors-typeface-tertiary)' },
-      info: { color: 'var(--maximeheckel-colors-brand)' },
-      success: { color: 'var(--maximeheckel-colors-success)' },
-      warning: { color: 'var(--maximeheckel-colors-warning)' },
-      danger: { color: 'var(--maximeheckel-colors-danger)' },
+      primary: { color: 'var(--laodeaksar-colors-typeface-primary)' },
+      secondary: { color: 'var(--laodeaksar-colors-typeface-secondary)' },
+      tertiary: { color: 'var(--laodeaksar-colors-typeface-tertiary)' },
+      info: { color: 'var(--laodeaksar-colors-brand)' },
+      success: { color: 'var(--laodeaksar-colors-success)' },
+      warning: { color: 'var(--laodeaksar-colors-warning)' },
+      danger: { color: 'var(--laodeaksar-colors-danger)' },
     },
-    weight: {
-      1: {
-        fontWeight: 'var(--font-weight-1)',
-      },
-      2: {
-        fontWeight: 'var(--font-weight-2)',
-      },
-      3: {
-        fontWeight: 'var(--font-weight-3)',
-      },
-      4: {
-        fontWeight: 'var(--font-weight-4)',
-      },
-    },
+    weight: getVariant('space', (token) => ({ fontWeight: token })),
     gradient: {
       true: {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
       },
+    ellipsis: {
+      true: {
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap'
+      }
+    }
     },
   },
   defaultVariants: {
