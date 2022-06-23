@@ -37,8 +37,8 @@ const Text = styled('span', {
         lineHeight: 1.9,
       },
     },
-    family: getVariant('fonts', (token) => ({fontFamily: token})),
-    size:  getVariant('space', (token) => ({ fontSize: token })),
+    family: getVariant('fonts', (token) => ({ fontFamily: token })),
+    size: getVariant('space', (token) => ({ fontSize: token })),
     truncate: {
       true: {
         overflow: 'hidden',
@@ -62,13 +62,13 @@ const Text = styled('span', {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
       },
-    ellipsis: {
-      true: {
-        textOverflow: 'ellipsis',
-        overflow: 'hidden',
-        whiteSpace: 'nowrap'
-      }
-    }
+      ellipsis: {
+        true: {
+          textOverflow: 'ellipsis',
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+        },
+      },
     },
   },
   defaultVariants: {
