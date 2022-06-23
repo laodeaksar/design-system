@@ -1,35 +1,41 @@
-import { styled } from 'src/lib/stitches.config';
+import { styled } from '@/lib/stitches.config';
 
 export const StyledCheckbox = styled('input', {
-  WebkitAppearance: 'none',
-  MozAppearance: 'none',
+  $$border: 'var(--laodeaksar-form-input-border)',
+  $$background: 'var(--laodeaksar-form-input-background)',
+  $$shadow: 'none',
 
-  flexShrink: 0,
+  appearance: 'none',
 
-  height: '24px',
-  width: '24px',
+  flexShrink: '0',
+  size: '24px',
 
   outline: 'none',
   display: 'inline-block',
   position: 'relative',
-  margin: 0,
+  margin: '0',
   cursor: 'pointer',
 
-  borderRadius: 'var(--border-radius-1)',
-  border: '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
-  background: 'var(--background, var(--laodeaksar-form-input-background))',
-  boxShadow: 'var(--shadow, none)',
+  borderRadius: '$1',
+  border: '1px solid $$border',
+  background: '$$background',
+  boxShadow: '$$shadow',
   transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
 
-  '--shadow-hover-primary': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+  '$$shadow-hover-primary': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+
+  $$do: '0.2s',
+  $$dt: '0.3s',
+  $$dte: 'ease',
+  $$dtd: '0s',
+  $$rotation: '20deg',
 
   '&:after': {
-    content: '',
+    content: '""',
     display: 'block',
     position: 'absolute',
-    opacity: 'var(--opacity, 0)',
-    transition:
-      'transform var(--d-t, 0.3s) var(--d-t-e, ease) var(--d-t-d, 0s), opacity var(--d-o, 0.2s)',
+    opacity: '$$opacity',
+    transition: 'transform $$dt $$dte $$dtd, opacity $$do',
     width: '6px',
     height: '10px',
     border: '2px solid var(--laodeaksar-form-input-background)',
@@ -37,43 +43,46 @@ export const StyledCheckbox = styled('input', {
     borderLeft: '0',
     left: '8px',
     top: '5px',
-    transform: 'rotate(var(--rotation, 20deg))',
+    transform: 'rotate($$rotation)'
   },
 
   '&:checked': {
-    '--background': 'var(--laodeaksar-form-input-active)',
-    '--border-color': 'var(--laodeaksar-form-input-active)',
-    '--d-o': '0.3s',
-    '--d-t': '0.6s',
-    '--d-t-e': 'cubic-bezier(0.2, 0.85, 0.32, 1.2)',
-    '--d-t-d': '0.1s',
-    '--opacity': '1',
-    '--rotation': '43deg',
+    $$background: 'var(--laodeaksar-form-input-active)',
+    $$border: 'var(--laodeaksar-form-input-active)',
+    $$do: '0.3s',
+    $$dt: '0.6s',
+    $$dte: 'cubic-bezier(0.2, 0.85, 0.32, 1.2)',
+    $$dtd: '0.1s',
+    $$opacity: '1',
+    $$rotation: '43deg'
   },
 
   '&:disabled': {
-    '--background': 'var(--laodeaksar-form-input-disabled)',
+    $$background: 'var(--laodeaksar-form-input-disabled)',
+    
     cursor: 'not-allowed',
     opacity: '0.65',
+
     '&:checked': {
-      '--border-color': 'var(--laodeaksar-form-input-border)',
+      $$border: 'var(--laodeaksar-form-input-border)'
     },
+
     '& + label': {
-      cursor: 'not-allowed',
-    },
+      cursor: 'not-allowed'
+    }
   },
 
   '&:hover': {
     '&:not(:disabled)': {
       '&:not(:checked)': {
-        '--border-color': 'var(--laodeaksar-form-input-active)',
+        $$border: 'var(--laodeaksar-form-input-active)'
       },
-      '--shadow': 'var(--shadow-hover-primary)',
-    },
+      $$shadow: '$$shadow-hover-primary'
+    }
   },
 
   '&:focus-visible': {
-    '--border-color': 'var(--laodeaksar-form-input-active)',
-    '--shadow': 'var(--shadow-hover-primary)',
-  },
+    $$border: 'var(--laodeaksar-form-input-active)',
+    $$shadow: '$$shadow-hover-primary'
+  }
 });
