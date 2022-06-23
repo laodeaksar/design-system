@@ -1,54 +1,57 @@
-import { Shadows, styled } from 'src/lib/stitches.config';
-import Box from '../Box';
+import { getVariant, Shadows, styled } from '@/lib/stitches.config';
+
+import Box from '@/components/Box';
 
 export const CardWrapper = styled(Box, {
+  $$background: 'var(--laodeaksar-card-background-color)',
+  $$blur: 'none',
+
   position: 'relative',
-  background: 'var(--card-background, var(--laodeaksar-card-background-color))',
-  backdropFilter: 'var(--card-blur, none)',
-  borderRadius: 'var(--border-radius-2)',
-  boxShadow: 'var(--card-shadow)',
+  background: '$$background',
+  backdropFilter: '$$blur',
+  borderRadius: '$2',
+  boxShadow: '$$shadow',
   border: '1px solid var(--laodeaksar-border-color)',
   overflow: 'hidden',
 
   variants: {
     glass: {
       true: {
-        '--card-background': 'var(--laodeaksar-colors-foreground)',
-        '--card-blur': 'blur(6px)',
-      },
+        $$background: 'var(--laodeaksar-foreground)',
+        $$blur: 'blur(6px)'
+      }
     },
     depth: {
       0: {
-        '--card-shadow': Shadows[0],
+        $$shadow: Shadows[0]
       },
       1: {
-        '--card-shadow': Shadows[1],
+        $$shadow: Shadows[1]
       },
       2: {
-        '--card-shadow': Shadows[2],
+        $$shadow: Shadows[2]
       },
       3: {
-        '--card-shadow': Shadows[3],
-      },
-    },
+        $$shadow: Shadows[3]
+      }
+    }
   },
   defaultVariants: {
-    depth: 1,
-  },
+    depth: 1
+  }
 });
 
 export const CardHeader = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  borderTopLeftRadius: 'var(--border-radius-1)',
-  borderTopRightRadius: 'var(--border-radius-1)',
   minHeight: '50px',
   padding: '0px 24px',
+  btr: '$1',
   color: 'var(--laodeaksar-colors-typeface-tertiary)',
-  fontWeight: 500,
-  fontSize: 'var(--font-size-2)',
-  borderBottom: '1px solid var(--laodeaksar-border-color)',
+  fontWeight: '$3',
+  fontSize: '$4',
+  borderBottom: '1px solid var(--laodeaksar-colors-emphasis)'
 });
 
 CardHeader.displayName = 'CardHeader';
@@ -61,11 +64,10 @@ export const CardBody = styled('div', {
   variants: {
     dotMatrix: {
       true: {
-        backgroundImage:
-          'radial-gradient(var(--laodeaksar-border-color) 1px, transparent 0)',
+        radialGradient: 'var(--laodeaksar-border-color) 1px, transparent 0',
         backgroundPosition: '50% center',
-        backgroundSize: '20px 20px',
-      },
-    },
-  },
+        backgroundSize: '20px 20px'
+      }
+    }
+  }
 });
