@@ -1,10 +1,13 @@
-import { Shadows, styled } from 'src/lib/stitches.config';
+import { Shadows, styled } from '@/lib/stitches.config';
 
 export const StyledRange = styled('input', {
-  WebkitAppearance: 'none',
-  MozAppearance: 'none',
+  $$shadow: Shadows[2],
+  $$border: 'var(--laodeaksar-form-input-border)',
+  $$track: 'transparent',
 
-  width: '100%',
+  appearance: 'none',
+
+  width: '$full',
   outline: 'none',
   position: 'relative',
   display: 'block',
@@ -15,47 +18,43 @@ export const StyledRange = styled('input', {
 
   '&::-moz-range-track': {
     MozAppearance: 'none',
-    width: '100%',
+    width: '$full',
     height: '4px',
     border: 'none',
-    borderRadius: 'var(--border-radius-0)',
-    background: 'var(--track-background, transparent)',
+    borderRadius: '$0',
+    background: '$$track',
   },
 
   '&::-webkit-slider-runnable-track': {
     WebkitAppearance: 'none',
-    width: '100%',
+    width: '$full',
     height: '4px',
     border: 'none',
-    borderRadius: 'var(--border-radius-0)',
-    background: 'var(--track-background, transparent)',
+    borderRadius: '$0',
+    background: '$$track',
   },
 
   '&::-moz-range-thumb': {
     MozAppearance: 'none',
-    height: '24px',
-    width: '24px',
-    borderRadius: '50%',
+    size: '$5',
+    borderRadius: '$round',
     background: 'var(--laodeaksar-form-input-background)',
-    border:
-      '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
+    border: '1px solid $$border',
     marginTop: '-10px',
     cursor: 'grab',
-    boxShadow: `var(--shadow, ${Shadows[2]})`,
+    boxShadow: '$$shadow',
     transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
   },
 
-  ' &::-webkit-slider-thumb': {
+  '&::-webkit-slider-thumb': {
     WebkitAppearance: 'none',
-    height: '24px',
-    width: '24px',
-    borderRadius: '50%',
+    size: '$5',
+    borderRadius: '$round',
     background: 'var(--laodeaksar-form-input-background)',
-    border:
-      '1px solid var(--border-color, var(--laodeaksar-form-input-border))',
+    border: '1px solid $$border',
     marginTop: '-10px',
     cursor: 'grab',
-    boxShadow: `var(--shadow, ${Shadows[2]})`,
+    boxShadow: '$$shadow',
     transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
   },
 
@@ -63,6 +62,7 @@ export const StyledRange = styled('input', {
     '&::-moz-range-thumb': {
       cursor: 'grabbing',
     },
+
     '&::-webkit-slider-thumb': {
       cursor: 'grabbing',
     },
@@ -72,6 +72,7 @@ export const StyledRange = styled('input', {
     '&::-moz-range-thumb': {
       cursor: 'not-allowed',
     },
+
     '&::-webkit-slider-thumb': {
       cursor: 'not-allowed',
     },
@@ -80,26 +81,26 @@ export const StyledRange = styled('input', {
   '&:hover': {
     '&:not(:disabled)': {
       '&::-moz-range-thumb': {
-        '--border-color': 'var(--laodeaksar-form-input-active)',
-        '--shadow': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+        $$border: 'var(--laodeaksar-form-input-active)',
+        $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
       },
 
-      '  &::-webkit-slider-thumb': {
-        '--border-color': 'var(--laodeaksar-form-input-active)',
-        '--shadow': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+      '&::-webkit-slider-thumb': {
+        $$border: 'var(--laodeaksar-form-input-active)',
+        $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
       },
     },
   },
 
   '&:focus-visible': {
     '&::-moz-range-thumb': {
-      '--border-color': 'var(--laodeaksar-form-input-active)',
-      '--shadow': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+      $$border: 'var(--laodeaksar-form-input-active)',
+      $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
     },
 
     '&::-webkit-slider-thumb': {
-      '--border-color': 'var(--form-input-active)',
-      '--shadow': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+      $$border: 'var(--laodeaksar-form-input-active)',
+      $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
     },
   },
 });

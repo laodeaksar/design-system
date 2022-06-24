@@ -1,6 +1,8 @@
 import React from 'react';
-import useDebouncedValue from 'src/hooks/useDebouncedValue';
-import Label from '../Label';
+
+import useDebouncedValue from '@/hooks/useDebouncedValue';
+import Label from '@/components/Label';
+
 import { StyledRange } from './Range.styles';
 import { RangeProps } from './Range.types';
 import { adjustSlider } from './utils';
@@ -52,7 +54,7 @@ const Range = (props: RangeProps) => {
         value={value}
         onChange={(event) => setRange(parseFloat(event.target.value))}
         css={{
-          '--track-background': `${fill}`,
+          $$track: fill,
         }}
         disabled={disabled}
         {...rest}

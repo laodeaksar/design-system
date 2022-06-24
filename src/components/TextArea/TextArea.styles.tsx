@@ -34,11 +34,11 @@ export const StyledTextArea = styled('textarea', {
 
   '&::placeholder': {
     color: 'var(--laodeaksar-colors-typeface-tertiary)',
-    opacity: 0.5
+    opacity: 0.5,
   },
 
   '&::-webkit-autofill': {
-    background: 'transparent'
+    background: 'transparent',
   },
 
   '&:disabled': {
@@ -47,41 +47,41 @@ export const StyledTextArea = styled('textarea', {
     opacity: 0.65,
 
     '& + label': {
-      cursor: 'not-allowed'
-    }
+      cursor: 'not-allowed',
+    },
   },
 
   '&:hover': {
     '&:not(:disabled)': {
       $$border: 'var(--laodeaksar-form-input-active)',
-      $$shadow: '$$shadow-hover-primary'
-    }
+      $$shadow: '$$shadow-hover-primary',
+    },
   },
 
   '&:focus-within': {
     $$border: 'var(--laodeaksar-form-input-active)',
-    $$shadow: '$$shadow-hover-primary'
+    $$shadow: '$$shadow-hover-primary',
   },
 
   variants: {
     readOnly: {
       true: {
-        $$cursor: 'default'
-      }
+        $$cursor: 'default',
+      },
     },
 
     resize: {
       none: {
-        resize: 'none'
+        resize: 'none',
       },
 
       vertical: {
-        resize: 'vertical'
+        resize: 'vertical',
       },
 
       horizontal: {
-        resize: 'horizontal'
-      }
-    }
-  }
+        resize: 'horizontal',
+      },
+    },
+  },
 });
