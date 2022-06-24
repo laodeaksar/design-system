@@ -1,6 +1,6 @@
+import useTheme from '@/hooks/useTheme';
 import { PillProps } from './Pill.types';
 import { StyledPill } from './Pill.styles';
-import useTheme from 'src/hooks/useTheme';
 
 /** IDEA
  *  New pill style:

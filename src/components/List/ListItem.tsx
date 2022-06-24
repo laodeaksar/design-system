@@ -1,5 +1,7 @@
 import React from 'react';
-import Icon from '../Icon';
+
+import Icon from '@/components/Icon';
+
 import { StyledListItem } from './List.styles';
 
 const ListItem: React.FC<React.LiHTMLAttributes<HTMLLIElement>> = (props) => {

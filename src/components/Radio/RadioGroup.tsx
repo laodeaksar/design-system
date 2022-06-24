@@ -1,5 +1,7 @@
 import React from 'react';
-import Flex from '../Flex';
+
+import Flex from '@/components/Flex';
+
 import { RadioContext } from './RadioContext';
 import { RadioGroupProps } from './Radio.types';
 import { isRadioItemElement } from './utils';

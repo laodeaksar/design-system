@@ -1,4 +1,5 @@
-import { isElementOfType } from 'src/lib/utils/isElementOfType';
+import { isElementOfType } from '@/lib/utils/isElementOfType';
+
 import RadioItem from './RadioItem';
 
 export function isRadioItemElement(
