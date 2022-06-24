@@ -1,6 +1,6 @@
 import React from 'react';
-import Box from '../Box';
-import Label from '../Label';
+import Box from '@/components/Box';
+import Label from '@/components/Label';
 import { AtSignIcon, EyeIcon, Tick } from './TextInputIcons';
 import { StyledInput, StyledInputWrapper } from './TextInput.styles';
 import { TextInputProps } from './TextInput.types';
