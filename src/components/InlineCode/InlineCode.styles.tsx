@@ -1,4 +1,4 @@
-import { Shadows, styled } from "~/lib/stitches.config";
+import { Shadows, styled } from "@/lib/stitches.config";
 
 export const StyledInlineCode = styled("code", {
   fontFamily: "$mono",
