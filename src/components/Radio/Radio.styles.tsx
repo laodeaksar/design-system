@@ -1,4 +1,4 @@
-import { styled } from '@/lib/stitches.config';
+import { styled } from 'src/lib/stitches.config';
 
 export const StyledRadio = styled('input', {
   $$border: 'var(--laodeaksar-form-input-border)',

@@ -1,4 +1,4 @@
-import { styled } from '@/lib/stitches.config';
+import { styled } from 'src/lib/stitches.config';
 
 export const StyledInput = styled('input', {
   $$padding: '8px 40px 8px 16px',

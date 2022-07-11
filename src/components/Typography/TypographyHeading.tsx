@@ -1,5 +1,7 @@
-import React from 'react';
-import { CSS } from '@/lib/stitches.config';
+import * as React from 'react';
+import merge from 'lodash/merge';
+
+import { CSS } from 'src/lib/stitches.config';
 import { DEFAULT_TAG } from './Typography.constants';
 import Text from './TypographyText';
 import {
@@ -56,8 +58,7 @@ const Heading = React.forwardRef<
       ref={ref}
       size={headingSize[size]}
       css={{
-        ...headingCSS[size],
-        ...props.css,
+        ...merge(headingCSS[size], props.css),
       }}
     />
   );

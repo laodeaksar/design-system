@@ -1,4 +1,4 @@
-import { styled } from '@/lib/stitches.config';
+import { styled } from 'src/lib/stitches.config';
 
 export const StyledButton = styled('button', {
   $$background: 'white',

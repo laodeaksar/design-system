@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Flex from '@/components/Flex';
-import Label from '@/components/Label';
+import Flex from 'src/components/Flex';
+import Label from 'src/components/Label';
 
 import { RadioContext } from './RadioContext';
 import { StyledRadio } from './Radio.styles';
