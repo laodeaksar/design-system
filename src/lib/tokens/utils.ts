@@ -1,151 +1,117 @@
-import type { ScaleValue } from '@stitches/react';
+import type { PropertyValue } from '@stitches/react';
 
 const utils = {
-  pt: (value: ScaleValue<'paddingTop'> | string | number) => ({
-    paddingTop: value,
-  }),
-  pr: (value: ScaleValue<'paddingRight'> | string | number) => ({
-    paddingRight: value,
-  }),
-  pb: (value: ScaleValue<'paddingBottom'> | string | number) => ({
-    paddingBottom: value,
-  }),
-  pl: (value: ScaleValue<'paddingLeft'> | string | number) => ({
-    paddingLeft: value,
-  }),
-  px: (value: ScaleValue<'paddingLeft'> | string | number) => ({
-    paddingLeft: value,
-    paddingRight: value,
-  }),
-  py: (value: ScaleValue<'paddingTop'> | string | number) => ({
-    paddingTop: value,
-    paddingBottom: value,
-  }),
+  pt: (value: PropertyValue<'paddingTop'>) => ({
+      paddingTop: value
+    }),
+    pr: (value: PropertyValue<'paddingRight'>) => ({
+      paddingRight: value
+    }),
+    pb: (value: PropertyValue<'paddingBottom'>) => ({
+      paddingBottom: value
+    }),
+    pl: (value: PropertyValue<'paddingLeft'>) => ({
+      paddingLeft: value
+    }),
+    px: (value: PropertyValue<'paddingLeft'>) => ({
+      paddingLeft: value,
+      paddingRight: value
+    }),
+    py: (value: PropertyValue<'paddingTop'>) => ({
+      paddingTop: value,
+      paddingBottom: value
+    }),
 
-  mt: (value: ScaleValue<'marginTop'> | string | number) => ({
-    marginTop: value,
-  }),
-  mr: (value: ScaleValue<'marginRight'> | string | number) => ({
-    marginRight: value,
-  }),
-  mb: (value: ScaleValue<'marginBottom'> | string | number) => ({
-    marginBottom: value,
-  }),
-  ml: (value: ScaleValue<'marginLeft'> | string | number) => ({
-    marginLeft: value,
-  }),
-  mx: (value: ScaleValue<'marginLeft'> | string | number) => ({
-    marginLeft: value,
-    marginRight: value,
-  }),
-  my: (value: ScaleValue<'marginTop'> | string | number) => ({
-    marginTop: value,
-    marginBottom: value,
-  }),
+    mt: (value: PropertyValue<'marginTop'>) => ({
+      marginTop: value
+    }),
+    mr: (value: PropertyValue<'marginRight'>) => ({
+      marginRight: value
+    }),
+    mb: (value: PropertyValue<'marginBottom'>) => ({
+      marginBottom: value
+    }),
+    ml: (value: PropertyValue<'marginLeft'>) => ({
+      marginLeft: value
+    }),
+    mx: (value: PropertyValue<'marginLeft'>) => ({
+      marginLeft: value,
+      marginRight: value
+    }),
+    my: (value: PropertyValue<'marginTop'>) => ({
+      marginTop: value,
+      marginBottom: value
+    }),
 
-  ta: (value: ScaleValue<'textAlign'> | string | number) => ({
-    textAlign: value,
-  }),
+    bc: (value: PropertyValue<'backgroundColor'>) => ({
+      backgroundColor: value
+    }),
+    linearGradient: (value: PropertyValue<'backgroundImage'>) => ({
+      backgroundImage: `linear-gradient(${value})`
+    }),
+    radialGradient: (value: PropertyValue<'backgroundImage'>) => ({
+      backgroundImage: `radial-gradient(${value})`
+    }),
 
-  fd: (value: ScaleValue<'flexDirection'> | string | number) => ({
-    flexDirection: value,
-  }),
-  fw: (value: ScaleValue<'flexWrap'> | string | number) => ({
-    flexWrap: value,
-  }),
+    btrr: (value: PropertyValue<'borderTopRightRadius'>) => ({
+      borderTopRightRadius: value
+    }),
+    bbrr: (value: PropertyValue<'borderBottomRightRadius'>) => ({
+      borderBottomRightRadius: value
+    }),
+    bblr: (value: PropertyValue<'borderBottomLeftRadius'>) => ({
+      borderBottomLeftRadius: value
+    }),
+    btlr: (value: PropertyValue<'borderTopLeftRadius'>) => ({
+      borderTopLeftRadius: value
+    }),
+    btr: (value: PropertyValue<'borderRadius'>) => ({
+      borderTopLeftRadius: value,
+      borderTopRightRadius: value
+    }),
+    brr: (value: PropertyValue<'borderRadius'>) => ({
+      borderTopRightRadius: value,
+      borderBottomRightRadius: value
+    }),
+    bbr: (value: PropertyValue<'borderRadius'>) => ({
+      borderBottomRightRadius: value,
+      borderBottomLeftRadius: value
+    }),
+    blr: (value: PropertyValue<'borderRadius'>) => ({
+      borderTopLeftRadius: value,
+      borderBottomLeftRadius: value
+    }),
 
-  ai: (value: ScaleValue<'alignItems'> | string | number) => ({
-    alignItems: value,
-  }),
-  ac: (value: ScaleValue<'alignContent'> | string | number) => ({
-    alignContent: value,
-  }),
-  jc: (value: ScaleValue<'justifyContent'> | string | number) => ({
-    justifyContent: value,
-  }),
-  as: (value: ScaleValue<'alignSelf'> | string | number) => ({
-    alignSelf: value,
-  }),
-  fg: (value: ScaleValue<'flexGrow'> | string | number) => ({
-    flexGrow: value,
-  }),
-  fs: (value: ScaleValue<'flexShrink'> | string | number) => ({
-    flexShrink: value,
-  }),
-  fb: (value: ScaleValue<'flexBasis'> | string | number) => ({
-    flexBasis: value,
-  }),
+    insetX: (value: PropertyValue<'left'>) => ({
+      left: value,
+      right: value
+    }),
+    insetY: (value: PropertyValue<'top'>) => ({
+      top: value,
+      bottom: value
+    }),
 
-  bc: (value: ScaleValue<'backgroundColor'> | string | number) => ({
-    backgroundColor: value,
-  }),
-  linearGradient: (value: ScaleValue<'backgroundImage'> | string | number) => ({
-    backgroundImage: `linear-gradient(${value})`,
-  }),
-  radialGradient: (value: ScaleValue<'backgroundImage'> | string | number) => ({
-    backgroundImage: `radial-gradient(${value})`,
-  }),
+    userSelect: (value: PropertyValue<'userSelect'>) => ({
+      WebkitUserSelect: value,
+      MozUserSelect: value,
+      MsUserSelect: value,
+      userSelect: value
+    }),
 
-  br: (value: ScaleValue<'borderRadius'> | string | number) => ({
-    borderRadius: value,
-  }),
-  btrr: (value: ScaleValue<'borderTopRightRadius'> | string | number) => ({
-    borderTopRightRadius: value,
-  }),
-  bbrr: (value: ScaleValue<'borderBottomRightRadius'> | string | number) => ({
-    borderBottomRightRadius: value,
-  }),
-  bblr: (value: ScaleValue<'borderBottomLeftRadius'> | string | number) => ({
-    borderBottomLeftRadius: value,
-  }),
-  btlr: (value: ScaleValue<'borderTopLeftRadius'> | string | number) => ({
-    borderTopLeftRadius: value,
-  }),
+    size: (value: PropertyValue<'width'>) => ({
+      width: value,
+      height: value
+    }),
 
-  bs: (value: ScaleValue<'boxShadow'> | string | number) => ({
-    boxShadow: value,
-  }),
-
-  lh: (value: ScaleValue<'lineHeight'> | string | number) => ({
-    lineHeight: value,
-  }),
-
-  ox: (value: ScaleValue<'overflowX'> | string | number) => ({
-    overflowX: value,
-  }),
-  oy: (value: ScaleValue<'overflowY'> | string | number) => ({
-    overflowY: value,
-  }),
-
-  pe: (value: ScaleValue<'pointerEvents'> | string | number) => ({
-    pointerEvents: value,
-  }),
-  us: (value: ScaleValue<'userSelect'> | string | number) => ({
-    WebkitUserSelect: value,
-    userSelect: value,
-  }),
-
-  userSelect: (value: ScaleValue<'userSelect'> | string | number) => ({
-    WebkitUserSelect: value,
-    MozUserSelect: value,
-    MsUserSelect: value,
-    userSelect: value,
-  }),
-
-  size: (value: ScaleValue<'width'> | string | number) => ({
-    width: value,
-    height: value,
-  }),
-
-  appearance: (value: ScaleValue<'appearance'> | string | number) => ({
-    WebkitAppearance: value,
-    MozAppearance: value,
-    appearance: value,
-  }),
-  backgroundClip: (value: ScaleValue<'backgroundClip'> | string | number) => ({
-    WebkitBackgroundClip: value,
-    backgroundClip: value,
-  }),
+    appearance: (value: PropertyValue<'appearance'>) => ({
+      WebkitAppearance: value,
+      MozAppearance: 'none',
+      appearance: value
+    }),
+    backgroundClip: (value: PropertyValue<'backgroundClip'>) => ({
+      WebkitBackgroundClip: value,
+      backgroundClip: value
+    })
 };
 
 export { utils };
