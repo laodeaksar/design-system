@@ -1,4 +1,4 @@
-import { getVariant, Shadows, styled } from '@/lib/stitches.config';
+import { Shadows, styled } from '@/lib/stitches.config';
 
 import Box from '@/components/Box';
 
