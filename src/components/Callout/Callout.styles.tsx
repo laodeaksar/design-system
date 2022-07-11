@@ -1,4 +1,4 @@
-import { styled } from '@/lib/stitches.config';
+import { styled } from 'src/lib/stitches.config';
 
 export const StyledCalloutIconWrapper = styled('div', {
   $$icon: 'var(--laodeaksar-colors-body)',

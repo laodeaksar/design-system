@@ -1,6 +1,6 @@
-import { Shadows, styled } from '@/lib/stitches.config';
+import { Shadows, styled } from 'src/lib/stitches.config';
 
-import Box from '@/components/Box';
+import Box from 'src/components/Box';
 
 export const CardWrapper = styled(Box, {
   $$background: 'var(--laodeaksar-card-background-color)',

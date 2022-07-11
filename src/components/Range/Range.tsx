@@ -1,7 +1,7 @@
 import React from 'react';
 
-import useDebouncedValue from '@/hooks/useDebouncedValue';
-import Label from '@/components/Label';
+import useDebouncedValue from 'src/hooks/useDebouncedValue';
+import Label from 'src/components/Label';
 
 import { StyledRange } from './Range.styles';
 import { RangeProps } from './Range.types';

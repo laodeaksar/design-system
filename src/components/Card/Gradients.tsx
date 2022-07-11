@@ -1,9 +1,10 @@
-import { keyframes } from '@/lib/stitches.config';
+import { keyframes } from 'src/lib/stitches.config';
 
-import Box from '@/components/Box';
-import Flex from '@/components/Flex';
+import Box from 'src/components/Box';
+import Flex from 'src/components/Flex';
 
 import Card from '.';
+import React from 'react';
 
 const rotateGradient = keyframes({
   '0%': {
@@ -17,7 +18,7 @@ const rotateGradient = keyframes({
   },
 });
 
-export const Gradients: React.FC = (props) => (
+export const Gradients: React.FC<{ children: React.ReactNode }> = (props) => (
   <Card
     css={{
       my: '150px',

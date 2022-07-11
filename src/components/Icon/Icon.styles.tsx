@@ -1,4 +1,4 @@
-import { styled, VariantProps } from '@/lib/stitches.config';
+import { styled, VariantProps } from '../../lib/stitches.config';
 
 export const StyledSVG = styled('svg', {
   variants: {

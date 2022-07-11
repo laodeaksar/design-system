@@ -1,10 +1,10 @@
-import { CSS, VariantProps } from '@/lib/stitches.config';
+import { CSS, VariantProps } from '../../lib/stitches.config';
 import { DEFAULT_TAG } from './Typography.constants';
 import Text from './TypographyText';
 
 export type TextSizeVariants = Pick<
   VariantProps<typeof Text>,
-  'size' | 'variant' | 'gradient'
+  'size' | 'variant' | 'gradient' | 'ellipsis'
 >;
 
 export type EMProps = React.HTMLAttributes<HTMLParagraphElement> &

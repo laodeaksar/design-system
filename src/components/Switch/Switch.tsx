@@ -1,5 +1,5 @@
-import Flex from '@/components/Flex';
-import Label from '@/components/Label';
+import Flex from 'src/components/Flex';
+import Label from 'src/components/Label';
 
 import { StyledSwitch } from './Switch.styles';
 import { SwitchProps } from './Switch.types';

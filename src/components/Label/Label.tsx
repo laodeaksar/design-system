@@ -1,4 +1,4 @@
-import Text from '@/components/Typography';
+import Text from 'src/components/Typography';
 
 const Label = (props: React.LabelHTMLAttributes<HTMLLabelElement>) => {
   const { children, ...rest } = props;

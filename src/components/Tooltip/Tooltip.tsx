@@ -1,5 +1,5 @@
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-import VisuallyHidden from '@/components/VisuallyHidden';
+import VisuallyHidden from 'src/components/VisuallyHidden';
 
 import {
   DEFAULT_TOOLTIP_DELAY,

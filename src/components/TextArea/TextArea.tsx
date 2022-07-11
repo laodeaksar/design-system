@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Label from '@/components/Label';
+import Label from 'src/components/Label';
 
 import { StyledTextArea } from './TextArea.styles';
 import { TextAreaProps } from './TextArea.types';

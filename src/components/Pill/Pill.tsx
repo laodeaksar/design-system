@@ -1,4 +1,4 @@
-import useTheme from '@/hooks/useTheme';
+import useTheme from 'src/hooks/useTheme';
 import { PillProps } from './Pill.types';
 import { StyledPill } from './Pill.styles';
 

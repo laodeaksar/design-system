@@ -1,6 +1,6 @@
-import { styled } from '@/lib/stitches.config';
+import { styled } from 'src/lib/stitches.config';
 
-import Box from '@/components/Box';
+import Box from 'src/components/Box';
 
 const Grid = styled(Box, {
   display: 'grid',

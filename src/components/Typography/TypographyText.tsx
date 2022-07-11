@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from '@/lib/stitches.config';
+import { styled } from 'src/lib/stitches.config';
 import { EMProps, StrongProps } from './Typography.types';
 
 /**
@@ -110,12 +110,12 @@ const Text = styled('span', {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
       },
-      ellipsis: {
-        true: {
-          textOverflow: 'ellipsis',
-          overflow: 'hidden',
-          whiteSpace: 'nowrap',
-        },
+    },
+    ellipsis: {
+      true: {
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
       },
     },
   },
