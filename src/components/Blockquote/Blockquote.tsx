@@ -2,7 +2,11 @@ import React from 'react';
 import { StyledBlockquote } from './Blockquote.styles';
 import QuotationMark from './Blockquote.icon';
 
-const Blockquote: React.FC<{ children: React.ReactNode }> = (props) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Blockquote = (props: Props) => {
   const { children, ...rest } = props;
 
   return (
