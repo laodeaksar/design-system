@@ -1,6 +1,6 @@
-import React from 'react';
-import { styled } from 'src/lib/stitches.config';
-import { EMProps, StrongProps } from './Typography.types';
+import React from "react";
+import { getVariant, styled } from "src/lib/stitches.config";
+import { EMProps, StrongProps } from "./Typography.types";
 
 /**
  * lineheight
@@ -14,10 +14,10 @@ import { EMProps, StrongProps } from './Typography.types';
  * 1.625 // Text Area Text Input
  */
 
-const Text = styled('span', {
-  margin: '0 0 2.25rem 0',
+const Text = styled("span", {
+  margin: "0 0 2.25rem 0",
   padding: 0,
-  textRendering: 'optimizeLegibility',
+  textRendering: "optimizeLegibility",
 
   variants: {
     // line heights / leading (define token)
@@ -26,104 +26,56 @@ const Text = styled('span', {
     // Follow dynamic metrics https://rsms.me/inter/dynmetrics/
     outline: {
       true: {
-        color: 'transparent !important',
-        WebkitTextStrokeColor: 'var(--laodeaksar-colors-typeface-primary)',
-        WebkitTextStrokeWidth: '1px',
+        color: "transparent !important",
+        WebkitTextStrokeColor: "var(--laodeaksar-colors-typeface-primary)",
+        WebkitTextStrokeWidth: "1px",
       },
     },
     spaced: {
       true: {
-        letterSpacing: '0.3px',
+        letterSpacing: "0.3px",
         lineHeight: 1.9,
       },
     },
-    family: {
-      default: {
-        fontFamily: '$default',
-      },
-      display: {
-        fontFamily: '$display',
-      },
-      mono: {
-        fontFamily: '$mono',
-      },
-      numeric: {
-        fontFamily: '$numeric',
-      },
-    },
-    size: {
-      1: {
-        fontSize: '$1',
-      },
-      2: {
-        fontSize: '$2',
-      },
-      3: {
-        fontSize: '$3',
-      },
-      4: {
-        fontSize: '$4',
-      },
-      5: {
-        fontSize: '$5',
-      },
-      6: {
-        fontSize: '$6',
-      },
-      7: {
-        fontSize: '$7',
-      },
-    },
+    family: getVariant("fonts", (token) => ({ fontFamily: token })),
+    size: getVariant("space", (token) => ({ fontSize: token })),
     truncate: {
       true: {
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
       },
     },
     variant: {
-      default: { color: 'currentColor' },
-      primary: { color: 'var(--laodeaksar-colors-typeface-primary)' },
-      secondary: { color: 'var(--laodeaksar-colors-typeface-secondary)' },
-      tertiary: { color: 'var(--laodeaksar-colors-typeface-tertiary)' },
-      info: { color: 'var(--laodeaksar-colors-brand)' },
-      success: { color: 'var(--laodeaksar-colors-success)' },
-      warning: { color: 'var(--laodeaksar-colors-warning)' },
-      danger: { color: 'var(--laodeaksar-colors-danger)' },
+      default: { color: "currentColor" },
+      primary: { color: "var(--laodeaksar-colors-typeface-primary)" },
+      secondary: { color: "var(--laodeaksar-colors-typeface-secondary)" },
+      tertiary: { color: "var(--laodeaksar-colors-typeface-tertiary)" },
+      info: { color: "var(--laodeaksar-colors-brand)" },
+      success: { color: "var(--laodeaksar-colors-success)" },
+      warning: { color: "var(--laodeaksar-colors-warning)" },
+      danger: { color: "var(--laodeaksar-colors-danger)" },
     },
-    weight: {
-      1: {
-        fontWeight: '$1',
-      },
-      2: {
-        fontWeight: '$2',
-      },
-      3: {
-        fontWeight: '$3',
-      },
-      4: {
-        fontWeight: '$4',
-      },
-    },
+    weight: getVariant("space", (token) => ({ fontWeight: token })),
     gradient: {
       true: {
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
       },
     },
     ellipsis: {
       true: {
-        textOverflow: 'ellipsis',
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
+        textOverflow: "ellipsis",
+        overflow: "hidden",
+        whiteSpace: "nowrap",
       },
     },
   },
   defaultVariants: {
-    family: 'default',
-    size: '3',
-    variant: 'default',
-    weight: '2',
+    family: "default",
+    size: "3",
+    variant: "default",
+    weight: "2",
     spaced: true,
   },
 });
@@ -133,7 +85,7 @@ const Text = styled('span', {
 // http://www.meticulous.org.uk/meticulous/websolutions/coding_tests/fractions.html
 // EXPLORE: Footnote component: http://microformats.org/wiki/footnotes-examples https://2ality.com/2011/12/footnotes.html
 
-const EM = React.forwardRef<React.ElementRef<'em'>, EMProps>((props, ref) => {
+const EM = React.forwardRef<React.ElementRef<"em">, EMProps>((props, ref) => {
   return (
     <Text
       {...props}
@@ -143,15 +95,15 @@ const EM = React.forwardRef<React.ElementRef<'em'>, EMProps>((props, ref) => {
       ref={ref}
       spaced={false}
       style={{
-        letterSpacing: '-0.3px',
+        letterSpacing: "-0.3px",
       }}
     />
   );
 });
 
-EM.displayName = 'EM';
+EM.displayName = "EM";
 
-const Strong = React.forwardRef<React.ElementRef<'strong'>, StrongProps>(
+const Strong = React.forwardRef<React.ElementRef<"strong">, StrongProps>(
   (props, ref) => {
     return (
       <Text {...props} as="strong" variant="primary" weight="4" ref={ref} />
@@ -159,7 +111,7 @@ const Strong = React.forwardRef<React.ElementRef<'strong'>, StrongProps>(
   }
 );
 
-Strong.displayName = 'Strong';
+Strong.displayName = "Strong";
 
 export default Text;
 export { EM, Strong };
