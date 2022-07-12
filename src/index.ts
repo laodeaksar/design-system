@@ -1,5 +1,5 @@
 /** COMPONENTS **/
-export { default as Anchor } from './components/Anchor';
+export { default as Anchor, type AnchorProps } from './components/Anchor';
 export { default as Blockquote } from './components/Blockquote';
 export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
@@ -16,6 +16,7 @@ export { default as Pill } from './components/Pill';
 export { default as Radio } from './components/Radio';
 export { default as Range } from './components/Range';
 export { default as Switch } from './components/Switch';
+export { default as Tabs } from './components/Tabs';
 export { default as Test } from './components/Test';
 export { default as TextArea } from './components/TextArea';
 export { default as TextInput } from './components/TextInput';
