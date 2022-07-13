@@ -1,5 +1,5 @@
 import { StyledSVG } from './Icon.styles';
-import { IconProps } from './Icon.types';
+import type { IconProps } from './Icon.types';
 
 export const TwitterIcon = (props: IconProps) => (
   <StyledSVG
