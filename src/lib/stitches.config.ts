@@ -1,8 +1,4 @@
-import {
-  createStitches,
-  CSS as StitchesCSS,
-  type PropertyValue,
-} from '@stitches/react';
+import { createStitches, CSS as StitchesCSS } from '@stitches/react';
 
 import { radii } from './tokens/radii';
 import { spaces as space } from './tokens/spaces';

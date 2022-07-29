@@ -1,6 +1,6 @@
 import { css } from 'src/lib/stitches.config';
 
-import { VisuallyHiddenProps } from './VisuallyHidden.types';
+import type { VisuallyHiddenProps } from './VisuallyHidden.types';
 
 const visuallyHiddenClass = css({
   border: '0 !important',
@@ -18,10 +18,14 @@ const visuallyHiddenClass = css({
 const VisuallyHidden = ({
   as: Component = 'p',
   ...props
-}: VisuallyHiddenProps) => (
-  <Component {...props} className={visuallyHiddenClass()}>
-    {props.children}
-  </Component>
-);
+}: React.PropsWithChildren<VisuallyHiddenProps>) => {
+  const { children } = props;
+
+  return (
+    <Component {...props} className={visuallyHiddenClass()}>
+      {children}
+    </Component>
+  );
+};
 
 export default VisuallyHidden;

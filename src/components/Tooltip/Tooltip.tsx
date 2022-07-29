@@ -8,9 +8,9 @@ import {
   DEFAULT_TOOLTIP_SIDE_OFFSET,
 } from './Tooltip.constants';
 import { TooltipContent } from './Tooltip.styles';
-import { TooltipProps } from './Tooltip.types';
+import type { TooltipProps } from './Tooltip.types';
 
-const Tooltip = (props: TooltipProps) => {
+const Tooltip = (props: React.PropsWithChildren<TooltipProps>) => {
   const {
     children,
     content,
@@ -31,9 +31,9 @@ const Tooltip = (props: TooltipProps) => {
         sideOffset={sideOffset}
       >
         {content}
-        {visuallyHiddenText ? (
+        {visuallyHiddenText && (
           <VisuallyHidden>{visuallyHiddenText}</VisuallyHidden>
-        ) : null}
+        )}
       </TooltipContent>
     </TooltipPrimitive.Root>
   );

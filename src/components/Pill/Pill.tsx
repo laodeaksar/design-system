@@ -1,5 +1,5 @@
 import useTheme from 'src/hooks/useTheme';
-import { PillProps } from './Pill.types';
+import type { PillProps } from './Pill.types';
 import { StyledPill } from './Pill.styles';
 
 /** IDEA

@@ -3,26 +3,26 @@ import {
   StyledCalloutIconWrapper,
   StyledCalloutLabelWrapper,
 } from './Callout.styles';
-import { CalloutProps } from './Callout.types';
+import type { CalloutProps } from './Callout.types';
 import { getVariantIcon } from './utils';
 
-const Callout = (props: CalloutProps) => {
+const Callout = (props: React.PropsWithChildren<CalloutProps>) => {
   const { children, label, variant, ...rest } = props;
 
   const icon = label ? null : getVariantIcon(variant);
 
   return (
     <StyledCallout variant={variant} {...rest}>
-      {icon ? (
+      {icon && (
         <StyledCalloutIconWrapper variant={variant}>
           {icon}
         </StyledCalloutIconWrapper>
-      ) : null}
-      {label ? (
+      )}
+      {label && (
         <StyledCalloutLabelWrapper variant={variant}>
           {label}
         </StyledCalloutLabelWrapper>
-      ) : null}
+      )}
       {children}
     </StyledCallout>
   );

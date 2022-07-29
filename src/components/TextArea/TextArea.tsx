@@ -3,7 +3,7 @@ import React from 'react';
 import Label from 'src/components/Label';
 
 import { StyledTextArea } from './TextArea.styles';
-import { TextAreaProps } from './TextArea.types';
+import type { TextAreaProps } from './TextArea.types';
 
 const TextArea = React.forwardRef(
   (props: TextAreaProps, ref: React.ForwardedRef<HTMLTextAreaElement>) => {
@@ -20,7 +20,7 @@ const TextArea = React.forwardRef(
 
     return (
       <div>
-        {label ? (
+        {label && (
           <Label
             htmlFor={id}
             style={{
@@ -29,7 +29,7 @@ const TextArea = React.forwardRef(
           >
             {label}
           </Label>
-        ) : null}
+        )}
         <StyledTextArea
           id={id}
           disabled={disabled}

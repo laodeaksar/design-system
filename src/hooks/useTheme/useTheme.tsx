@@ -1,5 +1,6 @@
-import useKeyboardShortcut from '../useKeyboardShortcut';
 import React from 'react';
+
+import useKeyboardShortcut from '../useKeyboardShortcut';
 
 enum Theme {
   LIGHT = 'light',

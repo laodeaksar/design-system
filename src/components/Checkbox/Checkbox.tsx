@@ -1,6 +1,6 @@
 import Label from '../Label';
 import { StyledCheckbox } from './Checkbox.styles';
-import { CheckboxProps } from './Checkbox.types';
+import type { CheckboxProps } from './Checkbox.types';
 import Flex from '../Flex';
 
 const Checkbox = (props: CheckboxProps) => {
@@ -16,7 +16,7 @@ const Checkbox = (props: CheckboxProps) => {
         role="checkbox"
         {...rest}
       />
-      {label ? <Label htmlFor={id}>{label}</Label> : null}
+      {label && <Label htmlFor={id}>{label}</Label>}
     </Flex>
   );
 };

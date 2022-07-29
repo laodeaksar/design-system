@@ -1,7 +1,7 @@
 import React from 'react';
 import Flex from '../Flex';
 import { StyledButton, StyledIconButton } from './Button.styles';
-import { ButtonProps } from './Button.types';
+import type { ButtonProps } from './Button.types';
 
 const Button = React.forwardRef(
   <T extends object>(

@@ -1,4 +1,4 @@
-import { Config } from './types';
+import type { Config } from './types';
 import { specialKeys } from './constants';
 
 export const extractRegularKeys = (

@@ -1,6 +1,7 @@
 import React from 'react';
+
 import { defaultConfig, specialKeys } from './constants';
-import { Config, EventType } from './types';
+import type { Config, EventType } from './types';
 import { extractRegularKeys } from './utils';
 
 const useKeyboardShortcut = (

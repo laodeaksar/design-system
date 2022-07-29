@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import merge from 'lodash/merge';
 
-import { CSS } from 'src/lib/stitches.config';
 import { DEFAULT_TAG } from './Typography.constants';
 import Text from './TypographyText';
-import {
+import type { CSS } from 'src/lib/stitches.config';
+import type {
   HeadingProps,
   HeadingSizeVariants,
   ShortHandHeadingProps,

@@ -1,4 +1,6 @@
-import { CSS, VariantProps } from '../../lib/stitches.config';
+import React from 'react';
+
+import type { CSS, VariantProps } from '../../lib/stitches.config';
 import { DEFAULT_TAG } from './Typography.constants';
 import Text from './TypographyText';
 
@@ -19,6 +21,6 @@ export type HeadingVariants = { size?: HeadingSizeVariants } & Omit<
 >;
 
 export type HeadingProps = React.ComponentProps<typeof DEFAULT_TAG> &
-  HeadingVariants & { css?: CSS; as?: any };
+  HeadingVariants & { css?: CSS; as?: React.ElementType };
 
 export type ShortHandHeadingProps = Omit<HeadingProps, 'size' | 'as'>;

@@ -2,7 +2,7 @@ import Flex from 'src/components/Flex';
 import Label from 'src/components/Label';
 
 import { StyledSwitch } from './Switch.styles';
-import { SwitchProps } from './Switch.types';
+import type { SwitchProps } from './Switch.types';
 
 const Switch = (props: SwitchProps) => {
   const { toggled, id, label, ...rest } = props;
@@ -18,7 +18,7 @@ const Switch = (props: SwitchProps) => {
         role="switch"
         {...rest}
       />
-      {label ? <Label htmlFor={id}>{label}</Label> : null}
+      {label && <Label htmlFor={id}>{label}</Label>}
     </Flex>
   );
 };

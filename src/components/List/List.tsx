@@ -1,6 +1,6 @@
 import ListItem from './ListItem';
 import { StyledList } from './List.styles';
-import { ListProps } from './List.types';
+import type { ListProps } from './List.types';
 
 const List = (props: ListProps) => {
   const { variant = 'unordered', children, ...rest } = props;

@@ -4,7 +4,7 @@ import useDebouncedValue from 'src/hooks/useDebouncedValue';
 import Label from 'src/components/Label';
 
 import { StyledRange } from './Range.styles';
-import { RangeProps } from './Range.types';
+import type { RangeProps } from './Range.types';
 import { adjustSlider } from './utils';
 
 const Range = (props: RangeProps) => {
@@ -40,11 +40,11 @@ const Range = (props: RangeProps) => {
         margin: '8px 0px',
       }}
     >
-      {label ? (
+      {label && (
         <Label htmlFor={id} style={{ marginBottom: '12px' }}>
           {label}
         </Label>
-      ) : null}
+      )}
       <StyledRange
         id={id}
         type="range"

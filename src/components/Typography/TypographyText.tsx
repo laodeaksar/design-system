@@ -1,6 +1,6 @@
 import React from 'react';
 import { getVariant, styled } from 'src/lib/stitches.config';
-import { EMProps, StrongProps } from './Typography.types';
+import type { EMProps, StrongProps } from './Typography.types';
 
 /**
  * lineheight

@@ -6,13 +6,7 @@ import { palette } from './tokens/colors';
 import { grid } from './tokens/layout';
 
 const global = {
-  '*': {
-    'box-sizing': 'border-box',
-  },
-  '*:before': {
-    'box-sizing': 'border-box',
-  },
-  '*:after': {
+  '*, *:before, *:after': {
     'box-sizing': 'border-box',
   },
 };
