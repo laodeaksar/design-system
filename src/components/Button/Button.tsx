@@ -1,5 +1,6 @@
 import React from 'react';
 import Flex from '../Flex';
+import Spinner from '../Spinner';
 import { StyledButton, StyledIconButton } from './Button.styles';
 import type { ButtonProps } from './Button.types';
 
@@ -12,6 +13,7 @@ const Button = React.forwardRef(
       variant = 'primary',
       children,
       icon,
+      isLoading,
       startIcon,
       endIcon,
       ...rest
@@ -33,7 +35,7 @@ const Button = React.forwardRef(
 
     return (
       <StyledButton variant={variant} ref={ref} {...rest}>
-        {startIcon ? (
+        {startIcon && (
           <Flex
             css={{
               marginRight: '$2',
@@ -41,9 +43,9 @@ const Button = React.forwardRef(
           >
             {startIcon}
           </Flex>
-        ) : null}
+        )}
         {children}
-        {endIcon ? (
+        {endIcon && (
           <Flex
             css={{
               marginLeft: '$2',
@@ -51,7 +53,8 @@ const Button = React.forwardRef(
           >
             {endIcon}
           </Flex>
-        ) : null}
+        )}
+        {isLoading && <Spinner />}
       </StyledButton>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { getVariant, styled } from 'src/lib/stitches.config';
-import type { EMProps, StrongProps } from './Typography.types';
+import { EMProps, StrongProps } from './Typography.types';
 
 /**
  * lineheight
@@ -61,13 +61,6 @@ const Text = styled('span', {
       true: {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
-      },
-    },
-    ellipsis: {
-      true: {
-        textOverflow: 'ellipsis',
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
       },
     },
   },

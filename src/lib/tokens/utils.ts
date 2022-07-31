@@ -1,114 +1,112 @@
-import type { PropertyValue } from '@stitches/react';
-
 const utils = {
-  pt: (value: PropertyValue<'paddingTop'>) => ({
+  pt: (value: any) => ({
     paddingTop: value,
   }),
-  pr: (value: PropertyValue<'paddingRight'>) => ({
+  pr: (value: any) => ({
     paddingRight: value,
   }),
-  pb: (value: PropertyValue<'paddingBottom'>) => ({
+  pb: (value: any) => ({
     paddingBottom: value,
   }),
-  pl: (value: PropertyValue<'paddingLeft'>) => ({
+  pl: (value: any) => ({
     paddingLeft: value,
   }),
-  px: (value: PropertyValue<'paddingLeft'>) => ({
+  px: (value: any) => ({
     paddingLeft: value,
     paddingRight: value,
   }),
-  py: (value: PropertyValue<'paddingTop'>) => ({
+  py: (value: any) => ({
     paddingTop: value,
     paddingBottom: value,
   }),
 
-  mt: (value: PropertyValue<'marginTop'>) => ({
+  mt: (value: any) => ({
     marginTop: value,
   }),
-  mr: (value: PropertyValue<'marginRight'>) => ({
+  mr: (value: any) => ({
     marginRight: value,
   }),
-  mb: (value: PropertyValue<'marginBottom'>) => ({
+  mb: (value: any) => ({
     marginBottom: value,
   }),
-  ml: (value: PropertyValue<'marginLeft'>) => ({
+  ml: (value: any) => ({
     marginLeft: value,
   }),
-  mx: (value: PropertyValue<'marginLeft'>) => ({
+  mx: (value: any) => ({
     marginLeft: value,
     marginRight: value,
   }),
-  my: (value: PropertyValue<'marginTop'>) => ({
+  my: (value: any) => ({
     marginTop: value,
     marginBottom: value,
   }),
 
-  bc: (value: PropertyValue<'backgroundColor'>) => ({
+  bc: (value: any) => ({
     backgroundColor: value,
   }),
-  linearGradient: (value: PropertyValue<'backgroundImage'>) => ({
+  linearGradient: (value: any) => ({
     backgroundImage: `linear-gradient(${value})`,
   }),
-  radialGradient: (value: PropertyValue<'backgroundImage'>) => ({
+  radialGradient: (value: any) => ({
     backgroundImage: `radial-gradient(${value})`,
   }),
 
-  btrr: (value: PropertyValue<'borderTopRightRadius'>) => ({
+  btrr: (value: any) => ({
     borderTopRightRadius: value,
   }),
-  bbrr: (value: PropertyValue<'borderBottomRightRadius'>) => ({
+  bbrr: (value: any) => ({
     borderBottomRightRadius: value,
   }),
-  bblr: (value: PropertyValue<'borderBottomLeftRadius'>) => ({
+  bblr: (value: any) => ({
     borderBottomLeftRadius: value,
   }),
-  btlr: (value: PropertyValue<'borderTopLeftRadius'>) => ({
+  btlr: (value: any) => ({
     borderTopLeftRadius: value,
   }),
-  btr: (value: PropertyValue<'borderRadius'>) => ({
+  btr: (value: any) => ({
     borderTopLeftRadius: value,
     borderTopRightRadius: value,
   }),
-  brr: (value: PropertyValue<'borderRadius'>) => ({
+  brr: (value: any) => ({
     borderTopRightRadius: value,
     borderBottomRightRadius: value,
   }),
-  bbr: (value: PropertyValue<'borderRadius'>) => ({
+  bbr: (value: any) => ({
     borderBottomRightRadius: value,
     borderBottomLeftRadius: value,
   }),
-  blr: (value: PropertyValue<'borderRadius'>) => ({
+  blr: (value: any) => ({
     borderTopLeftRadius: value,
     borderBottomLeftRadius: value,
   }),
 
-  insetX: (value: PropertyValue<'left'>) => ({
+  insetX: (value: any) => ({
     left: value,
     right: value,
   }),
-  insetY: (value: PropertyValue<'top'>) => ({
+  insetY: (value: any) => ({
     top: value,
     bottom: value,
   }),
 
-  userSelect: (value: PropertyValue<'userSelect'>) => ({
+  userSelect: (value: any) => ({
     WebkitUserSelect: value,
     MozUserSelect: value,
     MsUserSelect: value,
     userSelect: value,
   }),
 
-  size: (value: PropertyValue<'width'>) => ({
+  size: (value: any) => ({
     width: value,
     height: value,
   }),
 
-  appearance: (value: PropertyValue<'appearance'>) => ({
+  appearance: (value: any) => ({
     WebkitAppearance: value,
     MozAppearance: 'none',
     appearance: value,
   }),
-  backgroundClip: (value: PropertyValue<'backgroundClip'>) => ({
+  backgroundClip: (value: any) => ({
     WebkitBackgroundClip: value,
     backgroundClip: value,
   }),
