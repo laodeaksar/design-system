@@ -1,3 +1,5 @@
+import hoverUtils from './utils/hover';
+
 const utils = {
   pt: (value: any) => ({
     paddingTop: value,
@@ -110,6 +112,7 @@ const utils = {
     WebkitBackgroundClip: value,
     backgroundClip: value,
   }),
+  ...hoverUtils,
 };
 
 export { utils };

@@ -1,7 +1,10 @@
 import React from 'react';
+
 import Flex from '../Flex';
 import Spinner from '../Spinner';
+
 import { StyledButton, StyledIconButton } from './Button.styles';
+
 import type { ButtonProps } from './Button.types';
 
 const Button = React.forwardRef(

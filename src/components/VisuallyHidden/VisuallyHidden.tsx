@@ -18,7 +18,7 @@ const visuallyHiddenClass = css({
 const VisuallyHidden = ({
   as: Component = 'p',
   ...props
-}: React.PropsWithChildren<VisuallyHiddenProps>) => {
+}: VisuallyHiddenProps) => {
   const { children } = props;
 
   return (

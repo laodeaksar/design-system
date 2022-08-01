@@ -1,10 +1,13 @@
+import React from 'react';
+
 import {
   StyledCallout,
   StyledCalloutIconWrapper,
   StyledCalloutLabelWrapper,
 } from './Callout.styles';
-import type { CalloutProps } from './Callout.types';
 import { getVariantIcon } from './utils';
+
+import type { CalloutProps } from './Callout.types';
 
 const Callout = (props: React.PropsWithChildren<CalloutProps>) => {
   const { children, label, variant, ...rest } = props;

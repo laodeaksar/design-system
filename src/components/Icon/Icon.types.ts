@@ -1,7 +1,8 @@
-import { SVGAttributes } from 'react';
-import { IconSize, IconVariant } from './Icon.styles';
+import React from 'react';
 
-export interface IconProps extends SVGAttributes<SVGElement> {
+import type { IconSize, IconVariant } from './Icon.styles';
+
+export interface IconProps extends React.SVGAttributes<SVGElement> {
   size?: IconSize;
   variant?: IconVariant;
   outline?: boolean;
