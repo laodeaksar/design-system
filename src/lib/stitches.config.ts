@@ -13,6 +13,7 @@ import { media } from './tokens/media';
 import { sizes } from './tokens/sizes';
 import { utils } from './tokens/utils';
 import { zIndices } from './tokens/zIndices';
+import { IBMPlexSans, Iosevka } from './fonts';
 
 const { config, css, getCssText, globalCss, keyframes, styled, theme } =
   createStitches({
@@ -33,6 +34,11 @@ const { config, css, getCssText, globalCss, keyframes, styled, theme } =
 
 export type CSS = StitchesCSS<typeof config>;
 export type { VariantProps } from '@stitches/react';
+
+export const preloadFonts = [
+  ...IBMPlexSans.preloadFonts,
+  ...Iosevka.preloadFonts,
+];
 
 export { getVariant } from './tokens/getVariant';
 export { Shadows } from './tokens/shadows';

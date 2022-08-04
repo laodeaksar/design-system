@@ -1,3 +1,4 @@
+import { IBMPlexSans, Iosevka } from './fonts';
 import { globalCss } from './stitches.config';
 
 import darkTheme from './themes/dark';
@@ -9,6 +10,7 @@ const global = {
   '*, *:before, *:after': {
     'box-sizing': 'border-box',
   },
+  '@font-face': [...IBMPlexSans.family, ...Iosevka.family],
 };
 
 export const globalStyles = globalCss({

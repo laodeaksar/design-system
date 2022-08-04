@@ -13,7 +13,11 @@ export const StyledAnchor = styled('a', {
 
   '--hover-color': 'var(--laodeaksar-colors-typeface-primary)',
 
-  '&:focus': {
+  hocus: {
+    $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
+    '--hover-translation-distance': 'var(--arrow-translation, 0)',
+  },
+  /*'&:focus': {
     $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
     '--hover-translation-distance': 'var(--arrow-translation, 0)',
   },
@@ -23,7 +27,7 @@ export const StyledAnchor = styled('a', {
       $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
       '--hover-translation-distance': 'var(--arrow-translation, 0)',
     },
-  },
+  },*/
 
   variants: {
     discreet: {
@@ -99,7 +103,11 @@ export const StyledAnchor = styled('a', {
 
         '--hover-color': 'unset',
 
-        '&:focus': {
+        hocus: {
+          '--border-color': 'hsl(var(--palette-blue-40))',
+        },
+
+        /* '&:focus': {
           '--border-color': 'hsl(var(--palette-blue-40))',
         },
 
@@ -107,7 +115,7 @@ export const StyledAnchor = styled('a', {
           '&:hover': {
             '--border-color': 'hsl(var(--palette-blue-40))',
           },
-        },
+        },*/
       },
     },
 

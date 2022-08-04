@@ -56,3 +56,10 @@ export {
 } from './lib/stitches.config';
 export { globalStyles } from './lib/globalStyles';
 export type { CSS, VariantProps } from './lib/stitches.config';
+
+/** UTILS **/
+export { buildApiResponse } from './utils/response';
+export { formatDate } from './utils/format-date';
+export { groupBy } from './utils/group-by';
+export { default as unique } from './utils/unique';
+export { getDomainFromUrl } from './utils/domain';
