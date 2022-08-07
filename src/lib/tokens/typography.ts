@@ -1,15 +1,11 @@
-import { IBMPlexSans, Iosevka } from '../fonts';
-
 const systemFont =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
 const fonts = {
   default: 'inherit',
-  display: `${IBMPlexSans.name.regular}, ${systemFont}`,
-  displayVar: `${IBMPlexSans.name.variable}, ${systemFont}`,
-  mono: `${Iosevka.name.variable}, menlo, monospace`,
-  monoVar: `${Iosevka.name.variable}, menlo, monospace`,
-  numeric: `${IBMPlexSans.name.variable}`,
+  display: `IBM Plex Sans, ${systemFont}`,
+  mono: `Iosevka, menlo, monospace`,
+  numeric: `IBM Plex Sans`,
 };
 
 const fontSizes = {

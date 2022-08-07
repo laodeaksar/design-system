@@ -1,8 +1,8 @@
 const fontsUtils = {
-  useFont: (fontName: 'display' | 'mono') => ({
+  useFont: (fontName: 'display' | 'mono' | 'numeric') => ({
     fontFamily: `$${fontName}`,
     '@supports (font-variation-settings: normal)': {
-      fontFamily: `$${fontName}Var`,
+      fontFamily: `$${fontName}`,
       fontOpticalSizing: 'auto',
     },
   }),

@@ -1,4 +1,4 @@
-import type { CSS, PropertyValue } from '@stitches/react';
+import type { CSS } from '@stitches/react';
 
 const visiblityUtils = {
   hidden: (value?: boolean) =>
@@ -10,7 +10,7 @@ const visiblityUtils = {
           userSelect: 'none',
         }
       : {},
-  visible: (display: PropertyValue<'display'>) => ({
+  visible: (display: any) => ({
     display,
     visibility: 'visible',
     pointerEvents: 'auto',

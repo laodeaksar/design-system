@@ -1,31 +1,29 @@
-import type { PropertyValue } from '@stitches/react';
-
 const borderUtils = {
-  btrr: (value: PropertyValue<'border'>) => ({
+  btrr: (value: any) => ({
     borderTopRightRadius: value,
   }),
-  bbrr: (value: PropertyValue<'border'>) => ({
+  bbrr: (value: any) => ({
     borderBottomRightRadius: value,
   }),
-  bblr: (value: PropertyValue<'border'>) => ({
+  bblr: (value: any) => ({
     borderBottomLeftRadius: value,
   }),
-  btlr: (value: PropertyValue<'border'>) => ({
+  btlr: (value: any) => ({
     borderTopLeftRadius: value,
   }),
-  btr: (value: PropertyValue<'border'>) => ({
+  btr: (value: any) => ({
     borderTopLeftRadius: value,
     borderTopRightRadius: value,
   }),
-  brr: (value: PropertyValue<'border'>) => ({
+  brr: (value: any) => ({
     borderTopRightRadius: value,
     borderBottomRightRadius: value,
   }),
-  bbr: (value: PropertyValue<'border'>) => ({
+  bbr: (value: any) => ({
     borderBottomRightRadius: value,
     borderBottomLeftRadius: value,
   }),
-  blr: (value: PropertyValue<'border'>) => ({
+  blr: (value: any) => ({
     borderTopLeftRadius: value,
     borderBottomLeftRadius: value,
   }),

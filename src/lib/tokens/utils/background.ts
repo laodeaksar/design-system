@@ -1,16 +1,14 @@
-import { PropertyValue } from '@stitches/react';
-
 const backgroundUtils = {
-  bc: (value: PropertyValue<'backgroundColor'>) => ({
+  bc: (value: any) => ({
     backgroundColor: value,
   }),
-  linearGradient: (value: PropertyValue<'backgroundImage'>) => ({
+  linearGradient: (value: any) => ({
     backgroundImage: `linear-gradient(${value})`,
   }),
-  radialGradient: (value: PropertyValue<'backgroundImage'>) => ({
+  radialGradient: (value: any) => ({
     backgroundImage: `radial-gradient(${value})`,
   }),
-  backgroundClip: (value: PropertyValue<'backgroundClip'>) => ({
+  backgroundClip: (value: any) => ({
     WebkitBackgroundClip: value,
     backgroundClip: value,
   }),
