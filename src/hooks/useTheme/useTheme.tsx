@@ -62,7 +62,7 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
   return [themeState, setThemeStateEnhanced];
 };
 
-const ThemeProvider: React.FC<{ children: React.ReactNode }> = (props) => {
+const ThemeProvider = (props: React.PropsWithChildren) => {
   const { children } = props;
   const [themeState, setThemeStateEnhanced] = useDarkMode();
   const toggleDark = React.useCallback(() => {

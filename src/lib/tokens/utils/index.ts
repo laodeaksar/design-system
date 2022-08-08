@@ -23,7 +23,7 @@ const utils = {
     top: value,
     bottom: value,
   }),
-  userSelect: (value: any) => ({
+  us: (value: any) => ({
     WebkitUserSelect: value,
     MozUserSelect: value,
     MsUserSelect: value,

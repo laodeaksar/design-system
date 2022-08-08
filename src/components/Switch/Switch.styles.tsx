@@ -77,7 +77,15 @@ export const StyledSwitch = styled('input', {
     },
   },
 
-  '&:hover': {
+  notDisabled: {
+    '&:not(:checked)': {
+      $$border: 'var(--laodeaksar-form-input-active)',
+    },
+
+    $$shadow: '$$shadow-hover-primary',
+  },
+
+  /*'&:hover': {
     '&:not(:disabled)': {
       '&:not(:checked)': {
         $$border: 'var(--laodeaksar-form-input-active)',
@@ -85,7 +93,7 @@ export const StyledSwitch = styled('input', {
 
       $$shadow: '$$shadow-hover-primary',
     },
-  },
+  },*/
 
   '&:focus-visible': {
     $$border: 'var(--laodeaksar-form-input-active)',

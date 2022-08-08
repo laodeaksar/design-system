@@ -5,19 +5,28 @@ const hoverUtils = {
     '@hover': styles,
   }),
   hover: (styles: CSS) => ({
-    canHover: {
-      '&:hover': styles,
-    },
+    '&:hover': styles,
   }),
   focus: (styles: CSS) => ({
-    canHover: {
-      '&:focus': styles,
-    },
+    '&:focus': styles,
   }),
   hocus: (styles: CSS) => ({
     canHover: {
-      '&:hover, &:focus': styles,
+      hover: styles,
     },
+    focus: styles,
+  }),
+  notDisabled: (styles: CSS) => ({
+    hover: {
+      '&:not(:disabled)': styles,
+    },
+  }),
+  hocuv: (styles: CSS) => ({
+    notDisabled: styles,
+    focus: styles,
+  }),
+  disabled: (styles: CSS) => ({
+    '&:disabled': styles,
   }),
 };
 

@@ -9,10 +9,7 @@ export const StyledButton = styled('button', {
 
   WebkitAppearance: 'none',
   WebkitTapHighlightColor: 'transparent',
-  WebkitUserSelect: 'none',
-  MozUserSelect: 'none',
-  MsUserSelect: 'none',
-  userSelect: 'none',
+  us: 'none',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -43,7 +40,7 @@ export const StyledButton = styled('button', {
     $$scale: '0.95',
   },
 
-  '&:disabled': {
+  disabled: {
     cursor: 'not-allowed',
   },
 
@@ -53,12 +50,15 @@ export const StyledButton = styled('button', {
         $$background: 'var(--laodeaksar-colors-brand)',
         $$color: 'hsl(var(--palette-gray-00))',
 
-        '&:disabled': {
+        disabled: {
           $$background: 'var(--laodeaksar-form-input-disabled)',
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        '&:hover': {
+        hocuv: {
+          $$shadow: '$$shadow-hover-primary',
+        },
+        /*'&:hover': {
           '&:not(:disabled)': {
             $$shadow: '$$shadow-hover-primary',
           },
@@ -66,19 +66,20 @@ export const StyledButton = styled('button', {
 
         '&:focus-visible': {
           $$shadow: '$$shadow-hover-primary',
-        },
+        },*/
       },
 
       secondary: {
         $$background: 'var(--laodeaksar-colors-emphasis)',
         $$color: 'var(--laodeaksar-colors-brand)',
 
-        '&:disabled': {
+        disabled: {
           $$background: 'var(--laodeaksar-form-input-disabled)',
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        '&:hover': {
+        hocuv: { $$shadow: '$$shadow-hover-primary' },
+        /*'&:hover': {
           '&:not(:disabled)': {
             $$shadow: '$$shadow-hover-primary',
           },
@@ -86,18 +87,19 @@ export const StyledButton = styled('button', {
 
         '&:focus-visible': {
           $$shadow: '$$shadow-hover-primary',
-        },
+        },*/
       },
       danger: {
         $$background: 'var(--laodeaksar-colors-emphasis)',
         $$color: 'var(--laodeaksar-colors-danger)',
 
-        '&:disabled': {
+        disabled: {
           $$background: 'var(--laodeaksar-form-input-disabled)',
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        '&:hover': {
+        hocuv: { $$shadow: '$$shadow-hover-primary' },
+        /*'&:hover': {
           '&:not(:disabled)': {
             $$shadow: '$$shadow-hover-primary',
           },
@@ -105,7 +107,7 @@ export const StyledButton = styled('button', {
 
         '&:focus-visible': {
           $$shadow: '$$shadow-hover-primary',
-        },
+        },*/
       },
     },
   },
@@ -161,13 +163,22 @@ export const StyledIconButton = styled('button', {
     boxShadow: '$$shadow',
   },
 
-  '&:disabled': {
+  disabled: {
     cursor: 'not-allowed',
     $$background: 'var(--laodeaksar-form-input-disabled)',
     $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
   },
 
-  '&:hover': {
+  hocuv: {
+    $$border: 'var(--laodeaksar-colors-brand)',
+    $$thickness: '2px',
+    $$color: 'var(--laodeaksar-colors-brand)',
+    $$corner: 'calc($space$2 + 2px)',
+    $$afterscale: '0.92',
+    $$shadow: '$$shadow-hover-primary',
+  },
+
+  /*'&:hover': {
     '&:not(:disabled)': {
       $$border: 'var(--laodeaksar-colors-brand)',
       $$thickness: '2px',
@@ -185,7 +196,7 @@ export const StyledIconButton = styled('button', {
     $$corner: 'calc($space$2 + 2px)',
     $$afterscale: '0.92',
     $$shadow: '$$shadow-hover-primary',
-  },
+  },*/
 
   '&:active': {
     $$scale: '0.95',

@@ -5,8 +5,6 @@ const sharedConfig = {
   loader: {
     '.tsx': 'tsx',
     '.ts': 'tsx',
-    '.woff': 'file',
-    '.woff2': 'file',
   },
   outbase: './src',
   bundle: true,
@@ -14,11 +12,7 @@ const sharedConfig = {
   jsxFragment: 'Fragment',
   target: ['esnext'],
   logLevel: 'debug',
-  external: [
-    ...Object.keys(packagejson.peerDependencies || {}),
-    '*.woff',
-    '*.woff2',
-  ],
+  external: [...Object.keys(packagejson.peerDependencies || {})],
 };
 
 esbuild
