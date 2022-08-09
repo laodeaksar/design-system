@@ -21,7 +21,7 @@ interface MainButtonProps extends BaseButtonProps {
 
 interface IconButtonProps extends BaseButtonProps {
   variant: IconButtonVariant;
-  icon: React.ReactNode; // | HTMLOrSVGElement;
+  icon: React.ReactNode;
   isLoading?: never;
   startIcon?: never;
   endIcon?: never;

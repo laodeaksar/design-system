@@ -37,7 +37,8 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
   whiteSpace: 'nowrap',
   pointerEvents: 'none',
   userSelect: 'none',
-  boxShadow: Shadows[1],
+  boxShadow: `${Shadows[1]}`,
+  zIndex: '$4',
 
   '@media (prefers-reduced-motion: no-preference)': {
     animationDuration: '150ms',

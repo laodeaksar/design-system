@@ -4,8 +4,8 @@ import { DEFAULT_TAG } from './Typography.constants';
 import Text from './TypographyText';
 
 export type TextSizeVariants = Pick<
-  React.ComponentProps<typeof Text>,
-  'size' | 'variant' | 'gradient' | 'truncate'
+  VariantProps<typeof Text>,
+  'size' | 'variant' | 'gradient'
 >;
 
 export type EMProps = React.HTMLAttributes<HTMLParagraphElement> &

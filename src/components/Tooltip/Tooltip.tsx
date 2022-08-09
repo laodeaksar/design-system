@@ -24,19 +24,28 @@ const Tooltip = (props: React.PropsWithChildren<TooltipProps>) => {
   return (
     <TooltipPrimitive.Root delayDuration={delayDuration}>
       <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
-      <TooltipContent
-        id={id}
-        portalled={portalled}
-        side={side}
-        sideOffset={sideOffset}
-      >
-        {content}
-        {visuallyHiddenText && (
-          <VisuallyHidden>{visuallyHiddenText}</VisuallyHidden>
-        )}
-      </TooltipContent>
+      {portalled ? (
+        <TooltipPrimitive.Portal>
+          <TooltipContent id={id} side={side} sideOffset={sideOffset}>
+            {content}
+            {visuallyHiddenText && (
+              <VisuallyHidden>{visuallyHiddenText}</VisuallyHidden>
+            )}
+          </TooltipContent>
+        </TooltipPrimitive.Portal>
+      ) : (
+        <TooltipContent id={id} side={side} sideOffset={sideOffset}>
+          {content}
+          {visuallyHiddenText && (
+            <VisuallyHidden>{visuallyHiddenText}</VisuallyHidden>
+          )}
+        </TooltipContent>
+      )}
     </TooltipPrimitive.Root>
   );
 };
+
+Tooltip.displayName = 'Tooltip';
+Tooltip.Provider = TooltipPrimitive.TooltipProvider;
 
 export default Tooltip;
