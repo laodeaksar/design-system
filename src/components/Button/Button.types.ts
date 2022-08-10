@@ -14,7 +14,7 @@ interface BaseButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 interface MainButtonProps extends BaseButtonProps {
   variant: MainButtonVariant;
   icon?: never;
-  isLoading?: never;
+  isLoading?: boolean;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
 }
@@ -27,17 +27,4 @@ interface IconButtonProps extends BaseButtonProps {
   endIcon?: never;
 }
 
-interface IsLoadingButtonProps extends BaseButtonProps {
-  variant: IconButtonVariant;
-  icon?: never;
-  isLoading?: boolean;
-  startIcon?: never;
-  endIcon?: never;
-}
-
-export type ButtonProps<T> = (
-  | MainButtonProps
-  | IconButtonProps
-  | IsLoadingButtonProps
-) &
-  T;
+export type ButtonProps<T> = (MainButtonProps | IconButtonProps) & T;
