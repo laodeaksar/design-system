@@ -55,6 +55,11 @@ export const StyledInput = styled('input', {
       text: {},
       url: {},
     },
+    error: {
+      true: {
+        $$border: 'var(laodeaksar-colors-danger)',
+      },
+    },
   },
 });
 

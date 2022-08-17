@@ -83,5 +83,10 @@ export const StyledTextArea = styled('textarea', {
         resize: 'horizontal',
       },
     },
+    error: {
+      true: {
+        $$border: 'var(laodeaksar-colors-danger)',
+      },
+    },
   },
 });

@@ -1,9 +1,11 @@
 import React from 'react';
+
 import Box from 'src/components/Box';
 import Label from 'src/components/Label';
+
 import { AtSignIcon, EyeIcon, Tick } from './TextInputIcons';
 import { StyledInput, StyledInputWrapper } from './TextInput.styles';
-import { TextInputProps } from './TextInput.types';
+import type { TextInputProps } from './TextInput.types';
 import { validateEmail } from './utils';
 
 const TextInput = (props: TextInputProps) => {
@@ -57,6 +59,7 @@ const TextInput = (props: TextInputProps) => {
             <Tick />
           </>
         )}
+
         {type === 'password' && (
           <>
             <button
