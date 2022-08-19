@@ -52,6 +52,7 @@ const TextInput = React.forwardRef(
             type={computedType()}
             placeholder={placeholder}
             value={value}
+            ref={ref}
             {...rest}
           />
           {type === 'email' && (
