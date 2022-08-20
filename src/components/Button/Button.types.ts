@@ -1,4 +1,5 @@
 import { ForwardRefComponent } from 'framer-motion';
+import { CSS } from '../../lib/stitches.config';
 
 export type MainButtonVariant = 'primary' | 'secondary';
 export type IconButtonVariant = 'icon';
@@ -9,6 +10,7 @@ interface BaseButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   // But that is somehow invalid :shurg. The objective here would be to only allow polymorphism for motion.button
   as?: ForwardRefComponent<HTMLButtonElement, any>;
   type?: 'button' | 'reset' | 'submit';
+  css?: CSS;
 }
 
 interface MainButtonProps extends BaseButtonProps {
