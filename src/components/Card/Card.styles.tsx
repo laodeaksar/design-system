@@ -23,16 +23,16 @@ export const CardWrapper = styled(Box, {
     },
     depth: {
       0: {
-        $$shadow: Shadows[0],
+        $$shadow: `${Shadows[0]}`,
       },
       1: {
-        $$shadow: Shadows[1],
+        $$shadow: `${Shadows[1]}`,
       },
       2: {
-        $$shadow: Shadows[2],
+        $$shadow: `${Shadows[2]}`,
       },
       3: {
-        $$shadow: Shadows[3],
+        $$shadow: `${Shadows[3]}`,
       },
     },
   },

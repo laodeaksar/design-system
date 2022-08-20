@@ -31,7 +31,7 @@ const TextInput = React.forwardRef(
     }, [showPassword, type]);
 
     return (
-      <StyledInputWrapper className={isValid ? 'valid' : ''} ref={ref} variant={type}>
+      <StyledInputWrapper className={isValid ? 'valid' : ''} variant={type}>
         {label && (
           <Label
             htmlFor={id}
@@ -83,4 +83,6 @@ const TextInput = React.forwardRef(
 
 TextInput.displayName = 'TextInput';
 
-export default TextInput;
+export default TextInput as (
+  props: TextInputProps & { ref?: React.ForwardedRef<HTMLInputElement> }
+) => JSX.Element;
