@@ -31,7 +31,7 @@ const TextInput = React.forwardRef(
     }, [showPassword, type]);
 
     return (
-      <StyledInputWrapper className={isValid ? 'valid' : ''} variant={type}>
+      <StyledInputWrapper className={isValid ? 'valid' : ''} ref={ref} variant={type}>
         {label && (
           <Label
             htmlFor={id}
