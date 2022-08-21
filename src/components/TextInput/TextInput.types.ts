@@ -5,8 +5,8 @@ export interface TextInputProps
   type?: TextInputTypes;
   label?: React.ReactNode;
   value?: string;
-  id: string;
+  id?: string;
   ['data-testid']?: string;
-  ['aria-label']: string;
-  onChange: React.FormEventHandler<HTMLInputElement>;
+  ['aria-label']?: string;
+  onChange?: React.FormEventHandler<HTMLInputElement>;
 }
