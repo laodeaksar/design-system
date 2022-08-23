@@ -8,6 +8,6 @@ export interface TextInputProps
   error?: boolean;
   id: string;
   ['data-testid']?: string;
-  ['aria-label']: string;
-  onChange: React.FormEventHandler<HTMLInputElement>;
+  ['aria-label']?: string;
+  onChange?: React.FormEventHandler<HTMLInputElement>;
 }
