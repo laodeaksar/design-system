@@ -13,6 +13,7 @@ const TextInput = React.forwardRef(
     const {
       id,
       disabled,
+      error,
       label,
       type = 'text',
       placeholder,
@@ -47,6 +48,7 @@ const TextInput = React.forwardRef(
             id={id}
             className={isValid ? 'valid' : ''}
             disabled={disabled}
+            error={error}
             // TODO cleanup variants: variants != types
             variant={computedType()}
             type={computedType()}

@@ -5,6 +5,7 @@ export interface TextInputProps
   type?: TextInputTypes;
   label?: React.ReactNode;
   value?: string;
+  error?: boolean;
   id: string;
   ['data-testid']?: string;
   ['aria-label']: string;
