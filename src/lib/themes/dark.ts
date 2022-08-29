@@ -31,7 +31,7 @@ const darkTheme = {
     '--laodeaksar-form-input-border': 'hsl(var(--palette-gray-60))',
     '--laodeaksar-form-input-focus': 'hsla(var(--palette-blue-50), 1)',
 
-    '---shadow-color': 'var(--local-shadow-color, 223deg 5% 1%)',
+    '--shadow-color': 'var(--local-shadow-color, 223deg 5% 1%)',
     '--scrollbar': '#2c3038',
 
     '--code-snippet-background': 'hsla(var(--palette-gray-85), 0.5)',
