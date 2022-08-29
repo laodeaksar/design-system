@@ -48,6 +48,7 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
 
   React.useEffect(() => {
     const storedMode = storage.get();
+
     if (!storedMode && supportsDarkMode()) {
       return setThemeStateEnhanced(Theme.DARK);
     }
@@ -64,7 +65,9 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
 
 const ThemeProvider = (props: React.PropsWithChildren) => {
   const { children } = props;
+
   const [themeState, setThemeStateEnhanced] = useDarkMode();
+
   const toggleDark = React.useCallback(() => {
     setThemeStateEnhanced();
   }, [setThemeStateEnhanced]);

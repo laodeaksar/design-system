@@ -55,6 +55,7 @@ const useKeyboardShortcut = (
   // Add event listeners
   React.useEffect(() => {
     document.addEventListener(innerConfig.eventType as EventType, handler);
+
     return () =>
       document.removeEventListener(innerConfig.eventType as EventType, handler);
   }, [innerConfig.eventType, handler]);

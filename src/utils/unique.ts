@@ -7,6 +7,7 @@ const unique = <T, Key extends keyof T>(
   }
 
   const set = new Set();
+
   return array.filter((o: T) => {
     return !set.has(o[property]) && set.add(o[property]);
   });

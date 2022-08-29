@@ -1,4 +1,5 @@
 import { Prefixed } from '@stitches/react/types/util';
+
 import { config, type CSS } from '../stitches.config';
 
 const getVariant = <
@@ -11,6 +12,7 @@ const getVariant = <
   map: (tokenValue: P) => CSS
 ): R => {
   const values = Object.keys(config.theme[prop]) as T[];
+
   return values.reduce<R>(
     (acc, tokenValue) => ({
       ...acc,
