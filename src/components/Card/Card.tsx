@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { CardBody, CardHeader, CardWrapper } from './Card.styles';
-import { CardComposition, CardProps } from './Card.types';
+import type { CardComposition, CardProps } from './Card.types';
 import { isHeaderElement } from './utils';
 
 function Card<T>(props: CardProps & CardComposition & T) {

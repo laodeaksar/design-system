@@ -25,8 +25,7 @@ const Range = (props: RangeProps) => {
 
   React.useEffect(() => {
     onChange(debouncedValue);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedValue]);
+  }, [debouncedValue, onChange]);
 
   const fill = React.useMemo(
     () => adjustSlider(value, min, max, disabled),

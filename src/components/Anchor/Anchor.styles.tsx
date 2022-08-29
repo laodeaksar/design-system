@@ -17,6 +17,7 @@ export const StyledAnchor = styled('a', {
     $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
     '--hover-translation-distance': 'var(--arrow-translation, 0)',
   },
+
   /*'&:focus': {
     $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
     '--hover-translation-distance': 'var(--arrow-translation, 0)',
@@ -123,6 +124,8 @@ export const StyledAnchor = styled('a', {
       true: {
         '--size': '1.1em',
         border: '1px solid currentColor',
+        borderRadius: '$1',
+        margin: '$3',
 
         '&:before': {
           content: '""',

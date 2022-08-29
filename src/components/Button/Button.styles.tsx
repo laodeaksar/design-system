@@ -58,6 +58,7 @@ export const StyledButton = styled('button', {
         hocuv: {
           $$shadow: '$$shadow-hover-primary',
         },
+
         /*'&:hover': {
           '&:not(:disabled)': {
             $$shadow: '$$shadow-hover-primary',

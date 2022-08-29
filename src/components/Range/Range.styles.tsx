@@ -1,7 +1,7 @@
 import { Shadows, styled } from 'src/lib/stitches.config';
 
 export const StyledRange = styled('input', {
-  $$shadow: Shadows[2],
+  $$shadow: `${Shadows[2]}`,
   $$border: 'var(--laodeaksar-form-input-border)',
   $$track: 'transparent',
 

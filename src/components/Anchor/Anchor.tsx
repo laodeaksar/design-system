@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { StyledAnchor } from './Anchor.styles';
 import type { AnchorProps } from './Anchor.types';
+
 import { getIconString } from './utils';
 
 const Anchor = React.forwardRef(

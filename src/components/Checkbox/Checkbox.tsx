@@ -1,10 +1,12 @@
 import Label from '../Label';
+import Flex from '../Flex';
+
 import { StyledCheckbox } from './Checkbox.styles';
 import type { CheckboxProps } from './Checkbox.types';
-import Flex from '../Flex';
 
 const Checkbox = (props: CheckboxProps) => {
   const { checked, disabled, id, label, ...rest } = props;
+
   return (
     <Flex gap={2}>
       <StyledCheckbox

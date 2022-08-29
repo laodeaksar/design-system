@@ -77,6 +77,7 @@ export const StyledCheckbox = styled('input', {
       '&:not(:checked)': {
         $$border: 'var(--laodeaksar-form-input-active)',
       },
+
       $$shadow: '$$shadow-hover-primary',
     },
   },

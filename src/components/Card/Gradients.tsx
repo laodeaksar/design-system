@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { keyframes } from 'src/lib/stitches.config';
 
 import Box from 'src/components/Box';

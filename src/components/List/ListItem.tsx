@@ -4,7 +4,7 @@ import Icon from 'src/components/Icon';
 
 import { StyledListItem } from './List.styles';
 
-const ListItem: React.FC<React.LiHTMLAttributes<HTMLLIElement>> = (props) => {
+const ListItem = (props: React.LiHTMLAttributes<HTMLLIElement>) => {
   const { children, ...rest } = props;
 
   return (

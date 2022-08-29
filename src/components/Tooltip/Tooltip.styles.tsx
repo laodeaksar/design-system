@@ -2,8 +2,14 @@ import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { keyframes, Shadows, styled } from 'src/lib/stitches.config';
 
 const slideUpAndFadeIn = keyframes({
-  '0%': { opacity: 0, transform: 'translateY(var(--space-1)) scale(0.98)' },
-  '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+  '0%': {
+    opacity: 0,
+    transform: 'translateY(var(--space-1)) scale(0.98)',
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateY(0) scale(1)',
+  },
 });
 
 const slideRightAndFadeIn = keyframes({
@@ -11,7 +17,10 @@ const slideRightAndFadeIn = keyframes({
     opacity: 0,
     transform: 'translateX(calc(-1 * var(--space-1))) scale(0.98)',
   },
-  '100%': { opacity: 1, transform: 'translateX(0) scale(1)' },
+  '100%': {
+    opacity: 1,
+    transform: 'translateX(0) scale(1)',
+  },
 });
 
 const slideDownAndFadeIn = keyframes({
@@ -19,12 +28,21 @@ const slideDownAndFadeIn = keyframes({
     opacity: 0,
     transform: 'translateY(calc(-1 * var(--space-1))) scale(0.98)',
   },
-  '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+  '100%': {
+    opacity: 1,
+    transform: 'translateY(0) scale(1)',
+  },
 });
 
 const slideLeftAndFadeIn = keyframes({
-  '0%': { opacity: 0, transform: 'translateX(var(--space-1)) scale(0.98)' },
-  '100%': { opacity: 1, transform: 'translateX(0) scale(1)' },
+  '0%': {
+    opacity: 0,
+    transform: 'translateX(var(--space-1)) scale(0.98)',
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translateX(0) scale(1)',
+  },
 });
 
 export const TooltipContent = styled(TooltipPrimitive.Content, {
@@ -44,6 +62,7 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
     animationDuration: '150ms',
     animationTimingFunction: 'ease-in-out',
     willChange: 'transform, opacity, scale',
+
     '&[data-state="delayed-open"]': {
       '&[data-side="top"]': { animationName: slideDownAndFadeIn },
       '&[data-side="right"]': { animationName: slideLeftAndFadeIn },

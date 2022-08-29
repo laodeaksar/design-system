@@ -28,6 +28,7 @@ const TextInput = React.forwardRef(
       if (type === 'password' && showPassword) {
         return 'text';
       }
+
       return type;
     }, [showPassword, type]);
 

@@ -13,7 +13,7 @@ const visuallyHiddenClass = css({
   position: 'absolute !important',
   width: '1px !important',
   whiteSpace: 'nowrap !important',
-});
+})();
 
 const VisuallyHidden = ({
   as: Component = 'p',
@@ -22,7 +22,7 @@ const VisuallyHidden = ({
   const { children } = props;
 
   return (
-    <Component {...props} className={visuallyHiddenClass()}>
+    <Component {...props} className={visuallyHiddenClass}>
       {children}
     </Component>
   );
