@@ -126,6 +126,8 @@ export const StyledAnchor = styled('a', {
         border: '1px solid currentColor',
         borderRadius: '$1',
         margin: '$3',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
 
         '&:before': {
           content: '""',

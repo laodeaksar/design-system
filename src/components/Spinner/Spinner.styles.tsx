@@ -1,9 +1,4 @@
-import {
-  getVariant,
-  keyframes,
-  styled,
-  VariantProps,
-} from 'src/lib/stitches.config';
+import { getVariant, keyframes, styled } from 'src/lib/stitches.config';
 
 const spin = keyframes({
   from: {
