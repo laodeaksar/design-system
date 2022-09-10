@@ -1,4 +1,3 @@
-import React from 'react';
 import { LoaderProps } from './types';
 
 export function Bars({ size, color, ...others }: LoaderProps) {

@@ -5,7 +5,8 @@ export const StyledBlockquote = styled('blockquote', {
   lineHeight: '$relaxed',
   letterSpacing: '$tight',
   fontSize: '$4',
-  color: 'var(--laodeaksar-colors-typeface-secondary)',
+  color: '$typeface-secondary',
+  // color: 'var(--laodeaksar-colors-typeface-secondary)',
   position: 'relative',
   margin: '0 0 24px 0',
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { LoaderProps } from './types';
 
 export function Oval({ size, color, ...others }: LoaderProps) {

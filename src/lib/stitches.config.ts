@@ -13,12 +13,16 @@ import { media } from './tokens/media';
 import { sizes } from './tokens/sizes';
 import { utils } from './tokens/utils';
 import { zIndices } from './tokens/zIndices';
+import { shadows } from './tokens/shadows';
+import { colors } from './tokens/colors';
 
 const { config, css, getCssText, globalCss, keyframes, styled, theme } =
   createStitches({
     theme: {
+      colors,
       fonts,
       space,
+      shadows,
       sizes,
       fontSizes,
       lineHeights,

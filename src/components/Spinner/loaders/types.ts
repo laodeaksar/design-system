@@ -1,6 +1,6 @@
 import React from 'react';
 
 export interface LoaderProps extends React.ComponentPropsWithoutRef<'svg'> {
-  size: number | string;
+  size: number;
   color: string;
 }
