@@ -73,3 +73,5 @@ cypress/videos
 
 # Dist files
 dist/
+
+src/components/Carousel/

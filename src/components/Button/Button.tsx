@@ -37,7 +37,7 @@ const Button = React.forwardRef(
     }
 
     return (
-      <StyledButton variant={variant} ref={ref} {...rest}>
+      <StyledButton variant={variant} isLoading={isLoading} ref={ref} {...rest}>
         {startIcon && (
           <Flex
             css={{

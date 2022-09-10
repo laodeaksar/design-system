@@ -111,6 +111,13 @@ export const StyledButton = styled('button', {
         },*/
       },
     },
+    isLoading: {
+      true: {
+        cursor: 'not-allowed',
+        $$background: 'var(--laodeaksar-form-input-disabled)',
+        $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
+      },
+    },
   },
 });
 
