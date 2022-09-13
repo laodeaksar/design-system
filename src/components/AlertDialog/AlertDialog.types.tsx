@@ -4,9 +4,8 @@ export type ContentProps = {
   children: React.ReactNode;
 };
 
-export interface AlertDialogProps {
-  children: React.ReactNode;
+export interface AlertDialogProps extends ContentProps {
   title: string;
   description: string;
-  actionText: string;
+  action: React.ReactNode;
 }

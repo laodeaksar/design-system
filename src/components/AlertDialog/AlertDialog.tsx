@@ -23,7 +23,7 @@ function Content(props: ContentProps) {
 }
 
 const AlertDialog = (props: AlertDialogProps) => {
-  const { description, title, children, actionText } = props;
+  const { description, title, children, action } = props;
 
   return (
     <AlertDialogPrimitive.Root>
@@ -40,7 +40,7 @@ const AlertDialog = (props: AlertDialogProps) => {
             </Button>
           </AlertDialogPrimitive.Cancel>
           <AlertDialogPrimitive.Action asChild>
-            <Button variant="danger">{actionText}</Button>
+            {action}
           </AlertDialogPrimitive.Action>
         </Flex>
       </Content>
