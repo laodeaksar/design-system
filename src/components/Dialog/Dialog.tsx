@@ -9,7 +9,6 @@ import {
 } from './Dialog.styles';
 import { DialogProps, ContentProps } from './Dialog.types';
 
-import Flex from '../Flex';
 import Button from '../Button';
 import Icon from '../Icon';
 
