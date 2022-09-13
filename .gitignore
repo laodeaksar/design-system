@@ -75,3 +75,4 @@ cypress/videos
 dist/
 
 src/components/Carousel/
+src/components/Spinner/loaders/
