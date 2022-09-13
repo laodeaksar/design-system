@@ -12,45 +12,37 @@ import { DialogProps, ContentProps } from './Dialog.types';
 import Button from '../Button';
 import Icon from '../Icon';
 
-const Content = React.forwardRef(
-  (props: ContentProps, ref: React.ForwardedRef<HTMLDivElement>) => {
-    const { children } = props;
+const DialogContent = React.forwardRef(
+  (props: DialogProps, ref: React.ForwardedRef<HTMLDivElement>) => {
+    const { description, title, children } = props;
 
     return (
       <DialogPrimitive.Portal>
         <StyledOverlay />
         <StyledContent {...props} ref={ref}>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledDescription>{description}</StyledDescription>
           {children}
+          <DialogPrimitive.Close asChild>
+            <Button variant="icon" icon={<Icon.X />} />
+          </DialogPrimitive.Close>
         </StyledContent>
       </DialogPrimitive.Portal>
     );
   }
 );
 
-Content.displayName = 'Content';
-
-const DialogContent = (props: DialogProps) => {
-  const { description, title, children, action } = props;
-
-  return (
-    <Content>
-      <StyledTitle>{title}</StyledTitle>
-      <StyledDescription>{description}</StyledDescription>
-      {children}
-      <DialogPrimitive.Close asChild>
-        <Button variant="icon" icon={<Icon.X />} />
-      </DialogPrimitive.Close>
-    </Content>
-  );
-};
+DialogContent.displayName = 'DialogContent';
 
 const DialogTrigger = ({ children }: ContentProps) => (
   <DialogPrimitive.Trigger asChild>{children}</DialogPrimitive.Trigger>
 );
 
-const Dialog = ({ children }: ContentProps) => (
-  <DialogPrimitive.Root>{children}</DialogPrimitive.Root>
-);
+const Dialog = (props: DialogPrimitive.DialogProps) => {
+  const { children } = props;
+
+  return <DialogPrimitive.Root {...props}>{children}</DialogPrimitive.Root>;
+};
 
 Dialog.Content = DialogContent;
 Dialog.Trigger = DialogTrigger;

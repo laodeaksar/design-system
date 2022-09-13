@@ -11,35 +11,27 @@ import { AlertDialogProps, ContentProps } from './AlertDialog.types';
 import Flex from '../Flex';
 import Button from '../Button';
 
-function Content(props: ContentProps) {
-  const { children } = props;
-
-  return (
-    <AlertDialogPrimitive.Portal>
-      <StyledOverlay />
-      <StyledContent {...props}>{children}</StyledContent>
-    </AlertDialogPrimitive.Portal>
-  );
-}
-
 const AlertDialogContent = (props: AlertDialogProps) => {
   const { description, title, children } = props;
 
   return (
-    <Content>
-      <StyledTitle>{title}</StyledTitle>
-      <StyledDescription>{description}</StyledDescription>
-      <Flex css={{ justifyContent: 'flex-end' }}>
-        <AlertDialogPrimitive.Cancel asChild>
-          <Button variant="primary" css={{ marginRight: 25 }}>
-            Cancel
-          </Button>
-        </AlertDialogPrimitive.Cancel>
-        <AlertDialogPrimitive.Action asChild>
-          {children}
-        </AlertDialogPrimitive.Action>
-      </Flex>
-    </Content>
+    <AlertDialogPrimitive.Portal>
+      <StyledOverlay />
+      <StyledContent {...props}>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDescription>{description}</StyledDescription>
+        <Flex css={{ justifyContent: 'flex-end' }}>
+          <AlertDialogPrimitive.Cancel asChild>
+            <Button variant="primary" css={{ marginRight: 25 }}>
+              Cancel
+            </Button>
+          </AlertDialogPrimitive.Cancel>
+          <AlertDialogPrimitive.Action asChild>
+            {children}
+          </AlertDialogPrimitive.Action>
+        </Flex>
+      </StyledContent>
+    </AlertDialogPrimitive.Portal>
   );
 };
 
@@ -49,9 +41,13 @@ const AlertDialogTrigger = ({ children }: ContentProps) => (
   </AlertDialogPrimitive.Trigger>
 );
 
-const AlertDialog = ({ children }: ContentProps) => (
-  <AlertDialogPrimitive.Root>{children}</AlertDialogPrimitive.Root>
-);
+const AlertDialog = (props: AlertDialogPrimitive.AlertDialogProps) => {
+  const { children } = props;
+
+  return (
+    <AlertDialogPrimitive.Root {...props}>{children}</AlertDialogPrimitive.Root>
+  );
+};
 
 AlertDialog.Content = AlertDialogContent;
 AlertDialog.Trigger = AlertDialogTrigger;
