@@ -3,6 +3,7 @@ export const formatDate = (
   options: Intl.DateTimeFormatOptions | undefined | null = {}
 ): string => {
   if (!preDate || preDate.length <= 0) return '';
+
   try {
     const date = new Date(preDate);
 

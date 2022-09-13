@@ -2,6 +2,7 @@ import { styled } from 'src/lib/stitches.config';
 
 export const StyledAnchor = styled('a', {
   $$color: 'var(--laodeaksar-colors-brand)',
+  '$$hover-color': 'var(--laodeaksar-colors-typeface-primary)',
 
   fontSize: 'inherit',
   lineHeight: 'inherit',
@@ -11,10 +12,8 @@ export const StyledAnchor = styled('a', {
   outline: 'none',
   transition: 'border-color 0.3s ease, color 0.3s ease',
 
-  '--hover-color': 'var(--laodeaksar-colors-typeface-primary)',
-
   hocus: {
-    $$color: 'var(--hover-color, var(--laodeaksar-colors-brand))',
+    $$color: '$$hover-color',
     '--hover-translation-distance': 'var(--arrow-translation, 0)',
   },
 
@@ -41,7 +40,7 @@ export const StyledAnchor = styled('a', {
         '--size': '1.1em',
         '--arrow-direction': -1,
         '--arrow-translation': '-0.25em',
-        '--hover-color': 'unset',
+        '$$hover-color': 'unset',
 
         '&:before': {
           content: '""',
@@ -61,7 +60,7 @@ export const StyledAnchor = styled('a', {
         '--size': '1.1em',
         '--arrow-translation': '0.25em',
         '--arrow-direction': 1,
-        '--hover-color': 'unset',
+        '$$hover-color': 'unset',
 
         '&:after': {
           content: '""',
@@ -99,13 +98,15 @@ export const StyledAnchor = styled('a', {
 
     underline: {
       true: {
-        borderBottom: '2px solid',
-        borderColor: 'var(--border-color, transparent)',
+        $$border: 'transparent',
 
-        '--hover-color': 'unset',
+        borderBottom: '2px solid',
+        borderColor: '$$border',
+
+        '$$hover-color': 'unset',
 
         hocus: {
-          '--border-color': 'hsl(var(--palette-blue-40))',
+          $$border: 'hsl(var(--palette-blue-40))',
         },
 
         /* '&:focus': {
@@ -126,6 +127,8 @@ export const StyledAnchor = styled('a', {
         border: '1px solid currentColor',
         borderRadius: '$1',
         margin: '$3',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
 
         '&:before': {
           content: '""',

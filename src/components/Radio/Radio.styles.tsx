@@ -41,7 +41,8 @@ export const StyledRadio = styled('input', {
     borderRadius: '$round',
     background: 'var(--laodeaksar-form-input-background)',
     opacity: '$$opacity',
-    transform: 'scale($$scale)',
+    scale: '$$scale',
+    //transform: 'scale($$scale)',
   },
 
   '&:checked': {
@@ -50,8 +51,8 @@ export const StyledRadio = styled('input', {
     $$do: '0.3s',
     $$dt: '0.6s',
     $$dte: 'cubic-bezier(0.2, 0.85, 0.32, 1.2)',
-    $$scale: '0.5',
     $$opacity: '1',
+    $$scale: '0.5',
   },
 
   '&:disabled': {

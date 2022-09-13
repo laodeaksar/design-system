@@ -1,5 +1,4 @@
-import { Shadows, styled } from 'src/lib/stitches.config';
-
+import { styled } from 'src/lib/stitches.config';
 import Box from 'src/components/Box';
 
 export const CardWrapper = styled(Box, {
@@ -22,18 +21,10 @@ export const CardWrapper = styled(Box, {
       },
     },
     depth: {
-      0: {
-        $$shadow: `${Shadows[0]}`,
-      },
-      1: {
-        $$shadow: `${Shadows[1]}`,
-      },
-      2: {
-        $$shadow: `${Shadows[2]}`,
-      },
-      3: {
-        $$shadow: `${Shadows[3]}`,
-      },
+      0: { $$shadow: '$shadows$0' },
+      1: { $$shadow: '$shadows$1' },
+      2: { $$shadow: '$shadows$2' },
+      3: { $$shadow: '$shadows$3' },
     },
   },
   defaultVariants: {

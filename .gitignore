@@ -73,3 +73,6 @@ cypress/videos
 
 # Dist files
 dist/
+
+src/components/Carousel/
+src/components/Spinner/loaders/

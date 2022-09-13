@@ -1,7 +1,6 @@
 import { globalCss } from './stitches.config';
 
-import darkTheme from './themes/dark';
-import lightTheme from './themes/light';
+import { darkTheme, lightTheme } from './themes';
 import { palette } from './tokens/colors';
 import { grid } from './tokens/layout';
 

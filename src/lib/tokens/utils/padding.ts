@@ -1,3 +1,7 @@
+//import * as Stitches from '@stitches/react';
+
+//type Size = Stitches.PropertyValue<'padding'>;
+
 const paddingUtils = {
   // Abbreviated padding properties
   pt: (value: any) => ({
@@ -19,6 +23,12 @@ const paddingUtils = {
   py: (value: any) => ({
     paddingTop: value,
     paddingBottom: value,
+  }),
+  pxy: ([v, h]: [any, any]) => ({
+    paddingTop: v,
+    paddingBottom: v,
+    paddingLeft: h,
+    paddingRight: h,
   }),
 };
 

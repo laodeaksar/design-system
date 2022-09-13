@@ -33,8 +33,8 @@ export const StyledButton = styled('button', {
   boxShadow: '$$shadow',
   opacity: '$$opacity',
 
-  '$$shadow-hover-primary':
-    '0 2px 40px -4px var(--laodeaksar-form-input-focus)',
+  '$$shadow-hover-primary': '0 2px 40px -4px $colors$input-focus)',
+  // '0 2px 40px -4px var(--laodeaksar-form-input-focus)',
 
   '&:active': {
     $$scale: '0.95',
@@ -71,15 +71,21 @@ export const StyledButton = styled('button', {
       },
 
       secondary: {
-        $$background: 'var(--laodeaksar-colors-emphasis)',
-        $$color: 'var(--laodeaksar-colors-brand)',
+        $$background: '$colors$emphasis',
+        // $$background: 'var(--laodeaksar-colors-emphasis)',
+        $$color: '$colors$brand',
+        // $$color: 'var(--laodeaksar-colors-brand)',
 
         disabled: {
-          $$background: 'var(--laodeaksar-form-input-disabled)',
-          $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
+          $$background: '$colors$input-disabled',
+          // $$background: 'var(--laodeaksar-form-input-disabled)',
+          $$color: '$colors$typeface-tertiary',
+          // $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        hocuv: { $$shadow: '$$shadow-hover-primary' },
+        hocuv: {
+          $$shadow: '$$shadow-hover-primary',
+        },
         /*'&:hover': {
           '&:not(:disabled)': {
             $$shadow: '$$shadow-hover-primary',
@@ -99,7 +105,9 @@ export const StyledButton = styled('button', {
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        hocuv: { $$shadow: '$$shadow-hover-primary' },
+        hocuv: {
+          $$shadow: '$$shadow-hover-primary',
+        },
         /*'&:hover': {
           '&:not(:disabled)': {
             $$shadow: '$$shadow-hover-primary',
@@ -109,6 +117,13 @@ export const StyledButton = styled('button', {
         '&:focus-visible': {
           $$shadow: '$$shadow-hover-primary',
         },*/
+      },
+    },
+    isLoading: {
+      true: {
+        cursor: 'not-allowed',
+        $$background: 'var(--laodeaksar-form-input-disabled)',
+        $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
       },
     },
   },
@@ -159,7 +174,9 @@ export const StyledIconButton = styled('button', {
     transition:
       'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease,\n      transform 0.3s, cubic-bezier(0.34, 1.56, 0.64, 1)',
     background: '$$background',
-    transform: 'scale($$afterscale) translateZ(0)',
+    scale: '$$afterscale',
+    translate: 'z 0',
+    // transform: 'scale($$afterscale) translateZ(0)',
     border: '$$thickness solid $$border',
     boxShadow: '$$shadow',
   },

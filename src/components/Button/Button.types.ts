@@ -1,7 +1,7 @@
 import { ForwardRefComponent } from 'framer-motion';
 import { CSS } from '../../lib/stitches.config';
 
-export type MainButtonVariant = 'primary' | 'secondary';
+export type MainButtonVariant = 'primary' | 'secondary' | 'danger';
 export type IconButtonVariant = 'icon';
 
 interface BaseButtonProps extends React.HTMLAttributes<HTMLButtonElement> {

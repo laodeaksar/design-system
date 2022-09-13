@@ -29,11 +29,12 @@ export const StyledTextArea = styled('textarea', {
   boxShadow: '$$shadow',
   transition: 'border-color 0.3s, box-shadow 0.3s',
 
-  '$$shadow-hover-primary':
-    '0 2px 20px -2px var(--laodeaksar-form-input-focus)',
+  '$$shadow-hover-primary': '0 2px 20px -2px $colors$input-focus',
+  // '0 2px 20px -2px var(--laodeaksar-form-input-focus)',
 
   '&::placeholder': {
-    color: 'var(--laodeaksar-colors-typeface-tertiary)',
+    // color: 'var(--laodeaksar-colors-typeface-tertiary)',
+    color: '$typeface-tertiary',
     opacity: 0.5,
   },
 
