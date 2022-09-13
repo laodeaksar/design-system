@@ -8,5 +8,4 @@ export interface DialogProps extends ContentProps {
   title: string;
   description: string;
   action: React.ReactNode;
-  trigger: string;
 }

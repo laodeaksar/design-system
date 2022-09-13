@@ -22,30 +22,39 @@ function Content(props: ContentProps) {
   );
 }
 
-const AlertDialog = (props: AlertDialogProps) => {
-  const { description, title, children, action } = props;
+const AlertDialogContent = (props: AlertDialogProps) => {
+  const { description, title, children } = props;
 
   return (
-    <AlertDialogPrimitive.Root>
-      <AlertDialogPrimitive.Trigger asChild>
-        {children}
-      </AlertDialogPrimitive.Trigger>
-      <Content>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
-        <Flex css={{ justifyContent: 'flex-end' }}>
-          <AlertDialogPrimitive.Cancel asChild>
-            <Button variant="primary" css={{ marginRight: 25 }}>
-              Cancel
-            </Button>
-          </AlertDialogPrimitive.Cancel>
-          <AlertDialogPrimitive.Action asChild>
-            {action}
-          </AlertDialogPrimitive.Action>
-        </Flex>
-      </Content>
-    </AlertDialogPrimitive.Root>
+    <Content>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledDescription>{description}</StyledDescription>
+      <Flex css={{ justifyContent: 'flex-end' }}>
+        <AlertDialogPrimitive.Cancel asChild>
+          <Button variant="primary" css={{ marginRight: 25 }}>
+            Cancel
+          </Button>
+        </AlertDialogPrimitive.Cancel>
+        <AlertDialogPrimitive.Action asChild>
+          {children}
+        </AlertDialogPrimitive.Action>
+      </Flex>
+    </Content>
   );
 };
+
+const AlertDialogTrigger = ({ children }: ContentProps) => (
+  <AlertDialogPrimitive.Trigger asChild>
+    {children}
+  </AlertDialogPrimitive.Trigger>
+);
+
+const AlertDialog = ({ children }: ContentProps) => (
+  <AlertDialogPrimitive.Root>{children}</AlertDialogPrimitive.Root>
+);
+
+AlertDialog.Content = AlertDialogContent;
+AlertDialog.Trigger = AlertDialogTrigger;
+AlertDialog.displayName = 'AlertDialog';
 
 export default AlertDialog;

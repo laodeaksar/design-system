@@ -30,27 +30,31 @@ const Content = React.forwardRef(
 
 Content.displayName = 'Content';
 
-const Dialog = (props: DialogProps) => {
-  const { description, title, children, action, trigger } = props;
+const DialogContent = (props: DialogProps) => {
+  const { description, title, children, action } = props;
 
   return (
-    <DialogPrimitive.Root>
-      <DialogPrimitive.Trigger asChild>
-        <Button variant="primary">{trigger}</Button>
-      </DialogPrimitive.Trigger>
-      <Content>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
-        {children}
-        <Flex css={{ marginTop: 25, justifyContent: 'flex-end' }}>
-          <DialogPrimitive.Close asChild>{action}</DialogPrimitive.Close>
-        </Flex>
-        <DialogPrimitive.Close asChild>
-          <Button variant="icon" icon={<Icon.X />} />
-        </DialogPrimitive.Close>
-      </Content>
-    </DialogPrimitive.Root>
+    <Content>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledDescription>{description}</StyledDescription>
+      {children}
+      <DialogPrimitive.Close asChild>
+        <Button variant="icon" icon={<Icon.X />} />
+      </DialogPrimitive.Close>
+    </Content>
   );
 };
+
+const DialogTrigger = ({ children }: ContentProps) => (
+  <DialogPrimitive.Trigger asChild>{children}</DialogPrimitive.Trigger>
+);
+
+const Dialog = ({ children }: ContentProps) => (
+  <DialogPrimitive.Root>{children}</DialogPrimitive.Root>
+);
+
+Dialog.Content = DialogContent;
+Dialog.Trigger = DialogTrigger;
+Dialog.displayName = 'Dialog';
 
 export default Dialog;
