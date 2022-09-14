@@ -11,26 +11,13 @@ import { AlertDialogProps, ContentProps } from './AlertDialog.types';
 import Flex from '../Flex';
 import Button from '../Button';
 
-function Content(props: ContentProps) {
-  const { children } = props;
+const AlertDialogContent = (props: AlertDialogProps) => {
+  const { description, title, children } = props;
 
   return (
     <AlertDialogPrimitive.Portal>
       <StyledOverlay />
-      <StyledContent {...props}>{children}</StyledContent>
-    </AlertDialogPrimitive.Portal>
-  );
-}
-
-const AlertDialog = (props: AlertDialogProps) => {
-  const { description, title, children, actionText } = props;
-
-  return (
-    <AlertDialogPrimitive.Root>
-      <AlertDialogPrimitive.Trigger asChild>
-        {children}
-      </AlertDialogPrimitive.Trigger>
-      <Content>
+      <StyledContent {...props}>
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{description}</StyledDescription>
         <Flex css={{ justifyContent: 'flex-end' }}>
@@ -40,12 +27,30 @@ const AlertDialog = (props: AlertDialogProps) => {
             </Button>
           </AlertDialogPrimitive.Cancel>
           <AlertDialogPrimitive.Action asChild>
-            <Button variant="danger">{actionText}</Button>
+            {children}
           </AlertDialogPrimitive.Action>
         </Flex>
-      </Content>
-    </AlertDialogPrimitive.Root>
+      </StyledContent>
+    </AlertDialogPrimitive.Portal>
   );
 };
+
+const AlertDialogTrigger = ({ children }: ContentProps) => (
+  <AlertDialogPrimitive.Trigger asChild>
+    {children}
+  </AlertDialogPrimitive.Trigger>
+);
+
+const AlertDialog = (props: AlertDialogPrimitive.AlertDialogProps) => {
+  const { children } = props;
+
+  return (
+    <AlertDialogPrimitive.Root {...props}>{children}</AlertDialogPrimitive.Root>
+  );
+};
+
+AlertDialog.Content = AlertDialogContent;
+AlertDialog.Trigger = AlertDialogTrigger;
+AlertDialog.displayName = 'AlertDialog';
 
 export default AlertDialog;

@@ -6,6 +6,7 @@ export { default as Button } from './components/Button';
 export { default as Callout } from './components/Callout';
 export { default as Card, Gradients } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
+export { default as Dialog } from './components/Dialog';
 export { default as Flex } from './components/Flex';
 export { default as Grid } from './components/Grid';
 export { default as Icon, type IconProps, StyledSVG } from './components/Icon';
