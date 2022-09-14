@@ -1,5 +1,5 @@
-import React from 'react';
+import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
-export type Props = {
-  children: React.ReactNode;
-};
+export type AccordianProps =
+  | AccordionPrimitive.AccordionSingleProps
+  | AccordionPrimitive.AccordionMultipleProps;

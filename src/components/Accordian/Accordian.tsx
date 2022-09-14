@@ -10,10 +10,13 @@ import {
   StyledHeader,
   StyledTrigger,
 } from './Accordian.styles';
-import { Props } from './Accordian.types';
+import type { AccordianProps } from './Accordian.types';
 
 const AccordionTrigger = React.forwardRef(
-  (props: Props, ref: React.ForwardedRef<HTMLElement>) => {
+  (
+    props: AccordionPrimitive.AccordionTriggerProps,
+    ref: React.ForwardedRef<HTMLButtonElement>
+  ) => {
     const { children } = props;
 
     return (
@@ -30,7 +33,10 @@ const AccordionTrigger = React.forwardRef(
 AccordionTrigger.displayName = 'AccordionTrigger';
 
 const AccordionContent = React.forwardRef(
-  (props: Props, ref: React.ForwardedRef<HTMLElement>) => {
+  (
+    props: AccordionPrimitive.AccordionContentProps,
+    ref: React.ForwardedRef<HTMLDivElement>
+  ) => {
     const { children } = props;
 
     return (
@@ -43,13 +49,13 @@ const AccordionContent = React.forwardRef(
 
 AccordionContent.displayName = 'AccordionContent';
 
-export const AccordionItem = (props: Props) => {
+export const AccordionItem = (props: AccordionPrimitive.AccordionItemProps) => {
   const { children } = props;
 
   return <StyledItem {...props}>{children}</StyledItem>;
 };
 
-export const Accordion = (props: Props) => {
+export const Accordion = (props: AccordianProps) => {
   const { children } = props;
 
   return <StyledAccordion {...props}>{children}</StyledAccordion>;
