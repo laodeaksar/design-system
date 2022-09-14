@@ -20,6 +20,12 @@ const marginUtils = {
     marginTop: value,
     marginBottom: value,
   }),
+  mxy: ([v, h]: [any, any]) => ({
+    marginTop: v,
+    marginBottom: v,
+    marginLeft: h,
+    marginRight: h,
+  }),
 };
 
 export default marginUtils;

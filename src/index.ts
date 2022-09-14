@@ -6,6 +6,7 @@ export { default as Button } from './components/Button';
 export { default as Callout } from './components/Callout';
 export { default as Card, Gradients } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
+export { default as Dialog } from './components/Dialog';
 export { default as Flex } from './components/Flex';
 export { default as Grid } from './components/Grid';
 export { default as Icon, type IconProps, StyledSVG } from './components/Icon';
@@ -15,13 +16,16 @@ export { default as List } from './components/List';
 export { default as Pill } from './components/Pill';
 export { default as Radio } from './components/Radio';
 export { default as Range } from './components/Range';
+export { default as Skeleton } from './components/Skeleton';
 export { default as Spinner } from './components/Spinner';
+export { Loader } from './components/Spinner/Loader';
 export { default as Switch } from './components/Switch';
 export { default as Tabs } from './components/Tabs';
 export { default as Test } from './components/Test';
 export { default as TextArea } from './components/TextArea';
 export { default as TextInput } from './components/TextInput';
 export { default as Tooltip } from './components/Tooltip';
+export { default as Toast } from './components/Toast';
 export {
   default as Text,
   EM,

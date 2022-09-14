@@ -1,4 +1,3 @@
-import React from 'react';
 import { LoaderProps } from './types';
 
 export function Oval({ size, color, ...others }: LoaderProps) {
@@ -8,7 +7,7 @@ export function Oval({ size, color, ...others }: LoaderProps) {
       height={`${size}px`}
       viewBox="0 0 38 38"
       xmlns="http://www.w3.org/2000/svg"
-      stroke={color}
+      stroke="currentColor"
       {...others}
     >
       <g fill="none" fillRule="evenodd">

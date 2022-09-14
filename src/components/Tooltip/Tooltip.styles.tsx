@@ -1,10 +1,10 @@
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-import { keyframes, Shadows, styled } from 'src/lib/stitches.config';
+import { keyframes, styled } from 'src/lib/stitches.config';
 
 const slideUpAndFadeIn = keyframes({
   '0%': {
     opacity: 0,
-    transform: 'translateY(var(--space-1)) scale(0.98)',
+    transform: 'translateY($space$1)) scale(0.98)',
   },
   '100%': {
     opacity: 1,
@@ -15,7 +15,7 @@ const slideUpAndFadeIn = keyframes({
 const slideRightAndFadeIn = keyframes({
   '0%': {
     opacity: 0,
-    transform: 'translateX(calc(-1 * var(--space-1))) scale(0.98)',
+    transform: 'translateX(calc(-1 * $space$1))) scale(0.98)',
   },
   '100%': {
     opacity: 1,
@@ -26,7 +26,7 @@ const slideRightAndFadeIn = keyframes({
 const slideDownAndFadeIn = keyframes({
   '0%': {
     opacity: 0,
-    transform: 'translateY(calc(-1 * var(--space-1))) scale(0.98)',
+    transform: 'translateY(calc(-1 * $space$1))) scale(0.98)',
   },
   '100%': {
     opacity: 1,
@@ -37,7 +37,7 @@ const slideDownAndFadeIn = keyframes({
 const slideLeftAndFadeIn = keyframes({
   '0%': {
     opacity: 0,
-    transform: 'translateX(var(--space-1)) scale(0.98)',
+    transform: 'translateX($space$1)) scale(0.98)',
   },
   '100%': {
     opacity: 1,
@@ -55,7 +55,8 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
   whiteSpace: 'nowrap',
   pointerEvents: 'none',
   userSelect: 'none',
-  boxShadow: `${Shadows[1]}`,
+  boxShadow: '$1',
+  // boxShadow: `${Shadows[1]}`,
   zIndex: '$4',
 
   '@media (prefers-reduced-motion: no-preference)': {
@@ -64,10 +65,18 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
     willChange: 'transform, opacity, scale',
 
     '&[data-state="delayed-open"]': {
-      '&[data-side="top"]': { animationName: slideDownAndFadeIn },
-      '&[data-side="right"]': { animationName: slideLeftAndFadeIn },
-      '&[data-side="bottom"]': { animationName: slideUpAndFadeIn },
-      '&[data-side="left"]': { animationName: slideRightAndFadeIn },
+      '&[data-side="top"]': {
+        animationName: slideDownAndFadeIn,
+      },
+      '&[data-side="right"]': {
+        animationName: slideLeftAndFadeIn,
+      },
+      '&[data-side="bottom"]': {
+        animationName: slideUpAndFadeIn,
+      },
+      '&[data-side="left"]': {
+        animationName: slideRightAndFadeIn,
+      },
     },
   },
 });

@@ -1,4 +1,3 @@
-import React from 'react';
 import { LoaderProps } from './types';
 
 export function Bars({ size, color, ...others }: LoaderProps) {
@@ -6,7 +5,7 @@ export function Bars({ size, color, ...others }: LoaderProps) {
     <svg
       viewBox="0 0 135 140"
       xmlns="http://www.w3.org/2000/svg"
-      fill={color}
+      fill="currentColor"
       width={`${size}px`}
       {...others}
     >

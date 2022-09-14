@@ -27,7 +27,7 @@ const Text = styled('span', {
     outline: {
       true: {
         color: 'transparent !important',
-        WebkitTextStrokeColor: 'var(--laodeaksar-colors-typeface-primary)',
+        WebkitTextStrokeColor: '$colors$typeface-primary',
         WebkitTextStrokeWidth: '1px',
       },
     },
@@ -37,8 +37,12 @@ const Text = styled('span', {
         lineHeight: 1.9,
       },
     },
-    family: getVariant('fonts', (token) => ({ fontFamily: token })),
-    size: getVariant('space', (token) => ({ fontSize: token })),
+    family: getVariant('fonts', (token) => ({
+      fontFamily: token,
+    })),
+    size: getVariant('space', (token) => ({
+      fontSize: token,
+    })),
     truncate: {
       true: {
         overflow: 'hidden',
@@ -48,15 +52,38 @@ const Text = styled('span', {
     },
     variant: {
       default: { color: 'currentColor' },
-      primary: { color: 'var(--laodeaksar-colors-typeface-primary)' },
-      secondary: { color: 'var(--laodeaksar-colors-typeface-secondary)' },
-      tertiary: { color: 'var(--laodeaksar-colors-typeface-tertiary)' },
-      info: { color: 'var(--laodeaksar-colors-brand)' },
-      success: { color: 'var(--laodeaksar-colors-success)' },
-      warning: { color: 'var(--laodeaksar-colors-warning)' },
-      danger: { color: 'var(--laodeaksar-colors-danger)' },
+      primary: {
+        color: '$typeface-primary',
+        // color: 'var(--laodeaksar-colors-typeface-primary)'
+      },
+      secondary: {
+        color: '$typeface-secondary',
+        // color: 'var(--laodeaksar-colors-typeface-secondary)',
+      },
+      tertiary: {
+        color: '$colors-typeface-tertiary',
+        // color: 'var(--laodeaksar-colors-typeface-tertiary)',
+      },
+      info: {
+        color: '$brand',
+        // color: 'var(--laodeaksar-colors-brand)',
+      },
+      success: {
+        color: '$success',
+        // color: 'var(--laodeaksar-colors-success)',
+      },
+      warning: {
+        color: '$warning',
+        // color: 'var(--laodeaksar-colors-warning)',
+      },
+      danger: {
+        color: '$danger',
+        // color: 'var(--laodeaksar-colors-danger)',
+      },
     },
-    weight: getVariant('space', (token) => ({ fontWeight: token })),
+    weight: getVariant('space', (token) => ({
+      fontWeight: token,
+    })),
     gradient: {
       true: {
         WebkitBackgroundClip: 'text',

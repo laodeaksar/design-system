@@ -1,14 +1,13 @@
-import React from 'react';
 import { LoaderProps } from './types';
 
-export function Dots({ size, color, ...others }: LoaderProps) {
+export function Dots({ size, ...others }: LoaderProps) {
   return (
     <svg
       width={`${size}px`}
-      height={`${size / 4}px`}
+      height={`${(size as any) / 4}px`}
       viewBox="0 0 120 30"
       xmlns="http://www.w3.org/2000/svg"
-      fill={color}
+      fill="currentColor"
       {...others}
     >
       <circle cx="15" cy="15" r="15">
