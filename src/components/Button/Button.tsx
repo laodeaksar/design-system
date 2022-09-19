@@ -1,9 +1,7 @@
 import React from 'react';
 
 import Flex from '../Flex';
-import Skeleton from '../Skeleton';
 import Spinner from '../Spinner';
-import { Loader } from '../Spinner/Loader';
 
 import { StyledButton, StyledIconButton } from './Button.styles';
 

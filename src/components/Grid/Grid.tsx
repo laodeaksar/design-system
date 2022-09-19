@@ -7,7 +7,7 @@ const Grid = styled(Box, {
   height: 'inherit',
 
   variants: {
-    all: {
+    directAll: {
       true: {
         '> *': {
           gridColumn: 2,

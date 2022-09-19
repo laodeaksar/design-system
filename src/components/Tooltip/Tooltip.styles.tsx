@@ -67,12 +67,15 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
       '&[data-side="top"]': {
         animationName: slideDownAndFadeIn,
       },
+
       '&[data-side="right"]': {
         animationName: slideLeftAndFadeIn,
       },
+
       '&[data-side="bottom"]': {
         animationName: slideUpAndFadeIn,
       },
+
       '&[data-side="left"]': {
         animationName: slideRightAndFadeIn,
       },

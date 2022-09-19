@@ -74,9 +74,11 @@ export const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   '&[data-state="closed"]': {
     backgroundColor: 'white',
   },
+
   '&[data-state="open"]': {
     backgroundColor: 'white',
   },
+
   '&:hover': {
     backgroundColor: 'var(--laodeaksar-colors-body)',
   },
@@ -91,6 +93,7 @@ export const StyledContent = styled(AccordionPrimitive.Content, {
   '&[data-state="open"]': {
     animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
+
   '&[data-state="closed"]': {
     animation: `${slideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },

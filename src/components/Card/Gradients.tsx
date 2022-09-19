@@ -41,7 +41,10 @@ export const Gradients = ({ children }: React.PropsWithChildren) => (
 
         animation: `${rotateGradient} 10s infinite`,
 
-        '@motion': { display: 'none', animation: 'none' },
+        '@motion': {
+          display: 'none',
+          animation: 'none',
+        },
       }}
     >
       <Box

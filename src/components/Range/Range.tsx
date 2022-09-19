@@ -40,7 +40,12 @@ const Range = (props: RangeProps) => {
       }}
     >
       {label && (
-        <Label htmlFor={id} style={{ marginBottom: '12px' }}>
+        <Label
+          htmlFor={id}
+          style={{
+            marginBottom: '12px',
+          }}
+        >
           {label}
         </Label>
       )}

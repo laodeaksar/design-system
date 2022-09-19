@@ -29,7 +29,6 @@ export const getIconString = (
     case href && href.includes('/tags'):
       return Hastag;
     default:
-      // Improve: Add default link icon here
       return null;
   }
 };

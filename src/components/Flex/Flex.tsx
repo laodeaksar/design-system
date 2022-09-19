@@ -7,13 +7,27 @@ const Flex = styled(Box, {
 
   variants: {
     alignItems: {
-      baseline: { alignItems: 'baseline' },
-      center: { alignItems: 'center' },
-      end: { alignItems: 'end' },
-      ['flex-end']: { alignItems: 'flex-end' },
-      ['flex-start']: { alignItems: 'flex-start' },
-      start: { alignItems: 'start' },
-      stretch: { alignItems: 'stretch' },
+      baseline: {
+        alignItems: 'baseline',
+      },
+      center: {
+        alignItems: 'center',
+      },
+      end: {
+        alignItems: 'end',
+      },
+      ['flex-end']: {
+        alignItems: 'flex-end',
+      },
+      ['flex-start']: {
+        alignItems: 'flex-start',
+      },
+      start: {
+        alignItems: 'start',
+      },
+      stretch: {
+        alignItems: 'stretch',
+      },
     },
     alignContent: {
       baseline: { alignContent: 'baseline' },
