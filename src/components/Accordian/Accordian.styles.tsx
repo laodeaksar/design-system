@@ -1,24 +1,32 @@
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
-import { styled, keyframes } from 'src/lib/stitches.config';
+import { styled, keyframes, Shadows } from 'src/lib/stitches.config';
 
 import Icon from '../Icon';
 
 const slideDown = keyframes({
-  from: { height: 0 },
-  to: { height: 'var(--radix-accordion-content-height)' },
+  from: {
+    height: 0,
+  },
+  to: {
+    height: 'var(--radix-accordion-content-height)',
+  },
 });
 
 const slideUp = keyframes({
-  from: { height: 'var(--radix-accordion-content-height)' },
-  to: { height: 0 },
+  from: {
+    height: 'var(--radix-accordion-content-height)',
+  },
+  to: {
+    height: 0,
+  },
 });
 
 export const StyledAccordion = styled(AccordionPrimitive.Root, {
   borderRadius: 6,
   width: 300,
-  backgroundColor: '$foreground',
-  boxShadow: '$1',
+  backgroundColor: 'var(--laodeaksar-colors-foreground)',
+  boxShadow: Shadows[1],
 });
 
 export const StyledItem = styled(AccordionPrimitive.Item, {
@@ -39,7 +47,7 @@ export const StyledItem = styled(AccordionPrimitive.Item, {
   '&:focus-within': {
     position: 'relative',
     zIndex: 1,
-    boxShadow: '$1',
+    boxShadow: Shadows[1],
   },
 });
 
@@ -60,18 +68,25 @@ export const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   justifyContent: 'space-between',
   fontSize: 15,
   lineHeight: 1,
-  color: '$brand',
-  boxShadow: '$1',
-  '&[data-state="closed"]': { backgroundColor: 'white' },
-  '&[data-state="open"]': { backgroundColor: 'white' },
-  '&:hover': { backgroundColor: '$body' },
+  color: 'var(--laodeaksar-colors-brand)',
+  boxShadow: Shadows[1],
+
+  '&[data-state="closed"]': {
+    backgroundColor: 'white',
+  },
+  '&[data-state="open"]': {
+    backgroundColor: 'white',
+  },
+  '&:hover': {
+    backgroundColor: 'var(--laodeaksar-colors-body)',
+  },
 });
 
 export const StyledContent = styled(AccordionPrimitive.Content, {
   overflow: 'hidden',
   fontSize: 15,
-  color: '$typeface-primary',
-  backgroundColor: '$foreground',
+  color: 'var(--laodeaksar-colors-typeface-primary)',
+  backgroundColor: 'var(--laodeaksar-colors-foreground)',
 
   '&[data-state="open"]': {
     animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
@@ -86,7 +101,10 @@ export const StyledContentText = styled('div', {
 });
 
 export const StyledChevron = styled(Icon.Arrow, {
-  color: '$brand',
+  color: 'var(--laodeaksar-colors-brand)',
   transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-  '[data-state=open] &': { transform: 'rotate(180deg)' },
+
+  '[data-state=open] &': {
+    transform: 'rotate(180deg)',
+  },
 });

@@ -6,7 +6,7 @@ import {
   StyledOverlay,
   StyledTitle,
 } from './AlertDialog.styles';
-import { AlertDialogProps, ContentProps } from './AlertDialog.types';
+import type { AlertDialogProps, ContentProps } from './AlertDialog.types';
 
 import Flex from '../Flex';
 import Button from '../Button';

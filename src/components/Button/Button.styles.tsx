@@ -71,16 +71,12 @@ export const StyledButton = styled('button', {
       },
 
       secondary: {
-        $$background: '$colors$emphasis',
-        // $$background: 'var(--laodeaksar-colors-emphasis)',
-        $$color: '$colors$brand',
-        // $$color: 'var(--laodeaksar-colors-brand)',
+        $$background: 'var(--laodeaksar-colors-emphasis)',
+        $$color: 'var(--laodeaksar-colors-brand)',
 
         disabled: {
-          $$background: '$colors$input-disabled',
-          // $$background: 'var(--laodeaksar-form-input-disabled)',
-          $$color: '$colors$typeface-tertiary',
-          // $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
+          $$background: 'var(--laodeaksar-form-input-disabled)',
+          $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
         hocuv: {
@@ -174,9 +170,7 @@ export const StyledIconButton = styled('button', {
     transition:
       'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease,\n      transform 0.3s, cubic-bezier(0.34, 1.56, 0.64, 1)',
     background: '$$background',
-    scale: '$$afterscale',
-    translate: 'z 0',
-    // transform: 'scale($$afterscale) translateZ(0)',
+    transform: 'scale($$afterscale) translateZ(0)',
     border: '$$thickness solid $$border',
     boxShadow: '$$shadow',
   },

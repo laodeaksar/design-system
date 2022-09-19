@@ -3,13 +3,23 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { styled, keyframes } from 'src/lib/stitches.config';
 
 const overlayShow = keyframes({
-  '0%': { opacity: 0 },
-  '100%': { opacity: 1 },
+  '0%': {
+    opacity: 0,
+  },
+  '100%': {
+    opacity: 1,
+  },
 });
 
 const contentShow = keyframes({
-  '0%': { opacity: 0, transform: 'translate(-50%, -48%) scale(.96)' },
-  '100%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
+  '0%': {
+    opacity: 0,
+    transform: 'translate(-50%, -48%) scale(.96)',
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translate(-50%, -50%) scale(1)',
+  },
 });
 
 export const StyledOverlay = styled(DialogPrimitive.Overlay, {
@@ -39,19 +49,21 @@ export const StyledContent = styled(DialogPrimitive.Content, {
     animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
 
-  '&:focus': { outline: 'none' },
+  '&:focus': {
+    outline: 'none',
+  },
 });
 
 export const StyledTitle = styled(DialogPrimitive.Title, {
   margin: 0,
   fontWeight: 500,
-  color: '$typeface-primary',
+  color: 'var(--laodeaksar-colors-typeface-primary)',
   fontSize: 17,
 });
 
 export const StyledDescription = styled(DialogPrimitive.Description, {
   margin: '10px 0 20px',
-  color: '$typeface-secondary',
+  color: 'var(--laodeaksar-colors-typeface-primary)',
   fontSize: 15,
   lineHeight: 1.5,
 });

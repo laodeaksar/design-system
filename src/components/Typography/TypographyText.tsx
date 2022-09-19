@@ -27,7 +27,7 @@ const Text = styled('span', {
     outline: {
       true: {
         color: 'transparent !important',
-        WebkitTextStrokeColor: '$colors$typeface-primary',
+        WebkitTextStrokeColor: 'var(--laodeaksar-colors-typeface-primary)',
         WebkitTextStrokeWidth: '1px',
       },
     },
@@ -53,32 +53,25 @@ const Text = styled('span', {
     variant: {
       default: { color: 'currentColor' },
       primary: {
-        color: '$typeface-primary',
-        // color: 'var(--laodeaksar-colors-typeface-primary)'
+        color: 'var(--laodeaksar-colors-typeface-primary)',
       },
       secondary: {
-        color: '$typeface-secondary',
-        // color: 'var(--laodeaksar-colors-typeface-secondary)',
+        color: 'var(--laodeaksar-colors-typeface-secondary)',
       },
       tertiary: {
-        color: '$colors-typeface-tertiary',
-        // color: 'var(--laodeaksar-colors-typeface-tertiary)',
+        color: 'var(--laodeaksar-colors-typeface-tertiary)',
       },
       info: {
-        color: '$brand',
-        // color: 'var(--laodeaksar-colors-brand)',
+        color: 'var(--laodeaksar-colors-brand)',
       },
       success: {
-        color: '$success',
-        // color: 'var(--laodeaksar-colors-success)',
+        color: 'var(--laodeaksar-colors-success)',
       },
       warning: {
-        color: '$warning',
-        // color: 'var(--laodeaksar-colors-warning)',
+        color: 'var(--laodeaksar-colors-warning)',
       },
       danger: {
-        color: '$danger',
-        // color: 'var(--laodeaksar-colors-danger)',
+        color: 'var(--laodeaksar-colors-danger)',
       },
     },
     weight: getVariant('space', (token) => ({

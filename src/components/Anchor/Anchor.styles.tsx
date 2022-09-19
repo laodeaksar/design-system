@@ -125,10 +125,8 @@ export const StyledAnchor = styled('a', {
       true: {
         '--size': '1.1em',
         border: '1px solid currentColor',
-        borderRadius: '$1',
+        borderRadius: '$0',
         margin: '$3',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
 
         '&:before': {
           content: '""',

@@ -28,7 +28,7 @@ export const SkeletonStyled = styled('div', {
         '&::before': {
           content: '""',
           position: 'absolute',
-          background: '$body',
+          background: 'var(--laodeaksar-colors-body)',
           top: 0,
           bottom: 0,
           left: 0,
@@ -39,7 +39,7 @@ export const SkeletonStyled = styled('div', {
         '&::after': {
           content: '""',
           position: 'absolute',
-          background: '$foreground',
+          background: 'var(--laodeaksar-colors-foreground)',
           top: 0,
           bottom: 0,
           left: 0,

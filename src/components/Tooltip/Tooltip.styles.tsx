@@ -1,5 +1,5 @@
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-import { keyframes, styled } from 'src/lib/stitches.config';
+import { keyframes, Shadows, styled } from 'src/lib/stitches.config';
 
 const slideUpAndFadeIn = keyframes({
   '0%': {
@@ -55,8 +55,7 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
   whiteSpace: 'nowrap',
   pointerEvents: 'none',
   userSelect: 'none',
-  boxShadow: '$1',
-  // boxShadow: `${Shadows[1]}`,
+  boxShadow: Shadows[1],
   zIndex: '$4',
 
   '@media (prefers-reduced-motion: no-preference)': {

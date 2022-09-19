@@ -82,14 +82,14 @@ export const StyledTitle = styled(ToastPrimitive.Title, {
   gridArea: 'title',
   marginBottom: 5,
   fontWeight: '$4',
-  color: '$typeface-primary',
+  color: 'var(--laodeaksar-colors-typeface-primary)',
   fontSize: 15,
 });
 
 export const StyledDescription = styled(ToastPrimitive.Description, {
   gridArea: 'description',
   margin: 0,
-  color: '$typeface-secondary',
+  color: 'var(--laodeaksar-colors-typeface-secondary)',
   fontSize: 13,
   lineHeight: 1.3,
 });

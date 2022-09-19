@@ -17,11 +17,4 @@ const Shadows = {
   `,
 };
 
-const shadows = {
-  0: `${Shadows[0]}`,
-  1: `${Shadows[1]}`,
-  2: `${Shadows[2]}`,
-  3: `${Shadows[3]}`,
-};
-
-export { Shadows, shadows };
+export { Shadows };

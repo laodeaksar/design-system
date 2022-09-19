@@ -170,30 +170,4 @@ const palette = {
   '--palette-indigo-95': 'var(--base-indigo), 5%',
 };
 
-const colors = {
-  brand: 'var(--laodeaksar-colors-brand)',
-  body: 'var(--laodeaksar-colors-body)',
-  header: 'var(--laodeaksar-colors-header)',
-  emphasis: 'var(--laodeaksar-colors-emphasis)',
-  foreground: 'var(--laodeaksar-colors-foreground)',
-  danger: 'var(--laodeaksar-colors-danger)',
-  'danger-emphasis': 'var(--laodeaksar-colors-danger-emphasis)',
-  warning: 'var(--laodeaksar-colors-warning)',
-  'warning-emphasis': 'var(--laodeaksar-colors-warning-emphasis)',
-  success: 'var(--laodeaksar-colors-success)',
-  'success-emphasis': 'var(--laodeaksar-colors-success-emphasis)',
-  'typeface-primary': 'var(--laodeaksar-colors-typeface-primary)',
-  'typeface-secondary': 'var(--laodeaksar-colors-typeface-secondary)',
-  'typeface-tertiary': 'var(--laodeaksar-colors-typeface-tertiary)',
-  'typeface-danger': 'var(--laodeaksar-colors-typeface-danger)',
-  verified: 'var(--laodeaksar-verified)',
-  'border-color': 'var(--laodeaksar-border-color)',
-  'card-color': 'var(--laodeaksar-card-background-color)',
-  'input-active': 'var(--laodeaksar-form-input-active)',
-  'input-background': 'var(--laodeaksar-form-input-background)',
-  'input-disabled': 'var(--laodeaksar-form-input-disabled)',
-  'input-border': 'var(--laodeaksar-form-input-border)',
-  'input-focus': 'var(--laodeaksar-form-input-focus)',
-};
-
-export { palette, colors };
+export { palette };
