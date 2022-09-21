@@ -49,11 +49,11 @@ const AccordionContent = React.forwardRef(
 
 AccordionContent.displayName = 'AccordionContent';
 
-export const AccordionItem = (props: AccordionPrimitive.AccordionItemProps) => {
+/*export const AccordionItem = (props: AccordionPrimitive.AccordionItemProps) => {
   const { children } = props;
 
   return <StyledItem {...props}>{children}</StyledItem>;
-};
+};*/
 
 export const Accordion = (props: AccordianProps) => {
   const { children } = props;
@@ -62,7 +62,8 @@ export const Accordion = (props: AccordianProps) => {
 };
 
 Accordion.Content = AccordionContent;
-Accordion.Item = AccordionItem;
+Accordion.Item = AccordionPrimitive.Item;
+//Accordion.Item = AccordionItem;
 Accordion.Trigger = AccordionTrigger;
 Accordion.displayName = 'Accordian';
 
