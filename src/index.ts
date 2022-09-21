@@ -1,5 +1,6 @@
 /** COMPONENTS **/
 export { default as Accordian } from './components/Accordian';
+export { default as AlertDialog } from './components/AlertDialog';
 export { default as Anchor, type AnchorProps } from './components/Anchor';
 export { default as Blockquote } from './components/Blockquote';
 export { default as Box } from './components/Box';
