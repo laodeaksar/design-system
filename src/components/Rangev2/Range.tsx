@@ -10,9 +10,9 @@ import { RangeProps } from './Range.types';
 
 const Rangev2 = React.forwardRef(
   (props: RangeProps, ref: React.ForwardedRef<HTMLDivElement>) => {
-    const { label } = props;
+    const { label, value, defaultValue, name, ...rest } = props;
 
-    const value = props.value || props.defaultValue;
+    const values = value || defaultValue;
 
     return (
       <div
@@ -23,7 +23,7 @@ const Rangev2 = React.forwardRef(
       >
         {label && (
           <Label
-            htmlFor={props.name}
+            htmlFor={name}
             style={{
               marginBottom: '12px',
             }}
@@ -31,11 +31,11 @@ const Rangev2 = React.forwardRef(
             {label}
           </Label>
         )}
-        <StyledSlider {...props} ref={ref}>
+        <StyledSlider {...rest} ref={ref}>
           <StyledTrack>
             <StyledRange />
           </StyledTrack>
-          {value.map((_, i) => (
+          {values?.map((_, i) => (
             <StyledThumb key={i} />
           ))}
         </StyledSlider>

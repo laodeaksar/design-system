@@ -1,6 +1,5 @@
-export interface RangeProps {
-  name: string;
-  defaultValue: number[];
-  value: number[];
+import * as SliderPrimitive from '@radix-ui/react-slider';
+
+export interface RangeProps extends SliderPrimitive.SliderProps {
   label?: React.ReactNode;
 }
