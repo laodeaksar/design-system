@@ -14,7 +14,7 @@ export const StyledRange = styled('input', {
   margin: 0,
   flexShrink: 0,
 
-  background: 'transparent',
+  background: '$$track',
 
   '&::-moz-range-track': {
     MozAppearance: 'none',

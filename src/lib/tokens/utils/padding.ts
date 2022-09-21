@@ -4,12 +4,6 @@
 
 const paddingUtils = {
   // Abbreviated padding properties
-  paddingVH: ([v, h]: [any, any]) => ({
-    paddingTop: v,
-    paddingBottom: v,
-    paddingLeft: h,
-    paddingRight: h,
-  }),
   pt: (value: any) => ({
     paddingTop: value,
   }),

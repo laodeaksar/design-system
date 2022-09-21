@@ -2,10 +2,9 @@ const systemFont =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
 const fonts = {
-  '-webkit-font-smoothing': 'antialiased',
   default: 'inherit',
   display: `IBM Plex Sans, ${systemFont}`,
-  mono: `Iosevka, menlo, monospace`,
+  mono: `Fira Code, menlo, monospace`,
   numeric: `IBM Plex Sans`,
 };
 

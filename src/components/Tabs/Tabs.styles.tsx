@@ -25,11 +25,17 @@ export const StyledTrigger = styled(TabsPrimitive.Trigger, {
   cursor: 'pointer',
   userSelect: 'none',
 
-  '&:first-child': { btlr: 6 },
+  '&:first-child': {
+    btlr: 6,
+  },
 
-  '&:last-child': { btrr: 6 },
+  '&:last-child': {
+    btrr: 6,
+  },
 
-  '&:hover': { color: 'var(--laodeaksar-colors-typeface-primary)' },
+  '&:hover': {
+    color: 'var(--laodeaksar-colors-typeface-primary)',
+  },
 
   '&[data-state="active"]': {
     color: 'var(--laodeaksar-colors-brand)',

@@ -130,10 +130,7 @@ export const StyledIconButton = styled('button', {
 
   WebkitAppearance: 'none',
   WebkitTapHighlightColor: 'transparent',
-  WebkitUserSelect: 'none',
-  MozUserSelect: 'none',
-  MsUserSelect: 'none',
-  userSelect: 'none',
+  us: 'none',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -150,8 +147,7 @@ export const StyledIconButton = styled('button', {
   color: '$$color',
   transform: 'scale($$scale) translateZ(0)',
 
-  '$$shadow-hover-primary':
-    '0 2px 40px -2px var(--laodeaksar-form-input-focus)',
+  $$primary: '0 2px 40px -2px var(--laodeaksar-form-input-focus)',
 
   '&::after': {
     $$background: 'var(--laodeaksar-colors-foreground)',
