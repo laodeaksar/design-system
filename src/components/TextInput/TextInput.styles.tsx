@@ -55,11 +55,6 @@ export const StyledInput = styled('input', {
       text: {},
       url: {},
     },
-    error: {
-      true: {
-        $$border: 'var(laodeaksar-colors-danger)',
-      },
-    },
   },
 });
 
@@ -71,8 +66,7 @@ export const StyledInputWrapper = styled('div', {
   position: 'relative',
   width: '$full',
 
-  '$$shadow-hover-primary':
-    '0 2px 20px -2px var(--laodeaksar-form-input-focus)',
+  $$primary: '0 2px 20px -2px var(--laodeaksar-form-input-focus)',
 
   svg: {
     display: 'block',
@@ -108,7 +102,7 @@ export const StyledInputWrapper = styled('div', {
   '&:hover': {
     input: {
       '&:not(:disabled)': {
-        $$shadow: '$$shadow-hover-primary',
+        $$shadow: '$$primary',
         $$border: 'var(--laodeaksar-form-input-active)',
 
         '& + svg': {
@@ -127,7 +121,7 @@ export const StyledInputWrapper = styled('div', {
   '&:focus-within': {
     $$border: 'var(--laodeaksar-form-input-active)',
     $$stroke: 'var(--laodeaksar-form-input-active)',
-    $$shadow: '$$shadow-hover-primary',
+    $$shadow: '$$primary',
   },
 
   variants: {

@@ -8,6 +8,7 @@ export const StyledBlockquote = styled('blockquote', {
   color: 'var(--laodeaksar-colors-typeface-secondary)',
   position: 'relative',
   margin: '0 0 24px 0',
+  // isolation: 'isolate',
 
   '@lg': {
     fontSize: '$6',
@@ -20,13 +21,33 @@ export const StyledBlockquote = styled('blockquote', {
   cite: {
     letterSpacing: '$normal',
     fontSize: '$2',
-    wordBreak: 'break-word',
-    breakBefore: 'auto',
 
     '@lg': {
       fontSize: '$3',
     },
   },
+
+  /*'&::before': {
+    content: 'open-quote',
+    position: 'absolute',
+    fontSize: '20rem',
+    fontWeight: 900,
+    fontFamily: 'serif',
+    color: 'var(--laodeaksar-colors-typeface-primary)',
+    zIndex: '-1',
+    left: -15,
+    top: -25,
+
+    '@md': {
+      left: -85,
+      top: -15,
+    },
+
+    '@lg': {
+      top: 0,
+    },
+
+  },*/
 
   '.quotation': {
     opacity: 0.1,

@@ -27,7 +27,7 @@ export const StyledOverlay = styled(DialogPrimitive.Overlay, {
   position: 'fixed',
   inset: 0,
 
-  '@media (prefers-reduced-motion: no-preference)': {
+  '@motion': {
     animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
 });
@@ -45,7 +45,7 @@ export const StyledContent = styled(DialogPrimitive.Content, {
   maxHeight: '85vh',
   padding: 25,
 
-  '@media (prefers-reduced-motion: no-preference)': {
+  '@motion': {
     animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
 

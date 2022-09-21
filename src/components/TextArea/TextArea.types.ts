@@ -15,6 +15,6 @@ export interface TextAreaProps
   id: string;
   ['data-testid']?: string;
   ['aria-label']: string;
-  onChange: React.FormEventHandler<HTMLTextAreaElement>;
+  onChange?: React.FormEventHandler<HTMLTextAreaElement>;
   resize?: ResizeProperty;
 }

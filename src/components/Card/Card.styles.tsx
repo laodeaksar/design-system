@@ -57,7 +57,7 @@ export const CardBody = styled('div', {
       true: {
         radialGradient: 'var(--laodeaksar-border-color) 1px, transparent 0',
         backgroundPosition: '50% center',
-        backgroundSize: '20px 20px',
+        backgroundSize: '10px 10px',
       },
     },
   },

@@ -4,7 +4,6 @@ import fontsUtils from './fonts';
 import hoverUtils from './hover';
 import marginUtils from './margin';
 import paddingUtils from './padding';
-import visiblityUtils from './visibility';
 
 const utils = {
   ...paddingUtils,
@@ -12,7 +11,6 @@ const utils = {
   ...backgroundUtils,
   ...borderUtils,
   ...hoverUtils,
-  ...visiblityUtils,
   ...fontsUtils,
 
   insetX: (value: any) => ({

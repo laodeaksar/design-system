@@ -58,7 +58,7 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
   boxShadow: Shadows[1],
   zIndex: '$4',
 
-  '@media (prefers-reduced-motion: no-preference)': {
+  '@motion': {
     animationDuration: '150ms',
     animationTimingFunction: 'ease-in-out',
     willChange: 'transform, opacity, scale',

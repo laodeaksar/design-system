@@ -35,13 +35,15 @@ export const StyledItem = styled(AccordionPrimitive.Item, {
 
   '&:first-child': {
     marginTop: 0,
-    borderTopLeftRadius: 4,
-    borderTopRightRadius: 4,
+    btr: 4,
+    //borderTopLeftRadius: 4,
+    //borderTopRightRadius: 4,
   },
 
   '&:last-child': {
-    borderBottomLeftRadius: 4,
-    borderBottomRightRadius: 4,
+    bbr: 4,
+    //borderBottomLeftRadius: 4,
+    //borderBottomRightRadius: 4,
   },
 
   '&:focus-within': {
@@ -105,9 +107,11 @@ export const StyledContentText = styled('div', {
 
 export const StyledChevron = styled(Icon.Arrow, {
   color: 'var(--laodeaksar-colors-brand)',
-  transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+  transition: 'rotate 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+  //transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
 
   '[data-state=open] &': {
-    transform: 'rotate(180deg)',
+    rotate: '180deg',
+    //transform: 'rotate(180deg)',
   },
 });

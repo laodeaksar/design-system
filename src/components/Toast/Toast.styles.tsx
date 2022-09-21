@@ -40,7 +40,7 @@ export const StyledViewport = styled(ToastPrimitive.Viewport, {
   padding: VIEWPORT_PADDING,
   gap: 10,
   width: 390,
-  maxWidth: '100vw',
+  maxWidth: '$w-screen',
   margin: 0,
   listStyle: 'none',
   zIndex: 2147483647,
@@ -58,20 +58,24 @@ export const StyledToast = styled(ToastPrimitive.Root, {
   columnGap: 15,
   alignItems: 'center',
 
-  '@media (prefers-reduced-motion: no-preference)': {
+  '@motion': {
     '&[data-state="open"]': {
       animation: `${slideIn} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
     },
+
     '&[data-state="closed"]': {
       animation: `${hide} 100ms ease-in`,
     },
+
     '&[data-swipe="move"]': {
       transform: 'translateX(var(--radix-toast-swipe-move-x))',
     },
+
     '&[data-swipe="cancel"]': {
       transform: 'translateX(0)',
       transition: 'transform 200ms ease-out',
     },
+
     '&[data-swipe="end"]': {
       animation: `${swipeOut} 100ms ease-out`,
     },

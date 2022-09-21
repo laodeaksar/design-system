@@ -22,7 +22,7 @@ export const StyledCheckbox = styled('input', {
   boxShadow: '$$shadow',
   transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
 
-  '$$shadow-hover-primary': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+  $$primary: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
 
   $$do: '0.2s',
   $$dt: '0.3s',
@@ -78,12 +78,12 @@ export const StyledCheckbox = styled('input', {
         $$border: 'var(--laodeaksar-form-input-active)',
       },
 
-      $$shadow: '$$shadow-hover-primary',
+      $$shadow: '$$primary',
     },
   },
 
   '&:focus-visible': {
     $$border: 'var(--laodeaksar-form-input-active)',
-    $$shadow: '$$shadow-hover-primary',
+    $$shadow: '$$primary',
   },
 });

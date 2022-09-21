@@ -9,15 +9,16 @@ export const StyledListItem = styled('li', {
   letterSpacing: '0.3px',
 
   'span[data-list-item]': {
-    paddingRight: '8px',
+    paddingRight: '$2',
     background: 'none',
     transform: 'translateY(6px)',
   },
 
   '& > ol, & > ul': {
     marginLeft: '1.45rem',
-    marginBottom: 'calc(1.45rem / 2)',
-    marginTop: 'calc(1.45rem / 2)',
+    //marginBottom: 'calc(1.45rem / 2)',
+    //marginTop: 'calc(1.45rem / 2)',
+    my: 'calc(1.45rem / 2)',
   },
 
   '& > p': {

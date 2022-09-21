@@ -33,8 +33,7 @@ export const StyledButton = styled('button', {
   boxShadow: '$$shadow',
   opacity: '$$opacity',
 
-  '$$shadow-hover-primary': '0 2px 40px -4px $colors$input-focus)',
-  // '0 2px 40px -4px var(--laodeaksar-form-input-focus)',
+  $$primary: '0 2px 40px -4px var(--laodeaksar-form-input-focus)',
 
   '&:active': {
     $$scale: '0.95',
@@ -56,7 +55,7 @@ export const StyledButton = styled('button', {
         },
 
         hocuv: {
-          $$shadow: '$$shadow-hover-primary',
+          $$shadow: '$$primary',
         },
 
         /*'&:hover': {
@@ -80,7 +79,7 @@ export const StyledButton = styled('button', {
         },
 
         hocuv: {
-          $$shadow: '$$shadow-hover-primary',
+          $$shadow: '$$primary',
         },
         /*'&:hover': {
           '&:not(:disabled)': {
@@ -102,7 +101,7 @@ export const StyledButton = styled('button', {
         },
 
         hocuv: {
-          $$shadow: '$$shadow-hover-primary',
+          $$shadow: '$$primary',
         },
         /*'&:hover': {
           '&:not(:disabled)': {
@@ -187,7 +186,7 @@ export const StyledIconButton = styled('button', {
     $$color: 'var(--laodeaksar-colors-brand)',
     $$corner: 'calc($space$2 + 2px)',
     $$afterscale: '0.92',
-    $$shadow: '$$shadow-hover-primary',
+    $$shadow: '$$primary',
   },
 
   /*'&:hover': {

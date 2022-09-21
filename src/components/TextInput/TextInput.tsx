@@ -13,7 +13,6 @@ const TextInput = React.forwardRef(
     const {
       id,
       disabled,
-      error,
       label,
       type = 'text',
       placeholder,
@@ -49,7 +48,6 @@ const TextInput = React.forwardRef(
             id={id}
             className={isValid ? 'valid' : ''}
             disabled={disabled}
-            error={error}
             // TODO cleanup variants: variants != types
             variant={computedType()}
             type={computedType()}
@@ -66,17 +64,15 @@ const TextInput = React.forwardRef(
           )}
 
           {type === 'password' && (
-            <>
-              <button
-                aria-label="Reveal Password"
-                className={showPassword ? 'clicked' : ''}
-                data-testid="reveal-password-button"
-                disabled={disabled}
-                onClick={() => setShowPassword((prev) => !prev)}
-              >
-                <EyeIcon />
-              </button>
-            </>
+            <button
+              aria-label="Reveal Password"
+              className={showPassword ? 'clicked' : ''}
+              data-testid="reveal-password-button"
+              disabled={disabled}
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              <EyeIcon />
+            </button>
           )}
         </Box>
       </StyledInputWrapper>

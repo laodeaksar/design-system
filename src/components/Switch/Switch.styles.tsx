@@ -26,7 +26,8 @@ export const StyledSwitch = styled('input', {
   boxShadow: '$$shadow',
   transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
 
-  '$$shadow-hover-primary': '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+  $$primary: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+
   $$do: '0.3s',
   $$dt: '0.3s',
   $$dte: 'ease',
@@ -77,26 +78,18 @@ export const StyledSwitch = styled('input', {
     },
   },
 
-  notDisabled: {
-    '&:not(:checked)': {
-      $$border: 'var(--laodeaksar-form-input-active)',
-    },
-
-    $$shadow: '$$shadow-hover-primary',
-  },
-
-  /*'&:hover': {
+  '&:hover': {
     '&:not(:disabled)': {
       '&:not(:checked)': {
         $$border: 'var(--laodeaksar-form-input-active)',
       },
 
-      $$shadow: '$$shadow-hover-primary',
+      $$shadow: '$$sprimary',
     },
-  },*/
+  },
 
   '&:focus-visible': {
     $$border: 'var(--laodeaksar-form-input-active)',
-    $$shadow: '$$shadow-hover-primary',
+    $$shadow: '$$primary',
   },
 });

@@ -30,30 +30,64 @@ const Flex = styled(Box, {
       },
     },
     alignContent: {
-      baseline: { alignContent: 'baseline' },
-      center: { alignContent: 'center' },
-      end: { alignContent: 'end' },
-      start: { alignContent: 'start' },
-      stretch: { alignContent: 'stretch' },
+      baseline: {
+        alignContent: 'baseline',
+      },
+      center: {
+        alignContent: 'center',
+      },
+      end: {
+        alignContent: 'end',
+      },
+      start: {
+        alignContent: 'start',
+      },
+      stretch: {
+        alignContent: 'stretch',
+      },
     },
     direction: {
-      column: { flexDirection: 'column' },
-      ['column-reverse']: { flexDirection: 'column-reverse' },
-      row: { flexDirection: 'row' },
-      ['row-reverse']: { flexDirection: 'row-reverse' },
+      column: {
+        flexDirection: 'column',
+      },
+      ['column-reverse']: {
+        flexDirection: 'column-reverse',
+      },
+      row: {
+        flexDirection: 'row',
+      },
+      ['row-reverse']: {
+        flexDirection: 'row-reverse',
+      },
     },
     gap: getVariant('space', (token) => ({ gap: token })),
     justifyContent: {
-      center: { justifyContent: 'center' },
-      end: { justifyContent: 'end' },
-      ['space-around']: { justifyContent: 'space-around' },
-      ['space-between']: { justifyContent: 'space-between' },
-      ['space-evenly']: { justifyContent: 'space-evenly' },
-      start: { justifyContent: 'start' },
+      center: {
+        justifyContent: 'center',
+      },
+      end: {
+        justifyContent: 'end',
+      },
+      ['space-around']: {
+        justifyContent: 'space-around',
+      },
+      ['space-between']: {
+        justifyContent: 'space-between',
+      },
+      ['space-evenly']: {
+        justifyContent: 'space-evenly',
+      },
+      start: {
+        justifyContent: 'start',
+      },
     },
     wrap: {
-      true: { flexWrap: 'wrap' },
-      false: { flexWrap: 'nowrap' },
+      true: {
+        flexWrap: 'wrap',
+      },
+      false: {
+        flexWrap: 'nowrap',
+      },
     },
   },
   defaultVariants: {

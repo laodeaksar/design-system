@@ -2,7 +2,7 @@ import { styled } from 'src/lib/stitches.config';
 
 export const StyledAnchor = styled('a', {
   $$color: 'var(--laodeaksar-colors-brand)',
-  '$$hover-color': 'var(--laodeaksar-colors-typeface-primary)',
+  $$hover: 'var(--laodeaksar-colors-typeface-primary)',
 
   fontSize: 'inherit',
   lineHeight: 'inherit',
@@ -13,7 +13,7 @@ export const StyledAnchor = styled('a', {
   transition: 'border-color 0.3s ease, color 0.3s ease',
 
   hocus: {
-    $$color: '$$hover-color',
+    $$color: '$$hover',
     '--hover-translation-distance': 'var(--arrow-translation, 0)',
   },
 
@@ -40,7 +40,7 @@ export const StyledAnchor = styled('a', {
         '--size': '1.1em',
         '--arrow-direction': -1,
         '--arrow-translation': '-0.25em',
-        '$$hover-color': 'unset',
+        $$hover: 'unset',
 
         '&:before': {
           content: '""',
@@ -60,7 +60,7 @@ export const StyledAnchor = styled('a', {
         '--size': '1.1em',
         '--arrow-translation': '0.25em',
         '--arrow-direction': 1,
-        '$$hover-color': 'unset',
+        $$hover: 'unset',
 
         '&:after': {
           content: '""',
@@ -103,7 +103,7 @@ export const StyledAnchor = styled('a', {
         borderBottom: '2px solid',
         borderColor: '$$border',
 
-        '$$hover-color': 'unset',
+        $$hover: 'unset',
 
         hocus: {
           $$border: 'hsl(var(--palette-blue-40))',
