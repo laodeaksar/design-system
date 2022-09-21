@@ -35,11 +35,11 @@ const AlertDialogContent = (props: AlertDialogProps) => {
   );
 };
 
-const AlertDialogTrigger = ({ children }: ContentProps) => (
+/*const AlertDialogTrigger = ({ children }: ContentProps) => (
   <AlertDialogPrimitive.Trigger asChild>
     {children}
   </AlertDialogPrimitive.Trigger>
-);
+);*/
 
 const AlertDialog = (props: AlertDialogPrimitive.AlertDialogProps) => {
   const { children } = props;
@@ -50,7 +50,8 @@ const AlertDialog = (props: AlertDialogPrimitive.AlertDialogProps) => {
 };
 
 AlertDialog.Content = AlertDialogContent;
-AlertDialog.Trigger = AlertDialogTrigger;
+AlertDialog.Trigger = AlertDialogPrimitive.Trigger;
+//AlertDialog.Trigger = AlertDialogTrigger;
 AlertDialog.displayName = 'AlertDialog';
 
 export default AlertDialog;
