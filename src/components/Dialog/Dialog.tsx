@@ -34,9 +34,9 @@ const DialogContent = React.forwardRef(
 
 DialogContent.displayName = 'DialogContent';
 
-const DialogTrigger = ({ children }: ContentProps) => (
+/*const DialogTrigger = ({ children }: ContentProps) => (
   <DialogPrimitive.Trigger asChild>{children}</DialogPrimitive.Trigger>
-);
+);*/
 
 const Dialog = (props: DialogPrimitive.DialogProps) => {
   const { children } = props;
@@ -45,7 +45,8 @@ const Dialog = (props: DialogPrimitive.DialogProps) => {
 };
 
 Dialog.Content = DialogContent;
-Dialog.Trigger = DialogTrigger;
+Dialog.Trigger = DialogPrimitive.Trigger;
+//Dialog.Trigger = DialogTrigger;
 Dialog.displayName = 'Dialog';
 
 export default Dialog;
