@@ -37,8 +37,11 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
         ? Theme.DARK
         : Theme.LIGHT;
 
-      document.body.classList.remove('laodeaksar-' + prevState);
-      document.body.classList.add('laodeaksar-' + nextState);
+      //document.body.classList.remove('laodeaksar-' + prevState);
+      //document.body.classList.add('laodeaksar-' + nextState);
+
+      document.body.classList.remove(prevState);
+      document.body.classList.add(nextState);
       document.documentElement.style.setProperty('color-scheme', nextState);
       storage.set(nextState);
 

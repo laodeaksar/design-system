@@ -1,5 +1,6 @@
 const darkTheme = {
-  '.laodeaksar-dark': {
+  '.dark': {
+    //'.laodeaksar-dark': {
     '--laodeaksar-colors-brand': 'hsla(var(--palette-blue-35), 100%)',
     '--laodeaksar-colors-body': 'hsla(var(--palette-gray-90), 100%)',
     '--laodeaksar-colors-header': 'hsla(var(--palette-gray-90), 40%)',

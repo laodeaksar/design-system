@@ -1,5 +1,6 @@
 const lightTheme = {
-  '.laodeaksar-light': {
+  //'.laodeaksar-light': {
+  '.light': {
     '--laodeaksar-colors-brand': 'hsla(var(--palette-blue-50), 100%)',
     '--laodeaksar-colors-body': 'hsla(var(--palette-gray-02), 100%)',
     '--laodeaksar-colors-header': 'hsla(var(--palette-gray-02), 40%)',
