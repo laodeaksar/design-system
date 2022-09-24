@@ -22,7 +22,7 @@ const contentShow = keyframes({
   },
 });
 
-export const StyledOverlay = styled(AlertDialogPrimitive.Overlay, {
+export const Overlay = styled(AlertDialogPrimitive.Overlay, {
   backgroundColor: 'var(--laodeaksar-colors-typeface-primary)',
   position: 'fixed',
   inset: 0,
@@ -32,7 +32,7 @@ export const StyledOverlay = styled(AlertDialogPrimitive.Overlay, {
   },
 });
 
-export const StyledContent = styled(AlertDialogPrimitive.Content, {
+export const Content = styled(AlertDialogPrimitive.Content, {
   backgroundColor: 'white',
   borderRadius: 6,
   boxShadow: Shadows[2],
@@ -54,14 +54,14 @@ export const StyledContent = styled(AlertDialogPrimitive.Content, {
   },
 });
 
-export const StyledTitle = styled(AlertDialogPrimitive.Title, {
+export const Title = styled(AlertDialogPrimitive.Title, {
   margin: 0,
   color: 'var(--laodeaksar-colors-typeface-primary)',
   fontSize: 17,
   fontWeight: 500,
 });
 
-export const StyledDescription = styled(AlertDialogPrimitive.Description, {
+export const Description = styled(AlertDialogPrimitive.Description, {
   marginBottom: 20,
   color: 'var(--laodeaksar-colors-typeface-secondary)',
   fontSize: 15,

@@ -1,12 +1,8 @@
-import React from 'react';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 
-export type ContentProps = {
-  children: React.ReactNode;
-};
+export type Props = AlertDialogPrimitive.AlertDialogProps;
 
-export interface AlertDialogProps
-  extends AlertDialogPrimitive.AlertDialogContentProps {
+export type ContentProps = {
   title: string;
   description: string;
-}
+} & AlertDialogPrimitive.AlertDialogContentProps;

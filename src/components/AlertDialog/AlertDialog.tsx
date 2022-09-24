@@ -1,25 +1,20 @@
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 
-import {
-  StyledContent,
-  StyledDescription,
-  StyledOverlay,
-  StyledTitle,
-} from './AlertDialog.styles';
-import type { AlertDialogProps, ContentProps } from './AlertDialog.types';
+import * as Styled from './AlertDialog.styles';
+import type * as TAlertDialog from './AlertDialog.types';
 
 import Flex from '../Flex';
 import Button from '../Button';
 
-const AlertDialogContent = (props: AlertDialogProps) => {
+const AlertDialogContent = (props: TAlertDialog.ContentProps) => {
   const { description, title, children } = props;
 
   return (
     <AlertDialogPrimitive.Portal>
-      <StyledOverlay />
-      <StyledContent {...props}>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
+      <Styled.Overlay />
+      <Styled.Content {...props}>
+        <Styled.Title>{title}</Styled.Title>
+        <Styled.Description>{description}</Styled.Description>
         <Flex css={{ justifyContent: 'flex-end' }}>
           <AlertDialogPrimitive.Cancel asChild>
             <Button variant="primary" css={{ marginRight: 25 }}>
@@ -30,18 +25,12 @@ const AlertDialogContent = (props: AlertDialogProps) => {
             {children}
           </AlertDialogPrimitive.Action>
         </Flex>
-      </StyledContent>
+      </Styled.Content>
     </AlertDialogPrimitive.Portal>
   );
 };
 
-/*const AlertDialogTrigger = ({ children }: ContentProps) => (
-  <AlertDialogPrimitive.Trigger asChild>
-    {children}
-  </AlertDialogPrimitive.Trigger>
-);*/
-
-const AlertDialog = (props: AlertDialogPrimitive.AlertDialogProps) => {
+const AlertDialog = (props: TAlertDialog.Props) => {
   const { children } = props;
 
   return (
@@ -51,7 +40,6 @@ const AlertDialog = (props: AlertDialogPrimitive.AlertDialogProps) => {
 
 AlertDialog.Content = AlertDialogContent;
 AlertDialog.Trigger = AlertDialogPrimitive.Trigger;
-//AlertDialog.Trigger = AlertDialogTrigger;
 AlertDialog.displayName = 'AlertDialog';
 
 export default AlertDialog;
