@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-  StyledTabs,
-  StyledList,
-  StyledTrigger,
-  StyledContent,
-} from './Tabs.styles';
+import * as Styled from './Tabs.styles';
 import type { TabsProps, TabsItemProps } from './Tabs.types';
 
 const Tabs = ({ children, defaultTab = 0 }: TabsProps) => {
@@ -14,31 +9,31 @@ const Tabs = ({ children, defaultTab = 0 }: TabsProps) => {
   }
 
   return (
-    <StyledTabs defaultValue={defaultTab.toString()}>
-      <StyledList>
+    <Styled.Tabs defaultValue={defaultTab.toString()}>
+      <Styled.List>
         {React.Children.map(
           children,
           (child: React.ReactElement<TabsItemProps>, i: number) => {
             return (
-              <StyledTrigger value={i.toString()}>
+              <Styled.Trigger value={i.toString()}>
                 {child.props.title}
-              </StyledTrigger>
+              </Styled.Trigger>
             );
           }
         )}
-      </StyledList>
+      </Styled.List>
 
       {React.Children.map(
         children,
         (child: React.ReactElement<TabsItemProps>, i: number) => {
           return (
-            <StyledContent value={i.toString()} key={i}>
+            <Styled.Content value={i.toString()} key={i}>
               {child.props.children}
-            </StyledContent>
+            </Styled.Content>
           );
         }
       )}
-    </StyledTabs>
+    </Styled.Tabs>
   );
 };
 

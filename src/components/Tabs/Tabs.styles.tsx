@@ -2,17 +2,17 @@ import * as TabsPrimitive from '@radix-ui/react-tabs';
 
 import { styled } from 'src/lib/stitches.config';
 
-export const StyledTabs = styled(TabsPrimitive.Root, {
+export const Tabs = styled(TabsPrimitive.Root, {
   display: 'flex',
   flexDirection: 'column',
 });
 
-export const StyledList = styled(TabsPrimitive.List, {
+export const List = styled(TabsPrimitive.List, {
   flexShrink: 0,
   display: 'flex',
 });
 
-export const StyledTrigger = styled(TabsPrimitive.Trigger, {
+export const Trigger = styled(TabsPrimitive.Trigger, {
   all: 'unset',
   fontFamily: 'inherit',
   padding: '0.25rem 0.5rem',
@@ -43,7 +43,7 @@ export const StyledTrigger = styled(TabsPrimitive.Trigger, {
   },
 });
 
-export const StyledContent = styled(TabsPrimitive.Content, {
+export const Content = styled(TabsPrimitive.Content, {
   borderRadius: '0.5rem',
 
   'pre:first-child': {
