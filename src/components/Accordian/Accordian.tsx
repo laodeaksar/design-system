@@ -1,31 +1,22 @@
 import React from 'react';
-import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
-import {
-  StyledItem,
-  StyledAccordion,
-  StyledChevron,
-  StyledContent,
-  StyledContentText,
-  StyledHeader,
-  StyledTrigger,
-} from './Accordian.styles';
-import type { AccordianProps } from './Accordian.types';
+import * as Styled from './Accordian.styles';
+import type * as TAccordion from './Accordian.types';
 
 const AccordionTrigger = React.forwardRef(
   (
-    props: AccordionPrimitive.AccordionTriggerProps,
+    props: TAccordion.TriggerProps,
     ref: React.ForwardedRef<HTMLButtonElement>
   ) => {
     const { children } = props;
 
     return (
-      <StyledHeader>
-        <StyledTrigger {...props} ref={ref}>
+      <Styled.Header>
+        <Styled.Trigger {...props} ref={ref}>
           {children}
-          <StyledChevron aria-hidden />
-        </StyledTrigger>
-      </StyledHeader>
+          <Styled.Chevron aria-hidden />
+        </Styled.Trigger>
+      </Styled.Header>
     );
   }
 );
@@ -33,37 +24,33 @@ const AccordionTrigger = React.forwardRef(
 AccordionTrigger.displayName = 'AccordionTrigger';
 
 const AccordionContent = React.forwardRef(
-  (
-    props: AccordionPrimitive.AccordionContentProps,
-    ref: React.ForwardedRef<HTMLDivElement>
-  ) => {
+  (props: TAccordion.ContentProps, ref: React.ForwardedRef<HTMLDivElement>) => {
     const { children } = props;
 
     return (
-      <StyledContent {...props} ref={ref}>
-        <StyledContentText>{children}</StyledContentText>
-      </StyledContent>
+      <Styled.Content {...props} ref={ref}>
+        <Styled.ContentText>{children}</Styled.ContentText>
+      </Styled.Content>
     );
   }
 );
 
 AccordionContent.displayName = 'AccordionContent';
 
-/*export const AccordionItem = (props: AccordionPrimitive.AccordionItemProps) => {
+export const AccordionItem = (props: TAccordion.ItemProps) => {
   const { children } = props;
 
-  return <StyledItem {...props}>{children}</StyledItem>;
-};*/
+  return <Styled.Item {...props}>{children}</Styled.Item>;
+};
 
-export const Accordion = (props: AccordianProps) => {
+export const Accordion = (props: TAccordion.Props) => {
   const { children } = props;
 
-  return <StyledAccordion {...props}>{children}</StyledAccordion>;
+  return <Styled.Accordion {...props}>{children}</Styled.Accordion>;
 };
 
 Accordion.Content = AccordionContent;
-Accordion.Item = AccordionPrimitive.Item;
-//Accordion.Item = AccordionItem;
+Accordion.Item = AccordionItem;
 Accordion.Trigger = AccordionTrigger;
 Accordion.displayName = 'Accordian';
 

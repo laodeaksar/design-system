@@ -22,28 +22,24 @@ const slideUp = keyframes({
   },
 });
 
-export const StyledAccordion = styled(AccordionPrimitive.Root, {
+export const Accordion = styled(AccordionPrimitive.Root, {
   borderRadius: 6,
   width: 300,
   backgroundColor: 'var(--laodeaksar-colors-foreground)',
   boxShadow: Shadows[1],
 });
 
-export const StyledItem = styled(AccordionPrimitive.Item, {
+export const Item = styled(AccordionPrimitive.Item, {
   overflow: 'hidden',
   marginTop: 1,
 
   '&:first-child': {
     marginTop: 0,
     btr: 4,
-    //borderTopLeftRadius: 4,
-    //borderTopRightRadius: 4,
   },
 
   '&:last-child': {
     bbr: 4,
-    //borderBottomLeftRadius: 4,
-    //borderBottomRightRadius: 4,
   },
 
   '&:focus-within': {
@@ -53,12 +49,12 @@ export const StyledItem = styled(AccordionPrimitive.Item, {
   },
 });
 
-export const StyledHeader = styled(AccordionPrimitive.Header, {
+export const Header = styled(AccordionPrimitive.Header, {
   all: 'unset',
   display: 'flex',
 });
 
-export const StyledTrigger = styled(AccordionPrimitive.Trigger, {
+export const Trigger = styled(AccordionPrimitive.Trigger, {
   all: 'unset',
   fontFamily: 'inherit',
   backgroundColor: 'transparent',
@@ -86,7 +82,7 @@ export const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   },
 });
 
-export const StyledContent = styled(AccordionPrimitive.Content, {
+export const Content = styled(AccordionPrimitive.Content, {
   overflow: 'hidden',
   fontSize: 15,
   color: 'var(--laodeaksar-colors-typeface-primary)',
@@ -101,11 +97,11 @@ export const StyledContent = styled(AccordionPrimitive.Content, {
   },
 });
 
-export const StyledContentText = styled('div', {
+export const ContentText = styled('div', {
   padding: '15px 20px',
 });
 
-export const StyledChevron = styled(Icon.Arrow, {
+export const Chevron = styled(Icon.Arrow, {
   color: 'var(--laodeaksar-colors-brand)',
   transition: 'rotate 300ms cubic-bezier(0.87, 0, 0.13, 1)',
   //transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
