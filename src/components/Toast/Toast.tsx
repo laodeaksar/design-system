@@ -1,12 +1,6 @@
 import * as ToastPrimitive from '@radix-ui/react-toast';
 
-import {
-  StyledAction,
-  StyledTitle,
-  StyledToast,
-  StyledDescription,
-  StyledViewport,
-} from './Toast.styles';
+import * as Styled from './Toast.styles';
 import type { ToastProps } from './Toast.types';
 
 const Toast = (props: ToastProps) => {
@@ -14,19 +8,19 @@ const Toast = (props: ToastProps) => {
 
   return (
     <>
-      <StyledToast {...props}>
-        {title && <StyledTitle>{title}</StyledTitle>}
-        <StyledDescription>{content}</StyledDescription>
+      <Styled.Toast {...props}>
+        {title && <Styled.Title>{title}</Styled.Title>}
+        <Styled.Description>{content}</Styled.Description>
         {children && (
-          <StyledAction asChild altText={`${title || ''}`}>
+          <Styled.Action asChild altText={`${title || ''}`}>
             {children}
-          </StyledAction>
+          </Styled.Action>
         )}
         <ToastPrimitive.Close aria-label="Close">
           <span aria-hidden>×</span>
         </ToastPrimitive.Close>
-      </StyledToast>
-      <StyledViewport />
+      </Styled.Toast>
+      <Styled.Viewport />
     </>
   );
 };

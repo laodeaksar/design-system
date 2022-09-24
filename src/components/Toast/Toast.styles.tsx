@@ -31,7 +31,7 @@ const swipeOut = keyframes({
   },
 });
 
-export const StyledViewport = styled(ToastPrimitive.Viewport, {
+export const Viewport = styled(ToastPrimitive.Viewport, {
   position: 'fixed',
   bottom: 0,
   right: 0,
@@ -47,7 +47,7 @@ export const StyledViewport = styled(ToastPrimitive.Viewport, {
   outline: 'none',
 });
 
-export const StyledToast = styled(ToastPrimitive.Root, {
+export const Toast = styled(ToastPrimitive.Root, {
   backgroundColor: 'white',
   borderRadius: 6,
   boxShadow: '$2',
@@ -82,7 +82,7 @@ export const StyledToast = styled(ToastPrimitive.Root, {
   },
 });
 
-export const StyledTitle = styled(ToastPrimitive.Title, {
+export const Title = styled(ToastPrimitive.Title, {
   gridArea: 'title',
   marginBottom: 5,
   fontWeight: '$4',
@@ -90,7 +90,7 @@ export const StyledTitle = styled(ToastPrimitive.Title, {
   fontSize: 15,
 });
 
-export const StyledDescription = styled(ToastPrimitive.Description, {
+export const Description = styled(ToastPrimitive.Description, {
   gridArea: 'description',
   margin: 0,
   color: 'var(--laodeaksar-colors-typeface-secondary)',
@@ -98,6 +98,6 @@ export const StyledDescription = styled(ToastPrimitive.Description, {
   lineHeight: 1.3,
 });
 
-export const StyledAction = styled(ToastPrimitive.Action, {
+export const Action = styled(ToastPrimitive.Action, {
   gridArea: 'action',
 });
