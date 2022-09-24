@@ -57,13 +57,13 @@ export const StyledThumb = styled(SliderPrimitive.Thumb, {
   boxShadow: '$$shadow',
 
   '@hover': {
-    hover: {
+    '&:hover': {
       $$border: 'var(--laodeaksar-form-input-active)',
       $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
     },
   },
 
-  focus: {
+  '&:focus': {
     $$border: 'var(--laodeaksar-form-input-active)',
     $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
   },

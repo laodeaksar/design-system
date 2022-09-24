@@ -1,7 +1,5 @@
 import backgroundUtils from './background';
 import borderUtils from './border';
-import fontsUtils from './fonts';
-import hoverUtils from './hover';
 import marginUtils from './margin';
 import paddingUtils from './padding';
 
@@ -10,8 +8,6 @@ const utils = {
   ...marginUtils,
   ...backgroundUtils,
   ...borderUtils,
-  ...hoverUtils,
-  ...fontsUtils,
 
   insetX: (value: any) => ({
     left: value,

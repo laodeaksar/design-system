@@ -39,7 +39,7 @@ export const StyledButton = styled('button', {
     $$scale: '0.95',
   },
 
-  disabled: {
+  '&:disabled': {
     cursor: 'not-allowed',
   },
 
@@ -49,7 +49,7 @@ export const StyledButton = styled('button', {
         $$background: 'var(--laodeaksar-colors-brand)',
         $$color: 'hsl(var(--palette-gray-00))',
 
-        disabled: {
+        '&:disabled': {
           $$background: 'var(--laodeaksar-form-input-disabled)',
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
@@ -69,7 +69,7 @@ export const StyledButton = styled('button', {
         $$background: 'var(--laodeaksar-colors-emphasis)',
         $$color: 'var(--laodeaksar-colors-brand)',
 
-        disabled: {
+        '&:disabled': {
           $$background: 'var(--laodeaksar-form-input-disabled)',
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
@@ -88,7 +88,7 @@ export const StyledButton = styled('button', {
         $$background: 'var(--laodeaksar-colors-emphasis)',
         $$color: 'var(--laodeaksar-colors-danger)',
 
-        disabled: {
+        '&:disabled': {
           $$background: 'var(--laodeaksar-form-input-disabled)',
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
@@ -160,7 +160,7 @@ export const StyledIconButton = styled('button', {
     boxShadow: '$$shadow',
   },
 
-  disabled: {
+  '&:disabled': {
     cursor: 'not-allowed',
     $$background: 'var(--laodeaksar-form-input-disabled)',
     $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
