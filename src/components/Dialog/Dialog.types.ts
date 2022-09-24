@@ -1,11 +1,8 @@
-import React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 
-export type ContentProps = {
-  children: React.ReactNode;
-};
+export type Props = DialogPrimitive.DialogProps;
 
-export interface DialogProps extends DialogPrimitive.DialogContentProps {
+export type ContentProps = {
   title: string;
   description: string;
-}
+} & DialogPrimitive.DialogContentProps;

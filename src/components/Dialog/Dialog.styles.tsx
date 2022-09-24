@@ -22,7 +22,7 @@ const contentShow = keyframes({
   },
 });
 
-export const StyledOverlay = styled(DialogPrimitive.Overlay, {
+export const Overlay = styled(DialogPrimitive.Overlay, {
   backgroundColor: '$foreground',
   position: 'fixed',
   inset: 0,
@@ -32,7 +32,7 @@ export const StyledOverlay = styled(DialogPrimitive.Overlay, {
   },
 });
 
-export const StyledContent = styled(DialogPrimitive.Content, {
+export const Content = styled(DialogPrimitive.Content, {
   backgroundColor: 'white',
   borderRadius: 6,
   boxShadow: '$1',
@@ -54,14 +54,14 @@ export const StyledContent = styled(DialogPrimitive.Content, {
   },
 });
 
-export const StyledTitle = styled(DialogPrimitive.Title, {
+export const Title = styled(DialogPrimitive.Title, {
   margin: 0,
   fontWeight: 500,
   color: 'var(--laodeaksar-colors-typeface-primary)',
   fontSize: 17,
 });
 
-export const StyledDescription = styled(DialogPrimitive.Description, {
+export const Description = styled(DialogPrimitive.Description, {
   margin: '10px 0 20px',
   color: 'var(--laodeaksar-colors-typeface-primary)',
   fontSize: 15,
