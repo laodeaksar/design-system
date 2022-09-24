@@ -25,8 +25,8 @@ export const StyledTrack = styled(SliderPrimitive.Track, {
   backgroundColor: 'var(--laodeaksar-form-input-disabled)',
   position: 'relative',
   flexGrow: 1,
-  borderRadius: '$0',
   border: 'none',
+  borderRadius: '$0',
 
   '&[data-orientation="horizontal"]': {
     height: '$1',
@@ -39,8 +39,8 @@ export const StyledTrack = styled(SliderPrimitive.Track, {
 
 export const StyledRange = styled(SliderPrimitive.Range, {
   position: 'absolute',
-  backgroundColor: 'var(--laodeaksar-form-input-background)',
-  borderRadius: '$round',
+  backgroundColor: 'var(--laodeaksar-form-input-active)',
+  //borderRadius: '$round',
   height: '$full',
 });
 
@@ -55,9 +55,15 @@ export const StyledThumb = styled(SliderPrimitive.Thumb, {
   backgroundColor: 'var(--laodeaksar-form-input-background)',
   border: '1px solid $$border',
   boxShadow: '$$shadow',
-  transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
 
-  hocus: {
+  '@hover': {
+    hover: {
+      $$border: 'var(--laodeaksar-form-input-active)',
+      $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
+    },
+  },
+
+  focus: {
     $$border: 'var(--laodeaksar-form-input-active)',
     $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
   },

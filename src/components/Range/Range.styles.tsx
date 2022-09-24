@@ -43,7 +43,7 @@ export const StyledRange = styled('input', {
     marginTop: '-10px',
     cursor: 'grab',
     boxShadow: '$$shadow',
-    transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
+    // transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
   },
 
   '&::-webkit-slider-thumb': {
@@ -55,7 +55,7 @@ export const StyledRange = styled('input', {
     marginTop: '-10px',
     cursor: 'grab',
     boxShadow: '$$shadow',
-    transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
+    // transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
   },
 
   '&:active': {
@@ -78,19 +78,7 @@ export const StyledRange = styled('input', {
     },
   },
 
-  hocuv: {
-    '&::-moz-range-thumb': {
-      $$border: 'var(--laodeaksar-form-input-active)',
-      $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
-    },
-
-    '&::-webkit-slider-thumb': {
-      $$border: 'var(--laodeaksar-form-input-active)',
-      $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
-    },
-  },
-
-  /*'&:hover': {
+  '&:hover': {
     '&:not(:disabled)': {
       '&::-moz-range-thumb': {
         $$border: 'var(--laodeaksar-form-input-active)',
@@ -114,5 +102,5 @@ export const StyledRange = styled('input', {
       $$border: 'var(--laodeaksar-form-input-active)',
       $$shadow: '0 2px 20px 3px var(--laodeaksar-form-input-focus)',
     },
-  },*/
+  },
 });

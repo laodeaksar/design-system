@@ -16,15 +16,6 @@ const hoverUtils = {
     },
     focus: styles,
   }),
-  notDisabled: (styles: CSS) => ({
-    hover: {
-      '&:not(:disabled)': styles,
-    },
-  }),
-  hocuv: (styles: CSS) => ({
-    notDisabled: styles,
-    focus: styles,
-  }),
   disabled: (styles: CSS) => ({
     '&:disabled': styles,
   }),

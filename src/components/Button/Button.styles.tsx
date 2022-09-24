@@ -54,19 +54,15 @@ export const StyledButton = styled('button', {
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        hocuv: {
-          $$shadow: '$$primary',
-        },
-
-        /*'&:hover': {
+        '&:hover': {
           '&:not(:disabled)': {
             $$shadow: '$$shadow-hover-primary',
           },
         },
 
         '&:focus-visible': {
-          $$shadow: '$$shadow-hover-primary',
-        },*/
+          $$shadow: '$$primary',
+        },
       },
 
       secondary: {
@@ -78,18 +74,15 @@ export const StyledButton = styled('button', {
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        hocuv: {
-          $$shadow: '$$primary',
-        },
-        /*'&:hover': {
+        '&:hover': {
           '&:not(:disabled)': {
-            $$shadow: '$$shadow-hover-primary',
+            $$shadow: '$$primary',
           },
         },
 
         '&:focus-visible': {
-          $$shadow: '$$shadow-hover-primary',
-        },*/
+          $$shadow: '$$primary',
+        },
       },
       danger: {
         $$background: 'var(--laodeaksar-colors-emphasis)',
@@ -100,18 +93,15 @@ export const StyledButton = styled('button', {
           $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
         },
 
-        hocuv: {
-          $$shadow: '$$primary',
-        },
-        /*'&:hover': {
+        '&:hover': {
           '&:not(:disabled)': {
-            $$shadow: '$$shadow-hover-primary',
+            $$shadow: '$$primary',
           },
         },
 
         '&:focus-visible': {
-          $$shadow: '$$shadow-hover-primary',
-        },*/
+          $$shadow: '$$primary',
+        },
       },
     },
     isLoading: {
@@ -176,23 +166,14 @@ export const StyledIconButton = styled('button', {
     $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
   },
 
-  hocuv: {
-    $$border: 'var(--laodeaksar-colors-brand)',
-    $$thickness: '2px',
-    $$color: 'var(--laodeaksar-colors-brand)',
-    $$corner: 'calc($space$2 + 2px)',
-    $$afterscale: '0.92',
-    $$shadow: '$$primary',
-  },
-
-  /*'&:hover': {
+  '&:hover': {
     '&:not(:disabled)': {
       $$border: 'var(--laodeaksar-colors-brand)',
       $$thickness: '2px',
       $$color: 'var(--laodeaksar-colors-brand)',
       $$corner: 'calc($space$2 + 2px)',
       $$afterscale: '0.92',
-      $$shadow: '$$shadow-hover-primary',
+      $$shadow: '$$primary',
     },
   },
 
@@ -202,8 +183,8 @@ export const StyledIconButton = styled('button', {
     $$color: 'var(--laodeaksar-colors-brand)',
     $$corner: 'calc($space$2 + 2px)',
     $$afterscale: '0.92',
-    $$shadow: '$$shadow-hover-primary',
-  },*/
+    $$shadow: '$$primary',
+  },
 
   '&:active': {
     $$scale: '0.95',
