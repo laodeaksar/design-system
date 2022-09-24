@@ -1,5 +1,5 @@
 import * as SliderPrimitive from '@radix-ui/react-slider';
 
-export interface RangeProps extends SliderPrimitive.SliderProps {
+export type RangeProps = {
   label?: React.ReactNode;
-}
+} & SliderPrimitive.SliderProps;

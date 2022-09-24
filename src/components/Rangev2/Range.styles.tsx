@@ -2,7 +2,7 @@ import * as SliderPrimitive from '@radix-ui/react-slider';
 
 import { Shadows, styled } from 'src/lib/stitches.config';
 
-export const StyledSlider = styled(SliderPrimitive.Root, {
+export const Slider = styled(SliderPrimitive.Root, {
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
@@ -21,7 +21,7 @@ export const StyledSlider = styled(SliderPrimitive.Root, {
   },
 });
 
-export const StyledTrack = styled(SliderPrimitive.Track, {
+export const Track = styled(SliderPrimitive.Track, {
   backgroundColor: 'var(--laodeaksar-form-input-disabled)',
   position: 'relative',
   flexGrow: 1,
@@ -37,14 +37,14 @@ export const StyledTrack = styled(SliderPrimitive.Track, {
   },
 });
 
-export const StyledRange = styled(SliderPrimitive.Range, {
+export const Range = styled(SliderPrimitive.Range, {
   position: 'absolute',
   backgroundColor: 'var(--laodeaksar-form-input-active)',
   //borderRadius: '$round',
   height: '$full',
 });
 
-export const StyledThumb = styled(SliderPrimitive.Thumb, {
+export const Thumb = styled(SliderPrimitive.Thumb, {
   $$shadow: Shadows[2],
   $$border: 'var(--laodeaksar-form-input-border)',
 

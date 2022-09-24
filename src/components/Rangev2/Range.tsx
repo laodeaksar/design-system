@@ -1,11 +1,7 @@
 import React from 'react';
 import Label from '../Label';
-import {
-  StyledRange,
-  StyledSlider,
-  StyledThumb,
-  StyledTrack,
-} from './Range.styles';
+
+import * as Styled from './Range.styles';
 import { RangeProps } from './Range.types';
 
 const Rangev2 = React.forwardRef(
@@ -31,14 +27,14 @@ const Rangev2 = React.forwardRef(
             {label}
           </Label>
         )}
-        <StyledSlider {...rest} ref={ref}>
-          <StyledTrack>
-            <StyledRange />
-          </StyledTrack>
+        <Styled.Slider {...rest} ref={ref}>
+          <Styled.Track>
+            <Styled.Range />
+          </Styled.Track>
           {values?.map((_, i) => (
-            <StyledThumb key={i} />
+            <Styled.Thumb key={i} />
           ))}
-        </StyledSlider>
+        </Styled.Slider>
       </div>
     );
   }
