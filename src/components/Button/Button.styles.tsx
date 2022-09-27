@@ -9,10 +9,7 @@ export const StyledButton = styled('button', {
 
   WebkitAppearance: 'none',
   WebkitTapHighlightColor: 'transparent',
-  WebkitUserSelect: 'none',
-  MozUserSelect: 'none',
-  MsUserSelect: 'none',
-  userSelect: 'none',
+  us: 'none',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -101,12 +98,12 @@ export const StyledButton = styled('button', {
 
         '&:hover': {
           '&:not(:disabled)': {
-            $$shadow: '$$primary',
+            $$shadow: '0 2px 40px -4px var(--laodeaksar-colors-danger)',
           },
         },
 
         '&:focus-visible': {
-          $$shadow: '$$primary',
+          $$shadow: '0 2px 40px -4px var(--laodeaksar-colors-danger)',
         },
       },
     },
@@ -123,7 +120,7 @@ export const StyledButton = styled('button', {
 
 export const StyledIconButton = styled('button', {
   $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
-  $$corner: '$1',
+  $$corner: '$2',
   $$background: 'var(--laodeaksar-colors-foreground)',
   $$shadow: 'none',
   $$thickness: '1px',
@@ -133,10 +130,7 @@ export const StyledIconButton = styled('button', {
 
   WebkitAppearance: 'none',
   WebkitTapHighlightColor: 'transparent',
-  WebkitUserSelect: 'none',
-  MozUserSelect: 'none',
-  MsUserSelect: 'none',
-  userSelect: 'none',
+  us: 'none',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -158,7 +152,7 @@ export const StyledIconButton = styled('button', {
   '&::after': {
     zIndex: '0',
     position: 'absolute',
-    content: "''",
+    content: '""',
     display: 'block',
     size: '$full',
     borderRadius: '$$corner',
@@ -181,7 +175,7 @@ export const StyledIconButton = styled('button', {
       $$borderColor: 'var(--laodeaksar-colors-brand)',
       $$thickness: '2px',
       $$color: 'var(--laodeaksar-colors-brand)',
-      $$corner: 'calc($space$1 + 2px)',
+      $$corner: 'calc($space$2 + 2px)',
       $$backgroundScale: '0.92',
       $$shadow: '$$primary',
     },
@@ -191,7 +185,7 @@ export const StyledIconButton = styled('button', {
     $$borderColor: 'var(--laodeaksar-colors-brand)',
     $$thickness: '2px',
     $$color: 'var(--laodeaksar-colors-brand)',
-    $$corner: 'calc($space$1 + 2px)',
+    $$corner: 'calc($space$2 + 2px)',
     $$backgroundScale: 0.92,
     $$shadow: '$$primary',
   },

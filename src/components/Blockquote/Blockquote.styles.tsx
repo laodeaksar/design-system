@@ -8,7 +8,7 @@ export const StyledBlockquote = styled('blockquote', {
   color: 'var(--laodeaksar-colors-typeface-secondary)',
   position: 'relative',
   margin: '0 0 24px 0',
-  // isolation: 'isolate',
+  isolation: 'isolate',
 
   '@lg': {
     fontSize: '$6',
@@ -27,7 +27,7 @@ export const StyledBlockquote = styled('blockquote', {
     },
   },
 
-  /*'&::before': {
+  '&::before': {
     content: 'open-quote',
     position: 'absolute',
     fontSize: '20rem',
@@ -47,7 +47,7 @@ export const StyledBlockquote = styled('blockquote', {
       top: 0,
     },
 
-  },*/
+  },
 
   '.quotation': {
     opacity: 0.1,
