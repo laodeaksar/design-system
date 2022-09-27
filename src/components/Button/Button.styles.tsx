@@ -2,14 +2,17 @@ import { styled } from 'src/lib/stitches.config';
 
 export const StyledButton = styled('button', {
   $$background: 'white',
-  $$scale: 1,
+  $$color: 'black',
   $$shadow: 'none',
   $$opacity: 1,
-  $$color: 'black',
+  $$scale: 1,
 
   WebkitAppearance: 'none',
   WebkitTapHighlightColor: 'transparent',
-  us: 'none',
+  WebkitUserSelect: 'none',
+  MozUserSelect: 'none',
+  MsUserSelect: 'none',
+  userSelect: 'none',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -25,8 +28,10 @@ export const StyledButton = styled('button', {
   height: '44px',
   width: '$max',
   padding: '11px 16px',
-  transition: 'background 0.2s, transform 0.3s, color 0.2s, box-shadow 0.3s',
+  transition: 'background 0.2s, transform 0.2s, color 0.2s, box-shadow 0.3s',
   borderRadius: '$1',
+
+  /* Computed properties */
   background: '$$background',
   color: '$$color',
   transform: 'scale($$scale) translateZ(0)',
@@ -56,7 +61,7 @@ export const StyledButton = styled('button', {
 
         '&:hover': {
           '&:not(:disabled)': {
-            $$shadow: '$$shadow-hover-primary',
+            $$shadow: '$$primary',
           },
         },
 
@@ -84,6 +89,7 @@ export const StyledButton = styled('button', {
           $$shadow: '$$primary',
         },
       },
+
       danger: {
         $$background: 'var(--laodeaksar-colors-emphasis)',
         $$color: 'var(--laodeaksar-colors-danger)',
@@ -104,6 +110,7 @@ export const StyledButton = styled('button', {
         },
       },
     },
+
     isLoading: {
       true: {
         cursor: 'not-allowed',
@@ -116,11 +123,20 @@ export const StyledButton = styled('button', {
 
 export const StyledIconButton = styled('button', {
   $$color: 'var(--laodeaksar-colors-typeface-tertiary)',
-  $$scale: 1,
+  $$corner: '$1',
+  $$background: 'var(--laodeaksar-colors-foreground)',
+  $$shadow: 'none',
+  $$thickness: '1px',
+  $$borderColor: 'transparent',
+  $$contentScale: 1,
+  $$backgroundScale: 1,
 
   WebkitAppearance: 'none',
   WebkitTapHighlightColor: 'transparent',
-  us: 'none',
+  WebkitUserSelect: 'none',
+  MozUserSelect: 'none',
+  MsUserSelect: 'none',
+  userSelect: 'none',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -135,28 +151,22 @@ export const StyledIconButton = styled('button', {
   transition: 'color 0.3s ease, transform 0.3s ease',
   borderRadius: '$1',
   color: '$$color',
-  transform: 'scale($$scale) translateZ(0)',
+  transform: 'scale($$contentScale) translateZ(0)',
 
-  $$primary: '0 2px 40px -2px var(--laodeaksar-form-input-focus)',
+  $$primary: '0 2px 40px -4px var(--laodeaksar-form-input-focus)',
 
   '&::after': {
-    $$background: 'var(--laodeaksar-colors-foreground)',
-    $$afterscale: 1,
-    $$thickness: '1px',
-    $$border: 'transparent',
-    $$shadow: 'none',
-
     zIndex: '0',
     position: 'absolute',
-    content: '""',
+    content: "''",
     display: 'block',
     size: '$full',
-    borderRadius: '$2',
+    borderRadius: '$$corner',
     transition:
-      'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease,\n      transform 0.3s, cubic-bezier(0.34, 1.56, 0.64, 1)',
+      'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease,\n      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
     background: '$$background',
-    transform: 'scale($$afterscale) translateZ(0)',
-    border: '$$thickness solid $$border',
+    transform: 'scale(var(--button-background-scale, 1)) translateZ(0)',
+    border: '$$thickness solid $$borderColor',
     boxShadow: '$$shadow',
   },
 
@@ -168,25 +178,25 @@ export const StyledIconButton = styled('button', {
 
   '&:hover': {
     '&:not(:disabled)': {
-      $$border: 'var(--laodeaksar-colors-brand)',
+      $$borderColor: 'var(--laodeaksar-colors-brand)',
       $$thickness: '2px',
       $$color: 'var(--laodeaksar-colors-brand)',
-      $$corner: 'calc($space$2 + 2px)',
-      $$afterscale: '0.92',
+      $$corner: 'calc($space$1 + 2px)',
+      $$backgroundScale: '0.92',
       $$shadow: '$$primary',
     },
   },
 
   '&:focus-visible': {
-    $$border: 'var(--laodeaksar-colors-brand)',
+    $$borderColor: 'var(--laodeaksar-colors-brand)',
     $$thickness: '2px',
     $$color: 'var(--laodeaksar-colors-brand)',
-    $$corner: 'calc($space$2 + 2px)',
-    $$afterscale: '0.92',
+    $$corner: 'calc($space$1 + 2px)',
+    $$backgroundScale: 0.92,
     $$shadow: '$$primary',
   },
 
   '&:active': {
-    $$scale: '0.95',
+    $$contentScale: '0.95',
   },
 });

@@ -6,6 +6,7 @@ import VisuallyHidden from '../VisuallyHidden';
 
 const Spinner = (props: SpinnerProps) => {
   const { label = 'Loading...' } = props;
+  
   return (
     <Flex gap={2}>
       <SpinnerStyled {...props}>

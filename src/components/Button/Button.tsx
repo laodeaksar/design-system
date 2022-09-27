@@ -38,6 +38,7 @@ const Button = React.forwardRef(
 
     return (
       <StyledButton variant={variant} isLoading={isLoading} ref={ref} {...rest}>
+        {isLoading && <Spinner />}
         {startIcon && (
           <Flex
             css={{
@@ -57,7 +58,6 @@ const Button = React.forwardRef(
             {endIcon}
           </Flex>
         )}
-        {isLoading && <Spinner />}
       </StyledButton>
     );
   }

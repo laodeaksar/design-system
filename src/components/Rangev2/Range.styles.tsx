@@ -26,7 +26,6 @@ export const Track = styled(SliderPrimitive.Track, {
   position: 'relative',
   flexGrow: 1,
   border: 'none',
-  borderRadius: '$0',
 
   '&[data-orientation="horizontal"]': {
     height: '$1',
@@ -40,7 +39,6 @@ export const Track = styled(SliderPrimitive.Track, {
 export const Range = styled(SliderPrimitive.Range, {
   position: 'absolute',
   backgroundColor: 'var(--laodeaksar-form-input-active)',
-  //borderRadius: '$round',
   height: '$full',
 });
 
