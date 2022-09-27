@@ -1,6 +1,6 @@
 {
   "name": "@laodeaksarr/design-system",
-  "version": "1.0.20",
+  "version": "1.1.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
